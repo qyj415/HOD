@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Unit" 
+    table="hod2000_unit"
+>
+
+<cache usage="read-write"/>
+
+    <id
+        name="unitId"
+        type="java.lang.Integer"
+        column="unit_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="unitName"
+        type="java.lang.String"
+        column="unit_name"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="unitCode"
+        type="java.lang.String"
+        column="unit_code"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="unitRemark"
+        type="java.lang.String"
+        column="unit_remark"
+        length="128"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000Room -->
+    <set
+        name="hod2000Rooms"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+    <cache usage="read-write"/>
+        <key>
+            <column name="unit_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Room"
+        />
+    </set>
+    <!-- bi-directional many-to-one association to Hod2000Building -->
+    <many-to-one
+        name="hod2000Building"
+        class="com.hod.pojo.Hod2000Building"
+        not-null="true"
+    >
+        <column name="building_id" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

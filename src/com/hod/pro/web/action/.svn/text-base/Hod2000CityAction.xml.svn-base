@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000City" extends="defaults" namespace="/">
+		<action name="hod2000City" class="springHod2000CityAction">
+			<result name="success">/iframes/cityIframe.jsp</result>
+			<result name="toUpdate">/update/Hod2000City_Update.jsp</result>
+		</action>
+	</package>
+	<package name="hodCity" extends="json-default" namespace="/">
+		<action name="hodCity" class="springHod2000CityAction" method="doTree">
+			<result type="json"></result>
+		</action>
+		<action name="hodCity" class="springHod2000CityAction" method="batchFileUp">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

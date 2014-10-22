@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000MeterInfoFreeze" 
+    table="hod2000_meterInfoFreeze"
+>
+
+    <id
+        name="tid"
+        type="java.lang.Integer"
+        column="t_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="meterName"
+        type="java.lang.String"
+        column="meter_name"
+        length="50"
+    />
+    <property
+        name="clearEnergy"
+        type="java.lang.String"
+        column="clear_energy"
+        length="20"
+    />
+    <property
+        name="clearFlow"
+        type="java.lang.String"
+        column="clear_flow"
+        length="20"
+    />
+    <property
+        name="readTime"
+        type="java.util.Date"
+        column="read_time"
+        length="23"
+    />
+    <property
+        name="cleatDate"
+        type="java.util.Date"
+        column="clear_date"
+        length="23"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

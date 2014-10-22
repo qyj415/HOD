@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000ParaDownInfoCache" 
+    table="hod2000_paraDownInfoCache"
+>
+
+    <id
+        name="downId"
+        type="java.lang.Integer"
+        column="down_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="conNum"
+        type="java.lang.String"
+        column="con_number"
+        length="20"
+    />
+    <property
+        name="sendContent"
+        type="java.lang.String"
+        column="sendContent"
+        length="150"
+    />
+    <property
+        name="protocolType"
+        type="java.lang.String"
+        column="protocolType"
+        length="150"
+    />
+    <property
+        name="submitTime"
+        type="java.util.Date"
+        column="submitTime"
+        length="23"
+    />
+    <property
+        name="sendFlag"
+        type="java.lang.Integer"
+        column="sendFlag"
+        length="10"
+    />
+    <property
+        name="state"
+        type="java.lang.Integer"
+        column="state"
+        length="10"
+    />
+    <property
+        name="remark"
+        type="java.lang.String"
+        column="remark"
+        length="150"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

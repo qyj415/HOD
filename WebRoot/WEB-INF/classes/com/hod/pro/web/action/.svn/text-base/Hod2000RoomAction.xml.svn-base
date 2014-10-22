@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Room" extends="defaults" namespace="/">
+		<action name="hod2000Room" class="springHod2000RoomAction">
+			<result name="success">/iframes/roomIframe.jsp</result>
+			<result name="toUpdate">/update/roomedit.jsp</result>
+			<result name="list">/share/roomlist.jsp</result>
+			<result name="list2">/share/roomlist2.jsp</result>
+			<result name="list3">/share/roomlist3.jsp</result>
+			<result name="list4">/share/roomlist4.jsp</result>
+		</action>
+	</package>
+	<package name="hodRoom" extends="json-default" namespace="/">
+		<action name="hodRoom" class="springHod2000RoomAction" method="showMeter">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,16 @@
+/* ∑÷“≥ */
+.pagebox{zoom:1;overflow:hidden; padding:3px 0px 0px 0px;margin-right:-13px; font-size:12px; font-family:"ÀŒÃÂ",sans-serif;}
+.pagebox span{float:left; margin-right:2px; overflow:hidden; text-align:center; background:#fff;}
+.pagebox span a{display:block; zoom:1; overflow:hidden; _float:left;}
+.pagebox span.pagebox_pre_nolink{border:1px #ddd solid; width:53px; height:21px; *height:21px; line-height:21px; text-align:center; color:#999; cursor:default;}
+.pagebox span.pagebox_pre{color:#3568b9; height:23px;}
+.pagebox span.pagebox_pre a,.pagebox span.pagebox_pre a:visited,.pagebox span.pagebox_next a,.pagebox span.pagebox_next a:visited{border:1px #9aafe5 solid; color:#3568b9; text-decoration:none; text-align:center; width:53px; cursor:pointer; height:21px; line-height:21px;}
+.pagebox span.pagebox_pre a:hover,.pagebox span.pagebox_pre a:active,.pagebox span.pagebox_next a:hover,.pagebox span.pagebox_next a:active{color:#363636; border:1px #2e6ab1 solid;}
+.pagebox span.pagebox_num_nonce{padding:0 8px; height:23px; line-height:23px; _height:21px; _line-height:21px; color:#fff; cursor:default; background:#296cb3; font-weight:bold;}
+.pagebox span.pagebox_num{color:#3568b9; height:23px;}
+.pagebox span.pagebox_num a,.pagebox span.pagebox_num a:visited{border:1px #9aafe5 solid; color:#3568b9; text-decoration:none; padding:0 8px; cursor:pointer; height:21px; *height:21px; line-height:21px;}
+.pagebox span.pagebox_num a:hover,.pagebox span.pagebox_num a:active{border:1px #2e6ab1 solid;color:#363636;}
+.pagebox span.pagebox_num_ellipsis{color:#393733; width:22px; background:none; line-height:23px;}
+.pagebox span.pagebox_next_nolink{border:1px #ddd solid; width:53px; height:21px; *height:21px; line-height:21px; text-align:center; color:#999; cursor:default;}
+
+#divHalfTransparent {height:530px;width:810px; filter:alpha(Opacity=80);-moz-opacity:0.5;opacity: 0.5;z-index:100; background-color:#ffffff;padding:0px 0px 0px 0px; margin-top:-530px;text-align:center; }

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Building" 
+    table="hod2000_building"
+>
+<cache usage="read-write"/>
+
+    <id
+        name="buildingId"
+        type="java.lang.Integer"
+        column="building_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="buildingName"
+        type="java.lang.String"
+        column="building_name"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="buildingCode"
+        type="java.lang.String"
+        column="building_code"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="buildingRemark"
+        type="java.lang.String"
+        column="building_remark"
+        not-null="false"
+        length="128"
+    />
+    <property
+        name="buildingLongitude"
+        type="java.lang.String"
+        column="building_longitude"
+        not-null="false"
+        length="100"
+    />
+    <property
+        name="buildingLatitude"
+        type="java.lang.String"
+        column="building_latitude"
+        length="100"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to Hod2000Community -->
+    <many-to-one
+        name="hod2000Community"
+        class="com.hod.pojo.Hod2000Community"
+        not-null="true"
+    >
+        <column name="community_id" />
+    </many-to-one>
+    <!-- bi-directional one-to-many association to Hod2000Room -->
+    <set
+        name="hod2000Units"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+    <cache usage="read-write"/>
+        <key>
+            <column name="building_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Unit"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

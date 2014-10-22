@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ <package name="jFreeChart" extends="jfreechart-default,json-default"
+  namespace="/">
+  <action name="jFreeChart" class="springJfreeChartAction">
+   <result type="chart" name="success">
+	    <param name="width">700</param>
+	    <param name="height">400</param>
+   </result>
+   <result type="chart" name="profile">
+   		<param name="width">700</param>
+   		<param name="height">400</param>
+   </result>
+   <result type="chart" name="profile2">
+   		<param name="width">700</param>
+   		<param name="height">400</param>
+   </result>
+   <result type="chart" name="category">
+   		<param name="width">700</param>
+   		<param name="height">400</param>
+   </result>
+  </action>
+ </package>
+</struts>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000BatchClientError" 
+    table="hod2000_batchClientError"
+>
+
+    <id
+        name="id"
+        type="java.lang.Integer"
+        column="id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="errorMsg"
+        type="java.lang.String"
+        column="error_msg"
+        length="200"
+    />
+    <property
+        name="clientName"
+        type="java.lang.String"
+        column="client_name"
+        length="50"
+    />
+    <property
+        name="clientSex"
+        type="java.lang.String"
+        column="client_sex"
+        length="2"
+    />
+    <property
+        name="clientCardType"
+        type="java.lang.String"
+        column="client_card_type"
+        length="25"
+    />
+    <property
+        name="clientCardNumber"
+        type="java.lang.String"
+        column="client_card_number"
+        length="25"
+    />
+    <property
+        name="clientAddress"
+        type="java.lang.String"
+        column="client_address"
+        length="100"
+    />
+    <property
+        name="clientTel"
+        type="java.lang.String"
+        column="client_tel"
+        length="20"
+    />
+    <property
+        name="ptype"
+        type="java.lang.String"
+        column="p_type"
+        length="50"
+    />
+    <property
+        name="roomAddress"
+        type="java.lang.String"
+        column="room_address"
+        length="200"
+    />
+    <property
+        name="roomRemark"
+        type="java.lang.String"
+        column="room_remark"
+        length="128"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

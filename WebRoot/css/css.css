@@ -1,0 +1,192 @@
+body {
+font-size: 12px;
+font-family: Arial, Helvetica, sans-serif;
+}
+a:link {
+	 text-decoration: none;color: blue;
+	 }
+a:active { 
+	text-decoration:blink;
+	}
+a:hover { 
+	text-decoration:underline;color: red;
+	} 
+a:visited {
+	 text-decoration: none;color: blue;
+	 }
+table {
+background-color: #8DB2E3;margin-left:2px;
+}
+table caption{
+align:left;
+color: #15428B;
+padding:3px;
+font-size: 12;
+font-weight: bold;
+}
+
+
+table thead th {
+background-color: #D3E0F2;
+color: #15428B;
+padding:2px;
+font-size: 12px;
+font-weight: normal;
+}
+
+table tbody td {
+
+padding:1px;
+font-size: 12px;
+}
+
+table tbody tr {
+ background-color: #FFFFFF;
+}
+
+form{
+	margin:0px;
+	background-color: #FFFFFF;
+	font-size: 13px;
+	font-weight: normal;
+	}
+.imgClass{
+	width:15px;
+	height:16px;
+	vertical-align:middle;
+	}
+
+.textiploghidden {
+	margin-left:0px;
+	FONT-SIZE: 12px;
+	COLOR: #ffffff; 
+	border: 1 solid rgb(167,166,170);
+	background-color: #ffffff;
+}
+.textipinput {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 12px;
+	BORDER-LEFT: 0px; WIDTH: 22px; COLOR: #000000;
+	BORDER-BOTTOM: 0px;font-family: Arial, Helvetica, sans-serif;
+	HEIGHT: 15px; BACKGROUND-COLOR: #ffffff;
+	TEXT-ALIGN: center
+}
+
+.doorsname{
+	width:100%;
+	
+	}
+.doorid{
+	width:100%;
+	text-align:center;
+	}
+.DoorKeyFlag{
+	width:100%;
+	text-align:center;
+	}
+.DoorSensorFlag{
+	width:100%;
+	text-align:center;
+	}
+.DoorBolt_Flag{
+	width:100%;
+	text-align:center;
+	}
+.RLYOUT0{
+	width:100%;
+	text-align:center;
+	}
+.hiddentt1 {
+	width:200px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}	
+.even {background-color:#CCCCCC;}/*ÆæÊýÐÐ*/
+.odd {background-color:#ffffff;}/*Å¼ÊýÐÐ*/
+/*°´Å¥*/
+
+button { 
+	padding-top:1px;
+	height:21px;
+	/*
+	width:49px;
+	height:22px;
+	line-height:180%;
+	font-size:12px;
+	color:#15428B;
+	background:url("../images/bg35-2.JPG") repeat-x left -30px;
+	padding-bottom:1px;
+	border:0px;
+	margin:1px;
+	font-family:"Arial", "Tahoma", "Î¢ÈíÑÅºÚ", "ÑÅºÚ";
+	vertical-align:middle;
+	cursor:pointer;
+	*/
+	}
+
+.buttonStyle { 
+	padding-top:1px;
+	height:21px;
+	
+	}
+.button1 {
+	width:86px;
+	height:30px;
+	line-height:180%;
+	font-size:13px;
+	color:#15428B;
+	background:url("../images/bg35-1.JPG") repeat-x left -30px;
+	padding-bottom:1px;
+	border:0px;
+	margin:8px;
+	font-family:"Arial", "Tahoma", "Î¢ÈíÑÅºÚ", "ÑÅºÚ";
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+.pageTitle{
+    
+	text-decoration : underline;
+	color: #15428B;
+	font-size: 15px;
+    font-weight: bold;
+    margin-left:2px;
+    margin-bottom:10px;
+    font-family:"ºÚÌå";
+}
+.pageTitleChlid{
+    padding-left:20px;
+    margin-bottom:10px;
+}
+
+.pageSearch1{
+	margin-bottom:10px;
+	font-size:14px;
+}
+.titleMsg{
+ font-family: ºÚÌå;
+ color: blue;
+ }
+ 
+.messageRed{
+color:red;
+font-size: 12px;
+}
+.messageBlue{
+color:blue;
+font-size: 12px;
+}
+.messageGreen{
+color:green;
+font-size: 12px;
+}
+.selectTy{
+width: 100px;
+height: 125px;
+}
+.val{
+	color: #AAAAAA;
+}
+.divBorder{
+	border-bottom: 1px solid black;
+}

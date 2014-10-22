@@ -1,0 +1,5030 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>城市建筑智慧能源管理系统帮助</title>
+	<head>
+		<style>
+.tupian {
+	width: 800px;
+	height: 300px;
+}
+.spanfaq{
+	color:#FF9900;
+}
+.tupian1 {
+	width: 800px;
+	height: 150px;
+}
+
+#d1 {
+	width: 15%;
+	height: 1200px;
+	background-color: #FFFFFF;
+	border: 0px solid black;
+	left: 8px;
+	top: 82px;
+	position: absolute;
+	BORDER-RIGHT: #7b9ebd 1px solid;
+	BORDER-TOP: #7b9ebd 1px solid;
+	BORDER-LEFT: #7b9ebd 1px solid;
+	BORDER-BOTTOM: #7b9ebd 1px solid;
+}
+
+.d2 {
+	width: 82%;
+	height: 100%;
+	background-color: #FFFFFF;
+	border: 0px solid black;
+	right: 6px;
+	top: 88px;
+	position: absolute;
+}
+
+#d1_head {
+	height: 18px;
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	color: #000000;
+	font-family: "宋体";
+	font-weight: 500;
+	background: url(tab_19.gif);
+	BORDER-BOTTOM: #7b9ebd 1px solid;
+}
+
+#d1_body {
+	position: static;
+}
+
+.d3_shuoming {
+	font-size: 23px;
+	font-family: "宋体";
+	font-weight: 400;
+}
+
+#head {
+	width: 100%;
+	height: 10%;
+	BORDER-RIGHT: #7b9ebd 1px solid;
+	BORDER-TOP: #7b9ebd 1px solid;
+	BORDER-LEFT: #7b9ebd 1px solid;
+	BORDER-BOTTOM: #7b9ebd 1px solid;
+}
+</style>
+<style>
+td {
+	font-size: 12px;
+}
+
+div {
+	font-family: 宋体;
+}
+
+div.tree_add {
+	padding-left: 2px;
+	padding-top: 8px;
+	color: blue;
+	cursor: hand;
+}
+
+div.tree_1 {
+	padding-top: 6px;
+	font-size: 12px;
+	padding-left: 2px;
+	cursor: hand;
+	color: blue;
+}
+
+div.tree_2 {
+	padding-left: 25px;
+	font-size: 12px;
+}
+
+div.tree_3 {
+	padding-left: 2px;
+	padding-top: 5px;
+	cursor: hand;
+}
+
+.body_1 {
+	font-family: "宋体";
+	font-size: 12px;
+	background: url(tab_19.gif);
+	height: 15px;
+	width: 70%;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.padd {
+	padding-left: 18px;
+}
+
+.fontset {
+	font: "宋体";
+	font-size: 13px;
+}
+
+.lvse {
+	width: 10%;
+	height: 10%;
+}
+</style>
+
+		<script>
+	function show(i)
+	{ 
+	document.getElementById("div"+i).style.display="block"; 
+	if(document.getElementById("hidden1").value!=""&&document.getElementById("hidden1").value!="div"+i)
+	{ 
+	document.getElementById(document.getElementById("hidden1").value).style.display="none"; 
+	} 
+	document.getElementById("hidden1").value="div"+i; 
+	} 
+	</script>
+
+
+		<script> 
+		function line(obj)//添加下划线
+		{
+		obj.style.textDecoration='underline';
+		}
+		function delline(obj)//取消下划线
+		{
+		obj.style.textDecoration='none';
+		}
+		function showtree(str)//展开|关闭子分支
+		{
+		var eval1="span_"+str+".innerHTML=span_"+str+".innerHTML=='☜'?'☞':'☜'";
+		var eval2=str+"_value.style.display="+str+"_value.style.display=='none'?'':'none'";
+		eval(eval1);
+		eval(eval2);
+		}
+		</script>
+
+	</head>
+	<body style="font-size: 12pt;">
+		<div style="width: 100%;">
+			<div id="head">
+				<img src="helphead.jpg" width="100%" height="70px" />
+			</div>
+			<div id="d1">
+
+				<div id="d1_head">
+					帮助菜单
+				</div>
+
+				<table >
+					<tr>
+						<td width=100% style="padding: 15px 10px 10px 15px;">
+							<input type="hidden" id="hidden1" value=""></input>
+							<div class=tree_3 onMouseOver="line(this)"
+								onMouseOut="delline(this)" onClick="showtree('directly')">
+								<span id=span_directly style="color: gray">☞</span> 帮助首页
+							</div>
+							<div id=directly_value class=tree_2 style="display: none"
+								onclick="">
+								<div class=tree_1 onclick="show(11)">
+									☞ 帮助使用说明
+								</div>
+							</div>
+							<br />
+							<div class=tree_3 onMouseOver="line(this)"
+								onMouseOut="delline(this)" onClick="showtree('specially')">
+								<span id=span_specially style="color: gray">☞</span> 安装说明
+							</div>
+							<div id=specially_value class=tree_2 style="display: none">
+								<div class=tree_1 onclick="show(16)">
+									☞ 环境要求
+								</div>
+								<div class=tree_1 onclick="show(66)">
+									☞ 登陆系统
+								</div>
+								<div class=tree_1 onclick="show(67)">
+									☞ 系统注册
+								</div>
+							</div>
+							<br />
+							<div class=tree_3 onMouseOver="line(this)"
+								onMouseOut="delline(this)" onClick="showtree('state')">
+								<span id=span_state style="color: gray">☞</span> 软件安装卸载
+							</div>
+							<div id=state_value class=tree_2 style="display: none">
+								<div class=tree_1 onclick="show(12)">
+									☞ 软件安装
+								</div>
+								<div class=tree_1 onclick="show(13)">
+									☞ 软件卸载
+								</div>
+							</div>
+							<br />
+							<div class=tree_3 onMouseOver="line(this)"
+								onMouseOut="delline(this)" onClick="showtree('autonomous')">
+								<span id=span_autonomous style="color: gray">☞</span> 快速使用指南
+							</div>
+							<div id=autonomous_value class=tree_2 style="display: none">
+								<div class=tree_1 onclick="show(14)">
+									☞ 系统功能简介
+								</div>
+								<div class=tree_1 onclick="show(15)">
+									☞ 系统使用流程
+								</div>
+							</div>
+							<br />
+
+							<div class=tree_3 onMouseOver="line(this)"
+								onMouseOut="delline(this)" onClick="showtree('work')">
+								<span id=span_work style="color: gray">☞</span> 软件使用说明
+							</div>
+							<div id=work_value class=tree_2 style="display: none">
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)" onClick="showtree('city_kehuxinx')">
+									<span id=span_city_kehuxinx style="color: gray">☞</span> 客户信息
+								</div>
+								<div id=city_kehuxinx_value class=tree_2 style="display: none">
+									<div class=tree_add onclick="show(17)">
+										☞ 开户
+									</div>
+									<div class=tree_add onclick="show(18)">
+										☞ 变更
+									</div>
+									<div class=tree_add onclick="show(19)">
+										☞ 档案管理
+									</div>
+									<div class=tree_add onclick="show(20)">
+										☞ 销户
+									</div>
+								</div>
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)" onClick="showtree('city_dizhixinx')">
+									<span id=span_city_dizhixinx style="color: gray">☞</span> 地址信息
+								</div>
+								<div id=city_dizhixinx_value class=tree_2 style="display: none">
+									<div class=tree_add onclick="show(21)">
+										☞ 地址信息
+									</div>
+									<div class=tree_1 onclick="show(70)">
+										☞ 小区管理
+									</div>
+									<div class=tree_1 onclick="show(71)">
+										☞ 楼栋管理
+									</div>
+									<div class=tree_1 onclick="show(72)">
+										☞ 房间管理
+									</div>
+									<div class=tree_1 onclick="show(73)">
+										☞ 进入地图
+									</div>
+								</div>
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_jiagefangan')">
+									<span id=span_city_jiagefangan style="color: gray">☞</span>
+									价格方案
+								</div>
+								<div id=city_jiagefangan_value class=tree_2
+									style="display: none">
+									<div class=tree_1 onclick="show(22)">
+										☞ 定额价格方案
+									</div>
+									<div class=tree_1 onclick="show(74)">
+										☞ 阶梯价格方案一
+									</div>
+									<div class=tree_1 onclick="show(75)">
+										☞ 阶梯价格方案二
+									</div>
+								</div>
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)" onclick="show(23)">
+									<span style="color: gray">☞</span> 负荷曲线
+								</div>
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_systemmanagement')">
+									<span id=span_city_systemmanagement style="color: gray">☞</span>
+									系统管理
+								</div>
+								<div id=city_systemmanagement_value class=tree_2
+									style="display: none">
+									<div class=tree_add onclick="show(24)">
+										☞ 角色管理
+									</div>
+									<div class=tree_add onclick="show(25)">
+										☞ 操作员管理
+									</div>
+									<div class=tree_add onclick="show(26)">
+										☞ 日志管理
+									</div>
+									<div class=tree_add onclick="show(27)">
+										☞ 数据库备份恢复
+									</div>
+									<div class=tree_add onclick="show(28)">
+										☞ 密码修改
+									</div>
+								</div>
+								
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)" onclick="show(29)">
+									<span style="color: gray">☞</span> 表计型号
+								</div>
+								
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_baojingxinx')">
+									<span id=span_city_baojingxinx style="color: gray">☞</span>
+									报警信息
+								</div>
+								<div id=city_baojingxinx_value class=tree_2
+									style="display: none">
+									<div class=tree_1 onclick="show(30)">
+									☞ 表计报警信息
+									</div>
+									<div class=tree_1 onclick="show(90)">
+									☞ 集中器报警信息
+									</div>
+								</div>
+								
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_advancemanagement')">
+									<span id=span_city_advancemanagement style="color: gray">☞</span>
+									预收款管理
+								</div>
+								<div id=city_advancemanagement_value class=tree_2
+									style="display: none">
+									<div class=tree_add onclick="show(31)">
+										☞ 预收款
+									</div>
+									<div class=tree_add onclick="show(32)">
+										☞ 统计分析
+									</div>
+									<div class=tree_add onclick="show(33)">
+										☞ 参数设置
+									</div>
+								</div>
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_chargemanagement')">
+									<span id=span_city_chargemanagement style="color: gray">☞</span>
+									收费管理
+								</div>
+								<div id=city_chargemanagement_value class=tree_2
+									style="display: none">
+									<div class=tree_add onclick="show(34)">
+										☞ 收费
+									</div>
+									<div class=tree_add onclick="show(35)">
+										☞ 统计分析
+									</div>
+									<div class=tree_add onclick="show(36)">
+										☞ 参数设置
+									</div>
+								</div>
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_consumption')">
+									<span id=span_city_consumption style="color: gray">☞</span>
+									能耗曲线
+								</div>
+								<div id=city_consumption_value class=tree_2
+									style="display: none">
+									<div class=tree_add onclick="show(37)">
+										☞ 正常用量统计
+									</div>
+									<div class=tree_add onclick="show(38)">
+										☞ 异常用量统计
+									</div>
+								</div>
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_biaojiguanli')">
+									<span id=span_city_biaojiguanli style="color: gray">☞</span>
+									表计管理
+								</div>
+								<div id=city_biaojiguanli_value class=tree_2
+									style="display: none">
+									<div class=tree_1 onclick="show(76)">
+										☞ 查询表计信息
+									</div>
+									<div class=tree_1 onclick="show(77)">
+										☞ 打印表计信息
+									</div>
+									<div class=tree_1 onclick="show(78)">
+										☞ 新增表计信息
+									</div>
+									<div class=tree_1 onclick="show(79)">
+										☞ 换表
+									</div>
+									<div class=tree_1 onclick="show(80)">
+										☞ 阀门设置
+									</div>
+									<div class=tree_1 onclick="show(81)">
+										☞ 阀门控制
+									</div>
+									<div class=tree_1 onclick="show(82)">
+										☞ 进入地图
+									</div>
+								</div>
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_biaojizhuangtai')">
+									<span id=span_city_biaojizhuangtai style="color: gray">☞</span>
+									表计状态
+								</div>
+								<div id=city_biaojizhuangtai_value class=tree_2
+									style="display: none">
+									<div class=tree_1 onclick="show(40)">
+										☞ 表计状态
+									</div>
+								</div>
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_jizhongqizhuangtai')">
+									<span id=span_city_jizhongqizhuangtai style="color: gray">☞</span>
+									集中器状态
+								</div>
+								<div id=city_jizhongqizhuangtai_value class=tree_2
+									style="display: none">
+									<div class=tree_1 onclick="show(83)">
+										☞ 查询集中器状态
+									</div>
+									<div class=tree_1 onclick="show(84)">
+										☞ 打印集中器状态
+									</div>
+								</div>
+
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_shishishuju')">
+									<span id=span_city_shishishuju style="color: gray">☞</span>
+									实时数据
+								</div>
+								<div id=city_shishishuju_value class=tree_2
+									style="display: none">
+									<div class=tree_1 onclick="show(42)">
+										☞ 实时数据
+									</div>
+									<div class=tree_1 onclick="show(85)">
+										☞ 自动抄读
+									</div>
+									<div class=tree_1 onclick="show(86)">
+										☞ 进入地图
+									</div>
+								</div>
+
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_lishishuju')">
+									<span id=span_city_lishishuju style="color: gray">☞</span> 历史数据
+								</div>
+								<div id=city_lishishuju_value class=tree_2 style="display: none">
+									<div class=tree_1 onclick="show(87)">
+										☞ 历史数据
+									</div>
+									<div class=tree_1 onclick="show(88)">
+										☞ 月冻结数据
+									</div>
+								</div>
+
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)" onclick="show(44)">
+									<span style="color: gray">☞</span> 管网损耗
+								</div>
+								
+								<div class=tree_add onMouseOver="line(this)"
+									onMouseOut="delline(this)"
+									onClick="showtree('city_jizhongqiweihu')">
+									<span id=span_city_jizhongqiweihu style="color: gray">☞</span>
+									集中器管理
+								</div>
+								<div id=city_jizhongqiweihu_value class=tree_2
+									style="display: none">
+									<div class=tree_add onclick="show(45)">
+										☞ 初始化参数
+									</div>
+									<div class=tree_add onclick="show(46)">
+										☞ 集中器维护
+									</div>
+								</div>
+							</div>
+							<br />
+
+							<div class=tree_3 onMouseOver="line(this)"
+								onMouseOut="delline(this)" onClick="showtree('appendix')">
+								<span id=span_appendix style="color: gray">☞</span> 附录
+							</div>
+							<div id=appendix_value class=tree_2 style="display: none">
+								
+								<!--<div class=tree_1 onclick="show(47)">
+									☞ 常用操作
+								</div>  -->
+								<div class=tree_1 onclick="show(48)">
+									☞ 用户许可协议
+								</div>
+								<div class=tree_1 onclick="show(49)">
+									☞ 用户使用FAQ
+								</div>
+							</div>
+							<br />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="div11" class="d2" style="display: block;">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;首页</span>
+			</div>
+			<p class="d3_shuoming">
+				&nbsp;系统帮助使用说明
+			</p>
+			<hr />
+			<p class="fontset">
+				<img src="yanshi.jpg" />
+			<div class="fontset"
+				style="position: absolute; left: 210px; top: 180px; width: 600px; height: 80px;">
+				<strong>&nbsp;左侧菜单操作： </strong>
+				<br />
+				<br />
+				&nbsp;⊕点击左侧一级菜单，即可展开/收起二级菜单，点击二级菜单，可展开/收起三级菜单；
+				<br />
+				<br />
+				&nbsp;⊕点击二级菜单或者三级菜单，即可在右侧展示详细帮助页面。
+			</div>
+			<br />
+			<p class="d3_shuoming">
+				&nbsp;名词解释
+			</p>
+			<hr />
+			<p class="fontset">
+				<strong>超级用户：</strong>即拥有系统全部操作权限的用户，可以在系统中分配用户并配置相应模块的角色。
+				<br />
+				<br />
+				<strong>角色：</strong>在用户的日常使用过程中，超级用户需要分配一些具有不同权限级别的用户，为避免对每个用户单独设置，可在角色管理中设置一类具有
+				<br /><br />一定权限的角色，再将角色设置给某些用户。
+			</p>
+
+		</div>
+		<div id="div12" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件安装与卸载&nbsp;->&nbsp;软件安装</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 软件安装
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				&nbsp;&nbsp;❶ 支持程序的安装，如：IIS、framework等
+				<br />
+				<br />
+				&nbsp;&nbsp;❷ jre、tomcat服务器的安装
+				<br />
+				<br />
+				&nbsp;&nbsp;❸ sql server数据库安装
+				<br />
+				<br />
+				&nbsp;&nbsp;❹ 软件包安装与配置
+				<br />
+				<br />
+				&nbsp;&nbsp;具体各软件安装方法请参照安装手册或使用手册..
+				<br />
+				<br />
+		</div>
+		<div id="div13" class="d2" style="display: none; font-size: 12px;">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件安装与卸载&nbsp;->&nbsp;软件卸载</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 软件卸载
+				<br />
+				<br />
+			</p>
+
+			<p class="fontset">
+				&nbsp;&nbsp;⊕如果您不需要再使用此软件，并希望从计算机中删除掉，可执行以下操作：退出所有的软件相关的浏览器窗口，进入控制面板或开始—程序，然后进行卸载操作。
+				<br />
+				<br />
+				&nbsp;&nbsp;⊕这样并不能删除所有的文件，您需要到软件的安装目录下删除相关文件夹。
+				<br />
+			</p>
+		</div>
+		<div id="div14" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;快速使用指南&nbsp;->&nbsp;系统功能简介</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 系统功能简介
+				<br />
+			</p>
+			<p class="fontset">
+				
+				⊕该系统包括开户、用户变更、档案管理、销户、报警信息、表计状态、集中器状态、价格方案、预收款、预收款统计、预收款参数设置、
+				<br /><br />收费、收费统计、收费参数设置、地址信息、实时抄读、历史数据、负荷曲线、正常用量统计、异常用量统计、管网损耗、角色管理、操作员管理、
+				<br /><br />日志管理、数据库备份与还原、密码修改、表计型号、表计管理、集中器初始化参数、集中器管理这些功能模块。详细请参照用户手册。
+				<br /><br />
+				
+				<strong>☞ 系统特点</strong>
+				<br />
+				<br />
+■ 密码授权，安全可靠 。通过授权实行分级管理，不同级别的用户只能进行自己权限范围内的操作；防火墙管理、嵌入式系统保证了本系统的安全性。<br />
+				<br />
+■ 自动报警，防患未然。如果热量表有PT线断、流量线断、电池电量低、流量计装反、温度异常等问题，本系统会及时自动报警，使用户能及时发现问题。<br />
+				<br />
+■ 自动抄表，省时省心 。可设置不同的抄表周期，并将抄表数据自动存储进数据库系统，便于数据查询和统计分析。<br />
+				<br />
+■ 实时抄表，及时精准。 实时抄录热量表的数据，掌握了热力管网的最新的信息，为处理用户的投诉及实时监控热量表运行提供了有力的管理手段。<br />
+				<br />
+■ 历史数据，历历在目。可查询热量表的历史数据及热网的历史趋势图，并可进行数据备份。<br />
+				<br />
+■ 耗热计算，精细管理 。为供热企业提供基础分析数据。<br />
+				<br />
+■ 热量查询，阳光消费 。可随时计算用户每天、每月及整个采暖季的热量，并有标准数据接口，可与其它收费系统共享数据。<br />
+				<br />
+■ 统计分析，纵览全局 。可对整个小区的总耗热量、平均耗热量进行分析并生成报表及打印数据。<br />
+				<br />
+				<br />
+				
+			</p>
+		</div>
+		<div id="div15" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;快速使用指南&nbsp;->&nbsp;系统使用流程</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 系统使用基本流程
+				<br />
+			</p>
+			
+			
+			<p class="fontset">
+				&nbsp;&nbsp;⊕下面以超级用户为例，介绍系统的使用流程。不同的用户拥有的操作权限不同，所以相应的操作流程也会有所差别，用户只需按以下<br /><br />
+				流程但只操作页面显示项目即可，详见使用手册：
+				<br />
+				<br />
+			</p>
+			
+			<p class="fontset">
+				&nbsp;&nbsp;
+				<strong class="fontset">第一步：</strong><a href="#" onclick="show(66)">登陆系统</a>。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第二步：</strong><a href="#" onclick="show(67)">系统注册</a>。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第三步：</strong><a href="#" onclick="show(21)">地址信息</a>。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第四步：</strong>新增<a href="#" onclick="show(29)">表计型号</a>。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第五步：</strong>添加<a href="#" onclick="show(22)">价格方案</a>。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第六步：</strong><a href="#" onclick="show(46)">新增集中器</a>信息。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第七步：</strong><a href="#" onclick="show(78)">新增表计</a>信息。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第八步：</strong>进行<a href="#" onclick="show(17)">开户</a>。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第九步：</strong><a href="#" onclick="show(42)">实时数据</a>，自动抄读。
+				<br />
+				<br />
+				&nbsp;&nbsp;
+				<strong class="fontset">第十步：</strong><a href="#" onclick="show(31)">预收款</a>管理和<a href="#" onclick="show(34)">收费</a>管理。
+				<br />
+				<br />
+			</p>
+			<div style="position: absolute; left: 300px; top: 110px; width: 650px; height:500px;">
+			<img src="liucheng.jpg"/>
+			</div>
+		</div>
+
+		<div id="div16" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;环境要求</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 环境要求：
+				<br />
+			</p>
+			<p class="fontset">
+				服务器硬件：
+				<br />
+				<br />
+				处理器：主频 2GHz 或更高配置（推荐3GHz或更快）
+				<br />
+				<br />
+				内存：2G内存或更高配置（推荐4G及以上）
+				<br />
+				<br />
+				硬盘：250G或更高配置
+				<br /><br />
+				打印机：有RS-232接口，打印机接口，USB接口。
+				<br /><br />
+				服务器软件：
+				<br />
+				<br />
+				本系统需要运行在以下软件环境中：
+				<br />
+				<br />
+				1、操作系统：windows server 2003、xp、windows7/8等。
+				<br />
+				<br />
+				2、数据库：MS SQL SERVER 2005或MS SQL SERVER 2008
+				<br />
+				<br />
+				3、运行软件：jre、tomcat
+				<br />
+				<br />
+				客户机软件：
+				<br />
+				<br />
+				IE8.0或以上版本。
+				<br />
+				<br />
+			</p>
+			<p class="fontset" style="font-weight: 600"></p>
+
+		</div>
+
+		<div id="div66" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;登陆系统</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 登陆系统：
+				<br />
+			</p>
+			<p class="fontset">
+				宏德测控门禁系统软件采用B/S结构，使用软件需要安装IE8.0或以上版本浏览器，推荐使用IE8.0。
+				<br />
+				<br />
+				按照《HOD-2000城市建筑能源管理系统软件安装手册》安装软件后，在网络内任何一台电脑上，可通过IE浏览器访问和使用本软件。
+				<br />
+				<br />
+				端口号系统默认为8080。访问方式如下：
+				<br />
+				<br />
+				1. 打开IE浏览器。
+				<br />
+				<br />
+				2. 在IE地址栏输入：http://安装电脑的IP:8080/HOD-2000/
+				<br />
+				<br />
+				例如：
+				<br />
+				<br />
+				http://192.168.1.10:8080/HOD-2000/
+				<br />
+				<br />
+				如果系统安装成功，即会出现如下页面：
+				<br />
+				<br />
+
+				<img src="denglixitong.png" class="tupian" />
+				<br />
+				<br />
+				系统默认的管理员用户名为admin 密码为123456。
+				<br />
+				<br />
+				输入此信息后，点击
+				<img src="denglixitongdenglu.png" />
+				按钮或直接按回车键。
+				<br />
+				<br />
+
+			</p>
+
+		</div>
+
+		<div id="div67" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;系统注册</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 系统注册：
+				<br />
+			</p>
+			<p class="fontset">
+				登陆系统成功后，进入以下页面（如下图）：
+				<br />
+				<br />
+				如果无法登陆，说明数据库安装或初始化设置有问题，请确认安装步骤。或者联系系统管理员。
+				<br />
+				<br />
+
+
+				<img src="xitongzhuce.png" class="tupian" />
+				<br />
+				<br />
+				注意此图右下角提示信息，“用户未注册或注册已过期，请点击注册按钮进行注册！”。提示信息表示用户还未注册或注册已过期，不能对
+				<br /><br />系统的主要功能进行操作，如果点击系统上的功能按钮，将会弹出提示信息（如下图）：
+				<br />
+				<br />
+
+				<img src="xitongzhucetishi.png" class="tupian" />
+				<br />
+				<br />
+
+				点击注册按钮
+				<img src="xtzczcan.jpg" />
+				显示系统的注册信息（如下图）：
+				<br />
+				<br />
+
+				<img src="xxzczcxx.png" class="tupian1" />
+				<br />
+				<br />
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				第一行显示的是城市建筑智慧能源管理系统的版本号。
+				<br />
+				<br />
+				许可用户：用户名称。
+				<br />
+				<br />
+				并发用户：最多多少个操作员同时登陆。
+				<br />
+				<br />
+				使用期限：城市建筑智慧能源管理系统软件的使用期限。
+				<br />
+				<br />
+
+				用户未注册读取不到城市建筑智慧能源管理系统的信息，注册后才能正常显示如下图：
+				<br />
+				<br />
+
+				<img src="xtzczcxx2.png" class="tupian1" />
+				<br />
+				<br />
+				“软件注册”：点击该链接进入软件注册页面：
+				<br />
+				<br />
+
+				<img src="xxzczcxx3.png" class="tupian1" />
+				<br />
+				<br />
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				用户名：2-15位字符。由系统供应商提供。
+				<br />
+				<br />
+				序列号：根据一定规则生成的序列号。由系统供应商提供。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击
+				<提交>
+				按钮完成本次“注册”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，清除已经输入的注册信息。注册成功后，刷新页面或重新登陆即可正常使用本系统，主界面如下图：
+				<br />
+				<br />
+
+				<img src="xitongzhucemain.png" class="tupian" />
+				<br />
+				<br />
+				<img src="help.png" />
+				：即为城市建筑智慧能源管理系统问题列表，常见问题解答。
+				<br />
+				<br />
+				<img src="close.png" />
+				：退出系统到登陆界面，切换用户。
+				<br />
+				<br />
+			</p>
+
+		</div>
+
+		<div id="div17" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;客户信息&nbsp;->&nbsp;开户</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 开户
+				<br />
+			</p>
+			<p class="fontset">
+				点击【客户信息】页面中的【开户】按钮，可以进入开户信息页面（如下图）：
+				<br />
+				<br />
+				<img src="kaihu.png" class="tupian" />
+
+				<br />
+				<br />
+				用户姓名：必填，长度在2-32个字符之间（考虑到英文名比较长）。
+				<br />
+				<br />
+				用户性别：必填。
+				<br />
+				<br />
+				证件类型：必选，包括：二代身份证、港澳通行证、台湾通行证、护照。
+				<br />
+				<br />
+				证件号码：必填。
+				<br />
+				<br />
+				地 址：必填，长度在2-128个字符之间。
+				<br />
+				<br />
+				联系电话：可填，最长不超过15个数字。
+				<br />
+				<br />
+				备注信息：可填，最长不超过128个字符。
+				<br />
+				<br />
+				房 间：可选，可以选择多个房间，房间必须已经与表计关联且没有关联用户，用户要重新选择房间，
+				<br />
+				<br />
+				单击
+				<清除>
+				按钮清除已选的房间信息后，可以再次选择房间信息。
+				<br />
+				<br />
+				价格方案：必选，1、定额价格方案，2、阶梯价格方案一，3、阶梯价格方案二。
+				<br />
+				<br />
+				<br />
+				用户录入完相关信息后，单击
+				<提交>
+				按钮完成本次“开户”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，放弃本次“开户”操作。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div18" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;客户信息&nbsp;->&nbsp;变更</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 变更
+				<br />
+			</p>
+			<p class="fontset">
+				点击【客户信息】页面中的【变更】按钮，可以进入变更信息页面（如下图）：
+				<br />
+				<br />
+				<img src="biangeng.png" class="tupian" />
+				<br />
+				<br />
+				<img src="chaxun.png" />
+				：用户可以根据“用户姓名”或者“证件号码”来查询需要变更地用户信息。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				用户姓名：必填，长度在2-32个字符之间（考虑到英文名比较长）。
+				<br />
+				<br />
+				用户性别：必填。
+				<br />
+				<br />
+				证件号码：不可修改。
+				<br />
+				<br />
+				地 址：必填，长度在2-128个字符之间。
+				<br />
+				<br />
+				联系电话：可填，最长不超过15个数字。
+				<br />
+				<br />
+				备注信息：可填，最长不超过128个字符。
+				<br />
+				<br />
+				房 间：可选，可以选择多个房间，房间必须已经与表计关联且没有关联用户（除了原来已经有的房间），
+				<br />
+				<br />
+				用户要重新选择房间，单击
+				<清除>
+				按钮清除已选的房间信息后，可以再次选择房间信息。
+				<br />
+				<br />
+				价格方案：必选，1、定额价格方案，2、阶梯价格方案一，3、阶梯价格方案二。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击
+				<提交>
+				按钮完成本次“变更”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，放弃本次“变更”操作。
+				<br />
+			</p>
+		</div>
+
+		<div id="div19" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;客户信息&nbsp;->&nbsp;档案管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 档案管理
+				<br />
+			</p>
+			<p class="fontset">
+				点击【客户信息】页面中的【档案管理】按钮，可以进入档案管理信息页面（如下图）：
+				<br />
+				<br />
+				<img src="danganguanli.png" class="tupian1" />
+
+				<br />
+				<br />
+				查询按钮 ：用户可以根据“用户姓名”或者“证件号码”来查询需要变更地用户信息。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				房间信息：单击
+				<点击显示 /隐藏信息>
+				，显示/隐藏房间的信息，包括：地理位置、面积数（m2）。
+				<br />
+				<br />
+				打 印：单击
+				<打印>
+				按钮，打印查询出来的客户信息。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div20" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;客户信息&nbsp;->&nbsp;销户</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 销户
+				<br />
+			</p>
+
+			<P class="fontset">
+				点击【客户信息】页面中的【销户】按钮，可以进入销户管理信息页面（如下图）：
+				<br />
+				<br />
+				<img src="xiaohu.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				基本操作：点击
+				<销户>
+				,根据提示信息操作。
+				<br />
+				<br />
+				单击
+				<确定>
+				按钮完成本次“销户”操作。
+				<br />
+				<br />
+				单击
+				<取消>
+				按钮，放弃本次“销户”操作。
+				<br />
+				<br />
+				销户不可恢复，若是该用户要恢复，需要另外开户。
+				<br />
+			</p>
+		</div>
+
+		<div id="div21" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;地址信息</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 地址信息
+				<br />
+			</p>
+			<p class="fontset">
+				单击首页中的【地址信息】，进入地址信息主页面 （如下图）：
+				<br />
+				<br />
+				<img src="dizhixinx.png" class="tupian" />
+				<br />
+				<br />
+				上图所显示的树状列表是地址信息的树状结构，此结构是按照国家的行政区划代码来划分。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				树状结构分为省/市/区/街/小/楼/单：第一级是省份，第二级是城市，第三级是区/县，第四级是街道办、城镇，第五级是小区，第六级是楼栋，第七级是单元，第八级是房间。点击“省”链接，显示的是省份下的城市信息；点击“市”链接，显示的是市内区/县的信息；点击“区”链接，显示的是区/县内街道办或城镇的信息；点击“街”链接，显示的是街道办或城镇内的小区信息；点击“小”链接，显示的是小区内的楼栋信息；点击“楼”链接，显示的是楼栋内的单元信息；点击“单”链接，显示的是单元内的房间信息。				
+				<br />
+				<br />
+				树状结构为省/市/区/街的这四级的数据，在系统初始化的时候，按照当地的行政区划代码数据将数据初始化到数据库中，不需要在系统中添加。小/楼/单/室这四级数据，根据系统的使用情况，需要在系统中添加数据。				
+				<br />
+				<br />
+				树状结构的节点过多，可根据当地情况进行初始化，具体操作可联系管理人员进行操作。
+			</p>
+		</div>
+
+		<div id="div70" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;小区管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 小区管理
+				<br />
+			</p>
+			<p class="fontset">
+				“小区管理”是对使用该系统的小区进行管理，可以进行新增、修改、删除操作。
+				<br />
+				<br />
+				通过单击左边菜单的【省/市/区/街】，可以进入小区信息列表页面（如下图）：
+
+				<br />
+				<br />
+				<img src="xiaoquguanli.png" class="tupian1" />
+				<br />
+				<br />
+
+			</p>
+			<p class="fontset">
+				<strong>☞ 新增小区信息</strong>
+				<br />
+				<br />
+				通过单击小区信息列表页中的
+				<img src="xinz.png" />
+				按钮，可以进入新增小区信息页面（如下图）：
+				<br />
+				<br />
+				<img src="tjxqxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				小区名称：必填，2-32位字符，小区名称在同一街道办不能重复。
+				<br />
+				<br />
+				备 注：填写小区的备注信息，最长不超过128个字符。
+				<br />
+				<br />
+				用户录入完相关信息后，单击
+				<提交>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次“新增”输入的内容。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 修改小区信息</strong>
+				<br />
+				<br />
+				通过单击小区信息列表页面中任意记录后的
+				<编辑>
+				链接，可以进入该记录的修改页面（如下图）：
+				<br />
+				<br />
+				<img src="xgxqxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				小区名称：必填，2-32位字符，小区名称在同一街道办不能重复。
+				<br />
+				<br />
+				备 注：填写小区的备注信息，最长不超过128个字符。
+				<br />
+				<br />
+				录入完相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次操作修改的内容。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 删除小区信息</strong>
+				<br />
+				<br />
+				通过单击小区信息列表页面中任意记录后
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的小区中有楼栋存在，则会提示“请删除小区下的楼栋”， 该记录将不会被删除。
+				<br />
+				<br />
+				如果要删除的小区中没有楼栋存在，则会提示“删除小区信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+
+			<p class="fontset">
+				<strong>☞ 批量删除小区信息</strong>
+				<br />
+				<br />
+				在小区信息列表页面中批量勾选任意多条记录，然后单击
+				<img src="delete.png" />
+				按钮，可以对这些记录进行删除操作。当单击
+				<img src="delete.png" />
+				按钮时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的小区中有楼栋存在，则会提示“请删除小区下的楼栋”， 该记录将不会被删除。
+				<br />
+				<br />
+				如果要删除的小区中没有楼栋存在，则会提示“删除小区信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 批量上传地址信息</strong>
+				<br />
+				<br />
+				批量上传地址信息功能只针对【小/楼/单/室】这些节点的数据，此功能是为了方便热力公司批量上传用户地址信息而设计，只有街道办才可以使用此功能。此功能在小区信息列表页面中如下图所示：
+				<br />
+				<br />
+				<img src="plscdz.png" />
+				<br />
+				<br />
+			     上传文档仅支持txt格式，文档各个字段用英文（半角）逗号分隔。				
+			    <br />
+				<br />
+				文档格式：小区,楼栋,单元,房间号,面积数,户型
+				<br />
+				<br />
+				点击【浏览…】，选择地址信息文档。文档选择后，再单击【批量上传】按钮即可。上传时间与上传数据量大小成正比。若是上传失败，请检查文档内容是否符合文档格式要求。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div71" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;楼栋管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 楼栋管理
+				<br />
+			</p>
+			<p class="fontset">
+				“楼栋管理”是对使用该系统的小区下的楼栋进行管理，可以进行新增、修改、删除的操作。
+				<br />
+				<br />
+				通过单击左边树结构中的【省/市/区/街/小】 “小区名称”链接，可以进入楼栋信息列表页面（如下图）：
+				<br />
+				<br />
+				<img src="ldxx.jpg" class="tupian1" />
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 新增楼栋信息</strong>
+				<br />
+				<br />
+				通过单击楼栋信息列表页面中的
+				<img src="xinz.png" />
+				按钮，可以进入新增楼栋信息页面（如下图）：
+				<br />
+				<br />
+
+				<img src="tjldxx.jpg" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				楼栋名称：必填，2-32位字符，楼栋名称在同一小区下不能重复。
+				<br />
+				<br />
+				备 注：填写楼栋的备注信息，最长不超过128个字符。
+				<br />
+				<br />
+				用户录入完相关信息后，单击
+				<提交>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次“新增”输入的内容。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 修改楼栋信息</strong>
+				<br />
+				<br />
+				通过单击楼栋信息列表页面中任意记录后的
+				<编辑>
+				链接，可以进入该记录的修改页面（如下图）：
+				<br />
+				<br />
+				<img src="xgldxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				楼栋名称：必填，2-32位字符，楼栋名称在同一小区下不能重复。
+				<br />
+				<br />
+				备 注：填写楼栋的备注信息，最长不超过128个字符。
+				<br />
+				<br />
+
+				录入完相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，重置本次操作修改的内容。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 删除楼栋信息</strong>
+				<br />
+				<br />
+				通过单击楼栋信息列表页面中任意记录后
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的楼栋中有房间存在，则会提示“请先删除此楼栋下的房间”， 该记录将不会被删除。
+				<br />
+				<br />
+				如果要删除的楼栋中没有房间存在，则会提示“删除楼栋信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 批量删除楼栋信息</strong>
+				<br />
+				<br />
+				在楼栋信息列表页面中批量勾选任意多条记录，然后单击删除按钮，可以对这些记录进行删除操作。当单击删除按钮时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的楼栋中有房间存在，则会提示“请先删除此楼栋下的房间”， 该记录将不会被删除。
+				<br />
+				<br />
+				如果要删除的楼栋中没有房间存在，则会提示“删除楼栋信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+
+		</div>
+
+		<div id="div72" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;房间管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 房间管理
+				<br />
+			</p>
+			<p class="fontset">
+				“房间管理”是对使用该系统的楼栋下的房间进行管理，可以进行新增、修改、删除的操作。
+				<br />
+				<br />
+				通过单击左边树结构中的【省/市/区/街/小/楼】 “楼栋名称”链接，可以进入房间信息列表页面（如下图）：
+				<br />
+				<br />
+				<img src="roominfo.png" class="tupian1" />
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 新增房间信息</strong>
+				<br />
+				<br />
+				通过单击房间信息列表页面中的
+				<img src="xinz.png" />
+				按钮，可以进入新增房间信息页面（如下图）：
+				<br />
+				<br />
+				<img src="tjfjxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				房间名称：必填，2-32位字符，房间名称在同一楼栋下不能重复。
+				<br />
+				<br />
+				面 积 数：必填，1-20位字符，单位是㎡（平方米）。
+				<br />
+				<br />
+				户 型：必填，2-32个字符。
+				<br />
+				<br />
+				备注信息：填写楼栋的备注信息，最长不超过128个字符。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击
+				<提交>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次“新增”输入的内容。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 修改房间信息</strong>
+				<br />
+				<br />
+				通过单击楼栋信息列表页面中任意记录后的
+				<编辑>
+				链接，可以进入该记录的修改页面（如下图）：
+				<br />
+				<br />
+				<img src="xgfjxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				楼栋名称：必填，2-32位字符，楼栋名称在同一小区下不能重复。
+				<br />
+				<br />
+				备 注：填写楼栋的备注信息，最长不超过128个字符。
+				<br />
+				<br />
+				录入完相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，重置本次操作修改的内容。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 删除房间信息</strong>
+				<br />
+				<br />
+				通过单击房间信息列表页面中任意记录后
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的房间中有表计存在，则会返回提示信息，如：“该房间已关联表计信息，不能进行删除操作”，如下图， 该记录将不会被删除。
+				<br />
+				<br />
+				<img src="glbjbnsc.png" />
+				<br />
+				<br />
+				如果要删除的房间中没有表计存在，则会提示“删除房间信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 批量删除房间信息</strong>
+				<br />
+				<br />
+				在房间信息列表页面中批量勾选任意多条记录，然后单击
+				<img src="delete.png" />
+				按钮，可以对这些记录进行删除操作。当单击
+				<img src="delete.png" />
+				按钮时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的房间中有表计存在，则会返回提示信息，如：“该房间已关联表计信息，不能进行删除操作”，如下图， 该记录将不会被删除。
+				<br />
+				<br />
+				<img src="glbjbnsc.png" />
+				<br />
+				<br />
+				如果要删除的楼栋中没有房间存在，则会提示“删除房间信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+		</div>
+		<div id="div73" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;进入地图</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 进入地图
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击客户信息页面中的
+				<img src="jinruditu.png" />
+				按钮，可以进入地址信息的地图页面（如下图）：
+				<br />
+				<br />
+				<img src="mapinfo.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				回到地图中心：地图返回到设置的地图中心。
+				<br />
+				<br />
+				取消编辑操作：取消地图上所有未完成编辑的操作。
+				<br />
+				<br />
+				返回：返回到地址信息列表中。
+				<br />
+				<br />
+				首页：返回到系统首页页面。
+				<br />
+				<br />
+				右键菜单
+				<br />
+				<br />
+				放大：放大地图的显示比例。
+				<br />
+				<br />
+				缩小：缩小地图的显示比例。
+				<br />
+				<br />
+				放置到最大级：放大地图到可视效果最大的显示比例。
+				<br />
+				<br />
+				放置到最小级：缩小地图到可视效果最小的显示比例。
+				<br />
+				<br />
+				设置为地图中心：设置该地点为地图中心。
+				<br />
+				<br />
+				楼栋操作：
+				<br />
+				<br />
+				拖拽：将树状结构中的楼栋拖动到地图上相应的地理位置。
+				<br />
+				<br />
+				移动：将地图上的楼栋状态修改为可移动，修改地图位置。
+				<br />
+				<br />
+				保存：保存楼栋的地图位置信息。
+				<br />
+				<br />
+				清除：清除楼栋在地图上的图样。
+				<br />
+				<br />
+				取消：取消楼栋未完成的编辑操作。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div22" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;价格方案&nbsp;->&nbsp;定额价格方案</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 定额价格方案
+				<br />
+			</p>
+			<p class="fontset">
+				“价格方案”是对系统的价格方案进行管理，可以查看价格方案信息，新增价格方案，编辑。
+				<br />
+				<br />
+				价格方案包含三种：定额价格方格、阶梯价格方案一、阶梯价格方案二。
+				<br />
+				<br />
+				单击首页中的【价格方案】，进入价格方案管理页面 （如下图）：
+				<br />
+				<br />
+				<img src="jiagefangan.png" class="tupian1" />
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 定额价格方案</strong>
+				<br />
+				<br />
+				定额价格方案里由基础费和能量费两部分构成。
+				<br />
+				<br />
+				定额价格算法公式如下：定额价格=基础费+能量费。
+				<br />
+				<br />
+				基础费=面积数×基础费单价×时间（月）。
+				<br />
+				<br />
+				能量费=耗热量×用热单价。
+				<br />
+				<br />
+				选择
+				<定额价格方案>
+				，如下图：
+				<br />
+				<br />
+				<img src="dejiagefangan.png" class="tupian1" />
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				<strong>☞ 新增定额价格方案</strong>
+				<br />
+				<br />
+				单击
+				<新增>
+				按钮，添加定额价格方案（如下图）：
+				<br />
+				<br />
+				<img src="tjdejgfa.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				方案名称：必填，1~100个字符。
+				<br />
+				<br />
+				启用日期：必填，启用日期只能选大于当前日期。
+				<br />
+				<br />
+				基础费单价：必填，单位：元/月/平方米。
+				<br />
+				<br />
+				用热单价：必填，单位：元/KWh。
+				<br />
+				<br />
+				状态：预定方案。
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				
+				价格方案里，系统会自动判断方案的启用日期，若预定方案的启用日期已到，原来的当前方案自动放弃，并标注为“过期方案”，并将启用日期已到的预定方案设为当前方案。
+				<br />
+				<br />
+				 系统中任何时候只能执行一套当前方案。
+				<br />
+				<br />
+				 在同一个启用日期中，只能添加一套预定方案。
+				<br />
+				<br />
+				 启用日期必须大于当前日期。
+				<br />
+				<br />
+				 方案名称不能与已有的相同。
+				<br />
+				<br />
+				用户录入完相关信息后，单击
+				<提交>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次“新增”操作的内容。
+				<br />
+				<br />
+
+				<strong>☞ 修改定额价格方案</strong>
+				<br />
+				<br />
+				定额价格方案只能对状态是预定方案进行修改，当前方案与过期方案都不能进行修改。
+				<br />
+				<br />
+				通过单击预定方案记录后的
+				<编辑>
+				链接，可以进入该方案的修改页面（如下图）：
+				<br />
+				<br />
+				<img src="xgdejgfa.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				方案名称：必填，1~100个字符。
+				<br />
+				<br />
+				启用日期：必填发、，启用日期只能选大于当前日期。
+				<br />
+				<br />
+				基础费单价：必填，单位：元/月/平方米。
+				<br />
+				<br />
+				用热单价：必填，单位：元/KWh。
+				<br />
+				<br />
+				录入完相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，重置本次操作修改的内容。
+				<br />
+				<br />
+
+				<strong>☞ 删除定额价格方案</strong>
+				<br />
+				<br />
+				定额价格方案状态过期方案、预定方案的可以进行删除操作。当前方案不可以删除。
+				<br />
+				<br />
+				通过单击定额价格方案列表页面操作列中的
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除定额价格方案成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div74" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;价格方案&nbsp;->&nbsp;阶梯价格方案一</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 阶梯价格方案一
+				<br />
+			</p>
+			<p class="fontset">
+				阶梯价格方案一由基础费和阶梯能量费两部分构成。
+				<br />
+				<br />
+				阶梯价格算法公式如下：阶梯价格=基础费+阶梯能量费。
+				<br />
+				<br />
+				基础费=面积数×基础费单价×时间（月）。
+				<br />
+				<br />
+				能量费=耗热量×阶梯单价。
+				<br />
+				<br />
+				举例如下：
+				<br />
+				<br />
+				<img src="jietierjuli.jpg" />
+				<br />
+				<br />
+				假定某用户在一个供暖季消耗了25GJ热量，则他的用热费用为25c+d。
+				<br />
+				<br />
+
+				选择
+				<阶梯价格方案一>
+				，如下图：
+				<br />
+				<br />
+				<img src="jietijiagefayi.png" class="tupian1" />
+				<br />
+				<br />
+
+				<strong>☞ 新增阶梯价格方案一</strong>
+				<br />
+				<br />
+				单击
+				<新增>
+				按钮，添加阶梯价格方案一（如下图）：
+				<br />
+				<br />
+				<img src="tjjtjgfa.png" class="tupian" />
+				<br />
+				<br />
+
+				阶梯价格方案一是按耗热量的不同进行阶梯性定价的，系统中通过
+				<img src="tianjiahang.png" />
+				添加阶梯信息，
+				<img src="deleterow.png" />
+				删除阶梯信息。举例（如下图），耗热量在0~100kwh，用热单价为0.8元；耗热量在100~300kwh，用热单价为1元；耗热量在300~500kwh，用热单价为1.2元。
+				<br />
+				<br />
+				<img src="haoreliang.png" />
+				<br />
+				<br />
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				方案名称：必填，1~100个字符。
+				<br />
+				<br />
+				启用日期：必填，启用日期只能选大于当前日期。
+				<br />
+				<br />
+				状态：预定方案。
+				<br />
+				<br />
+				基础费单价：必填，单位：元/月/平方米。
+				<br />
+				<br />
+				用热单价：必填，单位：元/KWh。
+				<br />
+				<br />
+				耗热量：必填，只能填入数字。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				
+				价格方案里，系统会自动判断方案的启用日期，若是预定方案的启用日期已到，原来的当前方案自动放弃，并标注为“过期方案”，并将启用日期已到的预定方案设置为当前方案。
+				<br />
+				<br />
+				 系统中任何时候只能执行一套当前方案。
+				<br />
+				<br />
+				 在同一个启用日期中，只能添加一套预定方案。
+				<br />
+				<br />
+				 启用日期必须大于当前日期。
+				<br />
+				<br />
+				 方案名称不能与已有的相同。
+				<br />
+				<br />
+				用户录入完相关信息后，单击 完成本次“新增”操作。
+				<br />
+				<br />
+
+				<strong>☞ 修改阶梯价格方案一</strong>
+				<br />
+				<br />
+				阶梯价格方案一只能对状态是预定方案的进行修改，当前方案与过期方案都不能进行修改。
+				<br />
+				<br />
+				通过单击预定方案记录后的
+				<编辑>
+				链接，可以进入该方案的修改页面（如下图）：
+				<br />
+				<br />
+
+				<img src="xgjtjgfa1.png" class="tupian" />
+				<br />
+				<br />
+				阶梯价格方案一是按耗热量的不同进行阶梯性定价的，系统中通过
+				<img src="tianjiahang.png" />
+				添加阶梯信息，
+				<img src="deleterow.png" />
+				删除阶梯信息。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				方案名称：必填，1~100个字符。
+				<br />
+				<br />
+				启用日期：必填，启用日期只能选大于当前日期。
+				<br />
+				<br />
+				状态：预定方案。
+				<br />
+				<br />
+				基础费单价：必填，单位：元/月/平方米。
+				<br />
+				<br />
+				用热单价：必填，单位：元/KWh。
+				<br />
+				<br />
+				耗热量：必填，只能填入数字。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击
+				<img src="baocun.png" />
+				完成本次“修改”操作。
+				<br />
+				<br />
+
+				<strong>☞ 删除阶梯价格方案一</strong>
+				<br />
+				<br />
+				阶梯价格方案一状态过期方案、预定方案的可以进行删除操作。当前方案不可以删除。
+				<br />
+				<br />
+				通过单击阶梯价格方案一列表页面操作列中的
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除阶梯价格方案一成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div75" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;价格方案&nbsp;->&nbsp;阶梯价格方案二</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 阶梯价格方案二
+				<br />
+			</p>
+			<p class="fontset">
+				阶梯价格方案二由基础费和阶梯能量费两部分构成。
+				<br />
+				<br />
+				阶梯价格算法公式如下：阶梯价格=基础费+阶梯能量费。
+				<br />
+				<br />
+				基础费=面积数×基础费单价×时间（月）。
+				<br />
+				<br />
+				能量费=Σ（每一阶耗热量*该阶段阶梯单价）。
+				<br />
+				<br />
+				举例如下：
+				<br />
+				<br />
+				<img src="jietierjuli.jpg" />
+				<br />
+				<br />
+				假定某用户在一个供暖季消耗了25GJ热量，则他的用热费用为10a+10b+5c+d。
+				<br />
+				<br />
+				选择
+				<阶梯价格方案二>
+				，如下图：
+				<br />
+				<br />
+				<img src="jietijiagefa2.png" class="tupian1" />
+				<br />
+				<br />
+
+				<strong>☞ 新增阶梯价格方案二</strong>
+				<br />
+				<br />
+				单击
+				<新增>
+				按钮，添加阶梯价格方案二（如下图）：
+			
+				<br />
+				<br />
+
+				阶梯价格方案二是按耗热量的不同进行阶梯性定价的，系统中通过
+				<img src="tianjiahang.png" />
+				添加阶梯信息，
+				<img src="deleterow.png" />
+				删除阶梯信息。举例（如下图），耗热量在0~100kwh，用热单价为0.8元；耗热量在100~300kwh，用热单价为1元；耗热量在300~500kwh，用热单价为1.2元。
+				<br />
+				<br />
+				<img src="haoreliang.png" />
+				<br />
+				<br />
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				方案名称：必填，1~100个字符。
+				<br />
+				<br />
+				启用日期：必填，启用日期只能选大于当前日期。
+				<br />
+				<br />
+				状态：预定方案。
+				<br />
+				<br />
+				基础费单价：必填，单位：元/月/平方米。
+				<br />
+				<br />
+				用热单价：必填，单位：元/KWh。
+				<br />
+				<br />
+				耗热量：必填，只能填入数字。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				
+				价格方案里，系统会自动判断方案的启用日期，若是预定方案的启用日期已到，原来的当前方案自动放弃，并标注为“过期方案”，并将启用日期已到的预定方案设置为当前方案。
+				<br />
+				<br />
+				 系统中任何时候只能执行一套当前方案。
+				<br />
+				<br />
+				 在同一个启用日期中，只能添加一套预定方案。
+				<br />
+				<br />
+				 启用日期必须大于当前日期。
+				<br />
+				<br />
+				 方案名称不能与已有的相同。
+				<br />
+				<br />
+				用户录入完相关信息后，单击 完成本次“新增”操作。
+				<br />
+				<br />
+
+				<strong>☞ 修改阶梯价格方案二</strong>
+				<br />
+				<br />
+				阶梯价格方案二只能对状态是预定方案的进行修改，当前方案与过期方案都不能进行修改。
+				<br />
+				<br />
+				通过单击预定方案记录后的
+				<编辑>
+				链接，可以进入该方案的修改页面（如下图）：
+				<br />
+				<br />
+				<img src="xgjtjgfa2.png" class="tupian1" />
+				<br />
+				<br />
+				阶梯价格方案二是按耗热量的不同进行阶梯性定价的，系统中通过 添加阶梯信息， 删除阶梯信息。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				： 方案名称：必填，1~100个字符。
+				<br />
+				<br />
+				启用日期：必填，启用日期只能选大于当前日期。
+				<br />
+				<br />
+				状态：预定方案。
+				<br />
+				<br />
+				基础费单价：必填，单位：元/月/平方米。
+				<br />
+				<br />
+				用热单价：必填，单位：元/KWh。
+				<br />
+				<br />
+				耗热量：必填，只能填入数字。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击 完成本次“修改”操作。
+				<br />
+				<br />
+
+				<strong>☞ 删除阶梯价格方案二</strong>
+				<br />
+				<br />
+				阶梯价格方案二状态过期方案、预定方案的可以进行删除操作。当前方案不可以删除。
+				<br />
+				<br />
+				通过单击阶梯价格方案二列表页面操作列中的
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除阶梯价格方案二成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div23" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;负荷曲线</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 负荷曲线
+				<br />
+			</p>
+			<p class="fontset">
+				负荷，指的是单个表计在单位时间内消耗的能量。
+				<br />
+				<br />
+				单击首页中的【负荷曲线】，进入负荷曲线页面 （如下图）：
+				<br />
+				<br />
+				<img src="fuhequxian.png" class="tupian" />
+				<br />
+				左边的树状结构的上级表信息包括【热力公司/换能站（可能有多级）/楼栋表】等节点。
+				<br />
+				<br />
+                  户用表信息包括【楼栋表/户用表】两级节点。这里的楼栋表节点是上级表信息中选中的楼栋表节点。				
+				<br />
+				<br />
+				选择要分析的表计，然后在开始时间与结束时间中选择要分析的时间段，再单击<查询>按钮，完成负荷曲线报表的分析。<br />
+				<br />
+				<img src="shuoming.gif" /> ：<br />
+				<br />
+时间单位：默认为月，包括：时、日、月、年。<br /><br />
+				
+开始时间：时间格式为yyyy-MM-dd HH:mm:ss，如：2013-08-16 00:00:00。<br /><br />
+结束时间：时间格式为yyyy-MM-dd HH:mm:ss，如：2013-08-16 00:00:00。<br /><br />
+
+注意：<br /><br />
+开始时间和结束时间不能为空，否则提示“请选择开始时间和结束时间”。<br /><br />
+时间单位：时 <查询小时数不能超过24小时>。<br /><br />
+时间单位：日 <查询天数不能超过30天>。<br /><br />
+时间单位：月 <查询月数不能超过12个月>。<br /><br />
+时间单位：年 <查询年数不能超过5年>。<br /><br />
+				
+			</p>
+		</div>
+
+		<div id="div24" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;系统管理&nbsp;->&nbsp;角色管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 角色管理
+				<br />
+			</p>
+			<p class="fontset">
+				⊕功能：在用户的日常使用过程中，需要分配一些具有不同权限级别的用户，为避免对每个用户单独设置，可以在角色管理中设置一类具有一定权限的角色，再将角色设置给某些用户即可。
+				<br />
+				<br />
+				⊕包括开户、用户变更、档案管理、销户、报警信息、表计状态、集中器状态、价格方案、预收款、预收款统计、预收款参数设置、收费、收费统计、收费参数设置、地址信息、实时抄读、历史数据、负荷曲线、正常用量统计、异常用量统计、管网损耗、角色管理、操作员管理、日志管理、数据库备份与还原、密码修改、表计型号、表计管理、集中器初始化参数、集中器管理这些功能模块的使用权限。
+				<br />
+				<br />
+				⊕系统默认的超级用户拥有全部权限，超级用户可按需要建立新用户并设置相应权限。
+				<br />
+				<br />
+			</p>
+			<p class="fontset">
+				“角色管理”是对使用该系统的角色进行管理，可以进行新增、修改、删除操作。
+				<br />
+				<br />
+				通过单击【系统管理/角色管理】按钮，可以进入角色管理信息列表页面（如下图）：
+				<br />
+				<br />
+
+				<img src="jiaoseguanli.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				超级管理员：此角色是系统中默认的角色，拥有系统的所有权限，此角色不能进行修改与删除等操作。
+				<br />
+				<br />
+				<strong>☞ 新增角色信息</strong>
+				<br />
+				<br />
+				通过单击角色信息列表页面中的
+				<img src="xinz.png" />
+				按钮，可以进入新增角色信息页面（如下图）：
+				<br />
+				<br />
+
+				<img src="tjjsxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				角色名称：必填，2-16位字符，角色名称不能重复。
+				<br />
+				<br />
+				角色权限：左边有待选权限，右边为已选权限，已选权限不能为空。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击
+				<提交>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次“新增”操作的内容。
+				<br />
+				<br />
+				<strong>☞ 修改角色信息</strong>
+				<br />
+				<br />
+				通过单击角色信息列表页面中任意记录后的
+				<编辑>
+				链接，可以进入该记录的修改页面（如下图）：
+				<br />
+				<br />
+
+				<img src="jiaosexiugai.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				角色名称：必填，2-16位字符，角色名称不能重复。
+				<br />
+				<br />
+				角色权限：左边有待选权限，右边为已选权限，已选权限不能为空。
+				<br />
+				<br />
+				录入完相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，重置本次操作修改的内容。
+				<br />
+				<br />
+				<strong>☞ 删除角色信息</strong>
+				<br />
+				<br />
+				通过单击角色信息列表页面中任意记录后
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的角色已经关联了操作员，则会提示“请先删除角色中的操作员再进行删除”， 该记录将不会被删除。
+				<br />
+				<br />
+				如果要删除的角色没有关联操作员，则会提示“删除角色信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+				<strong>☞ 批量删除角色信息</strong>
+				<br />
+				<br />
+				在角色信息列表页面中批量勾选任意多条记录(除了超级管理员)，然后单击
+				<img src="delete.png" />
+				按钮，可以对这些记录进行删除操作。当单击
+				<img src="delete.png" />
+				按钮时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，如果要删除的角色中存在已经关联了操作员的角色，则会提示“请先删除角色中的操作员再进行删除”， 该记录将不会被删除。
+				<br />
+				<br />
+				如果要删除的角色中没有关联操作员，则会提示“删除角色信息成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div25" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;系统管理&nbsp;->&nbsp;操作员管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 操作员管理
+				<br />
+			</p>
+			<p class="fontset">
+				“操作员管理”是对使用该系统的操作员信息进行管理，可以进行新增、修改、删除操作。
+				<br />
+				<br />
+				通过单击【系统管理/操作员管理】按钮，可以进入操作员管理信息列表页面（如下图）：
+				<br />
+				<br />
+				<img src="caozuoyuanguanli.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				admin：此角色是系统中默认的角色，拥有系统的所有权限，此角色不能进行修改与删除等操作,初始化密码为：123456。
+				<br />
+				<br />
+				<strong>☞ 新增操作员信息</Strong>
+				<br />
+				<br />
+				通过单击操作员信息列表页面中的 按钮，可以进入新增操作员信息页面（如下图）：
+				<br />
+				<br />
+
+				<img src="tjczyxx.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				用 户 名：必填，2-16位字符，操作员名称不能重复。
+				<br />
+				<br />
+				登陆密码：必填，6-16位字符。
+				<br />
+				<br />
+				确认密码：必填，6-16位字符，确认密码要一样，否则会弹出提示信息“登陆密码与确认密码不一致，请重新输入…”。
+				<br />
+				<br />
+				角 色：操作员要继承相应地角色，才能拥有相应的系统权限。
+				<br />
+				<br />
+				有 效 性：默认为有效，若设置为无效，使用该操作员登陆的时候，将提示该用户无效。
+				<br />
+				<br />
+
+				录入相关信息后，单击
+				<提交>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次“新增”操作的内容。
+				<br />
+				<br />
+				<strong>☞ 修改操作员信息</Strong>
+				<br />
+				<br />
+				通过单击操作员信息列表页面中任意记录后的
+				<编辑>
+				链接，可以进入该记录的修改页面（如下图）：
+				<br />
+				<br />
+
+				<img src="czyxxxg.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				用 户 名：必填，2-16位字符，用户名不能重复。
+				<br />
+				<br />
+				登陆密码：必填，6-16位字符(密码为空即为旧密码，不为空则为新密码)。
+				<br />
+				<br />
+				确认密码：必填，6-16位字符，确认密码要一样，否则会弹出提示信息“登陆密码与确认密码不一致，请重新输入…”。
+				<br />
+				<br />
+				角 色：操作员要继承相应地角色，才能拥有相应的系统权限。
+				<br />
+				<br />
+				有 效 性：默认为有效，若设置为无效，使用该操作员登陆的时候，将提示该用户无效。
+				<br />
+				<br />
+
+				录入相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，重置本次操作修改的内容。
+				<br />
+				<br />
+				<strong>☞ 删除操作员信息</Strong>
+				<br />
+				<br />
+				通过单击操作员信息列表页面中任意记录后
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除操作员成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+				<strong>☞ 批量删除操作员信息</Strong>
+				<br />
+				<br />
+				在操作员信息列表页面中批量勾选任意多条记录（除了admin），然后单击
+				<img src="delete.png" />
+				按钮，可以对这些记录进行删除操作。当单击 按钮时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除操作员成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div26" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;系统管理&nbsp;->&nbsp;日志管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 日志管理
+				<br />
+			</p>
+			<p class="fontset">
+				“日志管理”是对使用该系统的所有操作进行记录管理，可以进行查询、删除操作。
+				<br />
+				<br />
+				通过单击【系统管理/日志管理】按钮，可以进入日志管理信息列表页面（如下图）：
+				<br />
+				<br />
+				<img src="caozuoyuanrizhi.png" class="tupian" />
+				<br />
+				<br />
+				<strong>☞ 查询日志信息</strong>
+				<br />
+				<br />
+				在日志管理信息列表中，用户可以根据时间段以及操作员名称（用户名）来查询日志的信息。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				开始时间：单击开始时间后的文本框控件，选择开始时间，开始时间不能大于当前时间。
+				<br />
+				<br />
+				结束时间：单击开始时间后的文本框控件，选择结束时间，结束时间不能大于当前时间。
+				<br />
+				<br />
+				操作员名称（用户名）：根据输入的操作员名称（用户名）进行查询日志信息。
+				<br />
+				
+			</p>
+		</div>
+
+		<div id="div27" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;数据库备份与恢复</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 数据库备份与恢复
+				<br />
+			</p>
+			<p class="fontset">
+				“数据备份与恢复”是对系统的数据进行备份与恢复管理。
+				<br />
+				<br />
+				通过单击【系统管理/数据备份与恢复】按钮，可以进入数据备份与恢复管理信息列表页面（如下图）：
+				<br />
+				<br />
+				<img src="sjbfyhf.png" class="tupian" />
+				<br />
+				<br />
+				数据库备份计划：
+				<br />
+				<br />
+				系统采用SQL Server 2005的完全备份与差异备份相结合的策略，保证用户数据的安全性。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				选择备份路径：数据库所在的服务器上的路径。
+				<br />
+				<br />
+				完整备份周期：每周，指的是在每周的星期天进行完整备份，每月，指的的在每个月的一号进行完
+				<br />
+				<br />
+				整备份，完整备份的时间点与差异备份的时间点一样。
+				<br />
+				<br />
+				差异备份时间间隔（每天一次）：表示每天都进行差异备份，范围0~23，单位是小时。
+				<br />
+				<br />
+				数据库恢复：
+				<br />
+				<br />
+				进行差异备份的恢复，与数据库的恢复模式有关，数据库的恢复模式需要设置成完整恢复模式或批量日志恢复模式（推荐使用完整模式）。
+				<br />
+				<br />
+				数据库恢复的时候，只需要选择数据库备份的时间，点击
+				<查询>
+				按钮，会自动将差异备份文件、差异备份日志文件、完整备份文件查询出来，然后点击
+				<数据恢复>
+				即可。
+				<br />
+				<br />
+			</p>
+
+		</div>
+
+		<div id="div28" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;系统管理&nbsp;->&nbsp;密码修改</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 密码修改
+				<br />
+			</p>
+			<p class="fontset">
+				“密码修改”是对正在使用该系统的用户，进行密码修改操作。
+				<br />
+				<br />
+				通过单击【系统管理/密码修改】按钮，可以进入密码修改页面（如下图）：
+				<br />
+				<br />
+				<img src="mimaxiugai.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				新 密 码：必填，6-16位字符。
+				<br />
+				<br />
+				密码确认：必填，6-16位字符，必须要与新密码一样，否则提示“确认密码输入不一致，请重新输入…”。
+				<br />
+				<br />
+				录入完相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，重置本次操作修改的内容。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div29" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;表计型号</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 表计型号
+				<br />
+			</p>
+			<p class="fontset">
+				单击首页中的【表计型号】，进入表计型号管理页面 （如下图）：
+				<br />
+				<br />
+				<img src="biaojixinghao.png" class="tupian1" />
+				<br />
+				<br />
+				<strong>☞ 新增表计型号</strong>
+				<br />
+				<br />
+				通过单击表计型号信息列表页面中的
+				<img src="xinz.png" />
+				按钮，可以进入新增表计型号页面（如下图）：
+				<br />
+				<br />
+
+				<img src="tjbjxh.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				表计型号：表计型号的描述，必填，2-10位字符。
+				<br />
+				<br />
+				仪表类型：必填，2个字符，如，热量表：20。
+				<br />
+				<br />
+				厂商名称：必填，2-10位字符，如，广宁。
+				<br /><br />
+				厂商编号：必填，每个框2个数字，比如HOD为72-79-68。
+				<br />
+				<br />
+				通信规约：表计与集中器之间的通信规约，CJ/T188-2004或HOD，HOD是对188的扩展协议。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击
+				<提交>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				，重置本次“新增”操作的内容。
+				<br />
+				<br />
+
+				<strong>☞ 修改表计型号</strong>
+				<br />
+				<br />
+				通过单击表计型号信息列表页面中任意记录后的
+				<编辑>
+				链接，可以进入该记录的修改页面（如下图）：
+				<br />
+				<br />
+
+				<img src="xgbjxh.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				表计型号：表计型号的描述，必填，2-10位字符。
+				<br />
+				<br />
+				仪表类型：必填，2个字符，如，热量表：20。
+				<br />
+				<br />
+				厂商名称：必填，2-10位字符，如，广宁。
+				<br /><br />
+				厂商编号：必填，每个框2个数字，比如HOD为72-79-68。
+				<br />
+				<br />
+				通信规约：表计与集中器之间的通信规约，CJ/T188-2004或HOD，HOD是对188的扩展协议。
+				<br />
+				<br />
+
+				录入完相关信息后，单击
+				<提交>
+				按钮完成本次“修改”操作。
+				<br />
+				<br />
+				单击
+				<重置>
+				按钮，重置本次操作修改的内容。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div30" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;表计报警信息</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 表计报警信息
+				<br />
+			</p>
+
+			<p class="fontset">
+			选择<表计报警信息>，如下图：<br /><br />
+			 
+			<img src="biaojibaojinxinx.jpg" class="tupian"/><br /><br />
+			
+			<strong>☞ 查询表计报警信息</strong>	<br /><br />
+			
+			查询条件：系统每隔一分钟会自动更新表计的报警信息。<br /><br />
+			表计报警信息内容包括：表号、地址、电池状态、在线状态、内存状态、流量传感器状态、供水温度传感器状态、回水温度传感器状态。<br /><br />
+			
+			<strong>☞ 表计打印信息</strong><br /><br />
+			通过单击表计报警信息页面中的 按钮，跳转到打印预览页面，然后单击<print>链接，打印查询出来的表计报警信息（如下图）：
+			 <br /><br />
+			<img src="biaojidayixinx.jpg" class="tupian"/><br /><br />
+			<strong>☞ 进入地图</strong>	<br /><br />
+			通过单击表计报警信息页面中的 按钮，可以进入表计报警信息的地图页面（如下图）：<br /><br />
+			 
+			<img src="biaojidituxinx.jpg" class="tupian"/><br /><br />
+			 <img src="shuoming.gif" />：<br /><br />
+			回到地图中心：地图返回到设置的地图中心。<br /><br />
+			返回：返回到地址信息列表中。<br /><br />
+			首页：返回到系统首页页面。<br /><br />
+			右键菜单<br /><br />
+			放大：放大地图的显示比例。<br /><br />
+			缩小：缩小地图的显示比例。<br /><br />
+			放置到最大级：放大地图到可视效果最大的显示比例。<br /><br />
+			放置到最小级：缩小地图到可视效果最小的显示比例。<br /><br />
+			地图上的图标右键<br /><br />
+			显示报警信息：显示该位置（楼栋）的所有报警的表计信息（如下图）：<br /><br />
+			 
+			<img src="biaojbjxx.jpg"/><br /><br />
+			双击地图上的树状结构中的集中器，可直接定位到该集中器在地图上所处的位置。<br /><br />
+							
+			</p>
+		</div>
+		
+		<div id="div90" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;集中器报警信息</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 集中器报警信息
+				<br />
+			</p>
+
+			<p class="fontset">
+			选择<集中器报警信息>，如下图：<br /><br />
+			 
+			<img src="jzqbjxx.jpg" class="tupian"/><br /><br />
+			
+			<strong>☞ 查询集中器报警信息</strong><br /><br />
+			
+			查询条件：系统每隔一分钟会自动更新集中器的报警信息。<br /><br />
+			集中器报警信息内容包括：集中器编号、安装地址、内存状态、通讯口1、通讯口2、通讯口3、在线状态、GPRS信号。<br /><br />
+			<strong>☞ 打印集中器报警信息</strong><br /><br />
+			通过单击集中器报警信息页面中的 按钮，跳转到打印预览页面，然后单击<print>链接，打印查询出来的集中器报警信息（如下图）：<br /><br />
+			 
+			<img src="dayijizhongqibaojin.jpg" class="tupian1"/><br /><br />
+			<strong>进入地图</strong><br /><br />
+			通过单击集中喊叫报警信息页面中的<进入地图>按钮，可以进入集中器报警信息的地图页面（如下图）：<br /><br />
+			 
+			<img src="jzqdtxx.jpg" class="tupian"/><br /><br />
+			 <img src="shuoming.gif" />：<br /><br />
+			回到地图中心：地图返回到设置的地图中心。<br /><br />
+			返回：返回到地址信息列表中。<br /><br />
+			首页：返回到系统首页页面。<br /><br />
+			右键菜单<br /><br />
+			放大：放大地图的显示比例。<br /><br />
+			缩小：缩小地图的显示比例。<br /><br />
+			放置到最大级：放大地图到可视效果最大的显示比例。<br /><br />
+			放置到最小级：缩小地图到可视效果最小的显示比例。<br /><br />
+			地图上的图标右键<br /><br />
+			显示报警信息：显示该位置（楼栋）的所有报警的集中器信息（如下图）：<br /><br />
+			 
+			<img src="jzqbjxx2.jpg" /><br /><br />
+			双击地图上的树状结构中的集中器，可直接定位到该集中器在地图上所处的位置。<br /><br />
+						
+			</p>
+		</div>
+
+		<div id="div31" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;预收款管理&nbsp;->&nbsp;预收款</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 预收款
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击【预收款管理/预收款】按钮，可以进入预收款操作页面（如下图）：
+				<br />
+				<br />
+
+				<img src="ysk.png" class="tupian" />
+				<br />
+				<br />
+				在进行预收款操作前，需要在【预收款管理/参数设置】中先设置参数，否则，选择房间后，会提示“请先设置预收款参数！”。
+				<br />
+				<br />
+				单击
+				<选择>
+				按钮，将弹出未收过费的房间信息（如下图）：
+				<br />
+				<br />
+
+				<img src="skxzfjxx.png" />
+				<br />
+				<br />
+
+
+				<img src="shuoming.gif" />
+				： 房间号：用户要交费的房间编号。
+				<br />
+				<br />
+				用户姓名：开户时，填写的用户姓名。
+				<br />
+				<br />
+				供暖月数：预收款参数设置中设置的供暖月数。
+				<br />
+				<br />
+				系数单价：预收款参数设置中设置的系数单价。
+				<br />
+				<br />
+				预收款金额：预收款金额=房间面积数×月数×系数单价。
+				<br />
+				<br />
+				是否后付费：如果选择后付费，则预收款金额系统会自动置零。
+				<br />
+				<br />
+				预收款时间：用户交预收款的时间。
+				<br />
+				<br />
+
+				用户确认完相关信息后，单击
+				<提交>
+				，系统会提示用户“是否需要打印收费单”。
+				<br />
+				<br />
+				单击
+				<确定>
+				，系统将会转入打印预览页面，用户选择相应的打印机后，便可打印出预收款凭据，最后系统会提示“预收款成功！。
+				<br />
+				<br />
+				单击
+				<取消>
+				，系统则不会打印预收款凭据，直接返回提示“预收款成功！”。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div32" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;预收款管理&nbsp;->&nbsp;统计分析</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 统计分析
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击【预收款管理/统计分析】按钮，可以进入预收款的统计分析页面（如下图）：
+				<br />
+				<br />
+
+				<img src="ysktjfx.png" class="tupian1" />
+				<br />
+				<br />
+
+				<strong>☞ 已收款明细</strong>
+				<br />
+				<br />
+				选择
+				<已收款明细>
+				，如下图：
+				<br />
+				<br />
+
+				<img src="ysktjfx2.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				开始时间：时间格式为yyyy-MM-dd，如：2013-08-16。
+				<br />
+				<br />
+				结束时间：时间格式为yyyy-MM-dd，如：2013-08-16。
+				<br />
+				<br />
+				是否后付费：根据用户是否后付费的情况选择已收款明细。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				查询已收款明细，需要选择“开始时间”或“结束时间”，结束时间不能大于开始时间。
+				<br />
+				<br />
+				“开始时间”与“结束时间”两者必须选择其中一个，否则弹出提示框“开始时间和结束时间不能同时为空！”。
+				<br />
+				<br />
+				<strong>☞ 未收款明细</strong>
+				<br />
+				<br />
+				选择
+				<未收款明细>
+				，如下图：
+				<br />
+				<br />
+
+				<img src="wskmx.png" class="tupian1" />
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				未收款明细不需要用户设置查询条件，系统会自己统计未收款的用户明细。
+				<br />
+				<br />
+				查询未收款明细前，必须先设置预收款参数，否则查询不到数据。
+				<br />
+				<br />
+
+				<strong>☞ 统计汇总</strong>
+				<br />
+				<br />
+
+				选择
+				<统计汇总>
+				，如下图：
+				<br />
+				<br />
+
+				<img src="tongjihuizong.png" class="tupian"/>
+				<br />
+				<br />
+
+				户数统计汇总
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				红色部分：表示已收款，杠后面表示户数。
+				<br />
+				<br />
+				蓝色部分：表示未收款，杠后面表示户数。
+				<br />
+				<br />
+				绿色部分：表示后付费，杠后面表示户数。
+				<br />
+				<br />
+
+				金额统计汇总
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				黄色部分：表示已收款金额，杠后面表示金额数。
+				<br />
+				<br />
+				绿色部分：表示未收款金额，杠后面表示金额数。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div33" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;预收款管理&nbsp;->&nbsp;参数设置</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 参数设置
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击【预收款管理/参数设置】按钮，可以预收款的参数设置操作页面（如下图）：
+				<br />
+				<br />
+
+				<img src="yskcssz.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				供暖月数：必填，范围在1~12之间。
+				<br />
+				<br />
+				系数单价：必填只能数值数字，包括小数。
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				参数设置必须在预收款之前进行，否则无法预收款。
+				<br />
+				<br />
+				如果不进行参数设置，未收款明细将无法查询。
+				<br />
+				<br />
+				在参数设置完成后，并已经开始收费的中途过程，不允许修改参数设置，否则可能导致统计出错。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div34" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;预收款管理&nbsp;->&nbsp;收费</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 收费
+				<br />
+			</p>
+			<p class="fontset">
+				“收费”是指热力公司在供暖季结束之后，根据用户的耗热情况，收取供暖的费用。
+				<br />
+				<br />
+
+				单击首页中的【收费管理】，进入收费管理页面 （如下图）：
+				<br />
+				<br />
+
+				<img src="sfgl.png" class="tupian" />
+				<br />
+				<br />
+
+				通过单击【收费管理/收费】按钮，可以进入收费操作页面（如下图）：
+				<br />
+				<br />
+					<img src="shoufei.png" class="tupian" />
+				
+				<br />
+				<br />
+				在进行收费操作前，需要在【收费管理/参数设置】中先设置参数，否则，选择房间后，会提示“请先设置收费参数！”。
+				<br />
+				<br />
+				单击
+				<选择>
+				按钮，将弹出未收过费的房间信息（如下图）：
+				<br />
+				<br />
+
+				<img src="skxzfjxx.png" />
+				<br />
+				<br />
+
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				房间号：用户要交费的房间编号。
+				<br />
+				<br />
+				用户姓名：开户时，填写的用户姓名。
+				<br />
+				<br />
+				面积数：房子的面积数，单位：㎡（平方米）。
+				<br />
+				<br />
+				表号：房间中表计的编号。
+				<br />
+				<br />
+				供暖开始累计热量：供暖开始时，表计的累计热量，单位：kwh（千瓦时）。
+				<br />
+				<br />
+				供暖结束累计热量：供暖结束后，表计的累计热量，单位：kwh（千瓦时）。
+				<br />
+				<br />
+				耗热量：供暖季内，用户消耗的热量，单位：kwh（千瓦时）。
+				<br />
+				<br />
+				价格方案：请参看2.9章节的价格方案。
+				<br />
+				<br />
+				预付款金额：预收费中收取的金额。
+				<br />
+				<br />
+				退款金额：若是预付款金额大于应交金额，应退还用户的差值。
+				<br />
+				<br />
+				补交金额：若是应交金额大于预付款金额，用户应补交的差值。
+				<br />
+				<br />
+				应交金额：用户在供暖季内应交的金额。
+				<br />
+				<br />
+				收费方式：请参看收费参数中设置的方式。
+				<br />
+				<br />
+				收费时间：用户收费的时间。
+				<br />
+				<br />
+
+				用户确认完相关信息后，单击
+				<提交>
+				，系统会提示用户“是否需要打印收费单”。
+				<br />
+				<br />
+				单击
+				<确定>
+				，系统将会转入打印预览页面，用户选择相应的打印机后，便可打印出收费凭据，最后系统会提示“收费成功！。
+				<br />
+				<br />
+				单击
+				<取消>
+				，系统则不会打印预收款凭据，直接返回提示“收费成功！”。
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div35" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;收费管理&nbsp;->&nbsp;统计分析</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 统计分析
+				<br />
+			</p>
+
+			<p class="fontset">
+				通过单击【收费管理/统计分析】按钮，可以进入收费管理的统计分析页面（如下图）：
+				<br />
+				<br />
+
+				<img src="sftjfx.png" class="tupian1" />
+				<br />
+				<br />
+
+				<strong>☞ 已收款明细</strong>
+				<br />
+				<br />
+				选择
+				<已收款明细>
+				，如下图：
+				<br />
+				<br />
+
+				<img src="sfysk.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				开始时间：时间格式为yyyy-MM-dd，如：2013-08-16。
+				<br />
+				<br />
+				结束时间：时间格式为yyyy-MM-dd，如：2013-08-16。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				查询已收款明细，需要选择“开始时间”或“结束时间”，结束时间不能大于开始时间。
+				<br />
+				<br />
+				“开始时间”与“结束时间”两者必须选择其中一个，否则弹出提示框“开始时间和结束时间不能同时为空！”。
+				<br />
+				<br />
+				<strong>☞ 未收款明细</strong>
+				<br />
+				<br />
+				选择
+				<未收款明细>
+				，如下图：
+				<br />
+				<br />
+
+				<img src="sfwskmx.png" class="tupian1" />
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				未收款明细不需要用户设置查询条件，系统会自己统计未收款的用户明细。
+				<br />
+				<br />
+				查询未收款明细前，必须先设置收费参数，否则查询不到数据。
+				<br />
+				<br />
+
+				<strong>☞ 统计汇总</strong>
+				<br />
+				<br />
+
+				选择
+				<统计汇总>
+				，如下图：
+				<br />
+				<br />
+
+				<img src="sftjhz.png" class="tupian" />
+				<br />
+				<br />
+
+				已收费与未收费户数统计汇总
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				红色部分：表示已收费户数，杠后面表示数量。
+				<br />
+				<br />
+				蓝色部分：表示未收费户数，杠后面表示数量。
+				<br />
+				<br />
+				退款金额：系统中退款的总金额。
+				<br />
+				<br />
+				补交金额：系统中用户补交的总金额。
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div36" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;收费管理&nbsp;->&nbsp;参数设置</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 参数设置
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击【收费管理/参数设置】按钮，可以收费管理的参数设置操作页面（如下图）：
+				<br />
+				<br />
+
+				<img src="sfcssz.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				供暖开始月份：必填。
+				<br />
+				<br />
+				供暖结束月份：必填，必须大于供暖开始月份。
+				<br />
+				<br />
+				收费方式：包括多退少补、多退少不补。
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				参数设置必须在收费之前进行，否则无法收费。
+				<br />
+				<br />
+				如果不进行参数设置，未收款明细将无法查询。
+				<br />
+				<br />
+				若是在预收款中用户设置为后付费，收费方式将强制设置为多退少补。
+				<br />
+				<br />
+				在参数设置完成后，并已经开始收费的中途过程，不允许修改参数设置，否则可能导致统计出错。
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div37" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;能耗曲线&nbsp;->&nbsp;正常用量统计</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 正常用量统计
+				<br />
+			</p>
+			<p class="fontset">
+			单击【能耗曲线/正常用量统计】，可以进入正常用量统计页面（如下图）：<br />
+				<br />
+			 
+			<img src="zcyltj.jpg" class="tupian" /><br />
+				<br />
+			正常用量统计包括：“用量分析”与“18个月用量分析”两个小模块。<br />
+				<br />
+			
+			<strong>☞ 用量分析</strong><br />
+				<br />
+			选择【能耗曲线/正常用量统计/用量分析】，如下图：<br />
+				<br />
+			 
+			<img src="yongliangfenxi.jpg" class="tupian" /><br /><br />
+				
+			选择要分析的表计，然后在开始时间与结束时间中选择要分析的时间段，再单击<查询>按钮，完成该表计的用量分析。<br /><br />
+			正常用量统计是统计开始时间与结束时间内的用户正常耗热量统计。为了便于查询当前点的统计信息，当把鼠标移到用量统计节点时，将显示用户在当时的计量数据（如下图）：<br /><br />
+			 
+			<img src="tubiao134.jpg" /><br /><br />
+			 <img src="shuoming.gif"/>：<br /><br />
+			时间单位：默认为月，包括：时、日、月。<br /><br />
+			开始时间：时间格式为yyyy-MM-dd HH:mm:ss，如：2013-08-16 00:00:00。<br /><br />
+			结束时间：时间格式为yyyy-MM-dd HH:mm:ss，如：2013-08-16 00:00:00。<br /><br />
+			
+			注意：<br /><br />
+			开始时间和结束时间不能为空，否则提示“请选择开始时间和结束时间”。<br /><br />
+			时间单位：时 <查询小时数不能超过24小时>。<br /><br />
+			时间单位：天 <查询天数不能超过30天>。<br /><br />
+			时间单位：月 <查询月数不能超过12个月>。<br /><br />
+			
+			<strong>☞ 18个月用量分析</strong><br /><br />
+			选择【能耗曲线/正常用量统计/18个月用量分析】，如下图：<br /><br />
+			 
+			<img src="18yongliangfenxi.jpg" class="tupian" /><br /><br />
+			选择要分析的表计，不需要选择时间段，系统会自动统计最近18个月的月结数据。<br /><br />
+			18个月用量分析统计的是用户最近18个月的月结算数据。为了便于查询当前点的统计信息，当把鼠标移到用量统计节点时，将显示用户在当时的计量数据（如下图）：
+			 <br /><br />
+			<img src="tubiao136.jpg"  /><br /><br />
+			</p>
+		</div>
+
+		<div id="div38" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;能耗曲线&nbsp;->&nbsp;异常用量统计</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 异常用量统计
+				<br />
+			</p>
+			<p class="fontset" >
+			单击【能耗曲线/异常用量统计】，可以进入异常用量统计页面（如下图）：<br /><br />
+			 
+			<img src="lxycyltj.jpg"  /><br /><br />
+			异常用量统计包括：“连续未使用的用户信息”与“用量异常的用户信息”两个小模块。<br /><br />
+			
+			<strong>☞ 连续未使用的用户信息</strong><br /><br />
+			   选择【能耗曲线/异常用量统计/连续未使用的用户信息】，如下图：<br /><br />
+			 
+			<img src="lxycyltj.jpg"  /><br /><br />
+			选择要分析的区域，然后录入查询条件，再单击<查询>按钮，系统会根据查询条件统计出异常的用户信息。<br /><br />
+			单击“用量明细”链接，可以查看该表在指定时间段内的表计信息。<br /><br />
+			 <img src="shuoming.gif"  />：<br /><br />
+			每月用户用量的最低值：必填，输入的数值必须大于零且不能为空。<br /><br />
+			未使用时间（天）：必填，输入的数值范围在1~28之间，且不能为空。<br /><br />
+			月份：必选，不能选择大于当前月。<br /><br />
+			
+			注意：<br /><br />
+			如果选择的是当前月，未使用的时间不能大于当前日期。<br /><br />
+			若是用户本月没有数据，如系统未上线前的日期，将提示没有数据。<br /><br />
+			
+			<strong>☞ 用量异常的用户信息</strong><br /><br />
+			选择【能耗曲线/异常用量统计/用量异常的用户信息】，如下图： <br /><br />
+			 <img src="yhyc.jpg"  /><br /><br />
+			统计用户异常的方法：在指定的时间段内，指定用户异常系数（百分比数），统计本月用量与月平均用量相差达到及超过用量异常系数的用户信息。
+			<br /><br />单击“用量明细”链接，可以查看该表在指定时间段内的表计信息。<br /><br />
+			 <img src="shuoming.gif"  />：<br /><br />
+			月平均用量：必填，输入的数值必须大于零且不能为空。<br /><br />
+			用户异常系数：必填，输入的数值不能为空，用户每个月的平均用量的上下浮动系数。<br /><br />
+			口径：必选，表计的口径大小。<br /><br />
+			月份：不能大于或等于当前月。<br /><br />
+			
+			注意：<br /><br />
+			若是用户本月没有数据，如系统未上线前的日期，将提示没有数据。<br /><br />
+								
+			</p>
+		</div>
+
+		<div id="div76" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;表计管理</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 表计管理
+				<br />
+			</p>
+			<p class="fontset">
+				“表计管理”是对系统的所有表计进行管理，可以进行查询、打印、新增、换表、阀门设置、阀门操作、进入地图。
+				<br />
+				<br />
+				单击首页中的【表计管理】，进入表计管理页面 （如下图）：
+				<br />
+				<br />
+				<img src="biaojiguanli.png" class="tupian" />
+				<br />
+				<br />
+				<p class="fontset" style="font-weight: 600">
+				☞ 查询表计信息
+				<br />
+			</p>
+			<p class="fontset">
+				查询条件：用户可以根据表号、所属集中器、表计型号、口径、表计类型等组合条件进行查询，支持模糊查询。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				表号：表计铭牌上的编号，最长不超过8个字符，系统自动判断，用户无法输入超过8个字符的表号。
+				<br />
+				<br />
+				所属集中器：表计分配的集中器编号，最长不超过8个字符，系统自动判断，用户无法输入超过8个字符的集中器编号。
+				<br />
+				<br />
+				表计型号：表计属于哪种型号，表计型号请参看2.4章节。
+				<br />
+				<br />
+				口径：表计所属的口径。
+				<br />
+				<br />
+				表计类型：可以根据户型表、楼栋表、换能站三种表计类型来查询表计信息。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		
+		<div id="div77" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;打印表计信息</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 打印表计信息
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击表计管理页面中的<打印>按钮，跳转到打印预览页面，然后单击
+				<print>
+				链接，打印查询出来的表计信息（如下图）：
+				<br />
+				<br />
+				<img src="daybjxx.jpg" class="tupian" />
+
+			</p>
+		</div>
+		<div id="div78" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;新增表计信息</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 新增表计信息
+				<br />
+			</p>
+			<p class="fontset">
+				在表计管理页面的树形结构中，点击树形结构中的节点，可在该节点下添加信息。
+				<br />
+				<br />
+				新增热力公司：
+				<br />
+				<br />
+				在根节点“宏德城市建筑智慧能源管理系统”上右键，会出现“新增热力公司”的菜单（如下图）：
+				<br />
+				<br />
+				<img src="xzrlgs.png" />
+				<br />
+				<br />
+				选择“新增热力公司”，将会弹出热力公司的新增窗口（如下图）：
+				<br />
+				<br />
+
+				<img src="xzrlgsmb.png"/>
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				热力公司名称：必填，1~100个字符。
+				<br />
+				<br />
+				地理位置：必选，在弹出的树形结构中，选择小区或小区以下的结点。
+				<br />
+				<br />
+
+				用户录入完相关信息后，单击
+				<保存>
+				完成本次“新增”操作。
+				<br />
+				<br />
+				单击
+				<关闭>
+				，关闭“新增热力公司”的窗口。
+				<br />
+				<br />
+
+				新增表计信息：
+				<br />
+				<br />
+				在根节点“宏德城市建筑智慧能源管理系统”以外的节点上右键，会出现“新增表计信息”的菜单（如下图）：
+				<br />
+				<br />
+
+				<img src="xinzbiaojixinx.png" />
+				<br />
+				<br />
+				选择“新增表计信息”，将会弹出表计信息的新增窗口（如下图）：
+				<br />
+				<br />
+				<img src="xzbjxx.jpg" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				表号：表计铭牌上的编号，必填，8位，不能与其它表计重复。
+				<br />
+				<br />
+				表底数：表计在添加进系统时的累积热量，单位可选，Kwh（千瓦时）或MJ（兆焦）。
+				<br />
+				<br />
+				通信速率：根据表计的实际通讯速率选择，默认为4800。
+				<br />
+				<br />
+				口径：表计的口径，默认为20。
+				<br />
+				<br />
+				表计型号：可选，请参看2.4章节的表计型号。
+				<br />
+				<br />
+				表计类型：有三种类型，户型表、楼栋表、换能站，默认为户型表。
+				<br />
+				<br />
+				地理位置：表计被安装的位置，一个位置只能安装一个表计，在弹出的树状结构中，至少选到小区或以下
+				<br />
+				<br />
+				的节点。
+				<br />
+				<br />
+				上级表：选择添加的节点的表计。
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				新增的表计，必须已经连接到登陆的集中器中，点击
+				<提交>
+				按钮后，系统会自动寻找属于哪个集中器。
+				<br />
+				<br />
+				新增表计信息返回信息包括如下几种：
+				<br />
+				<br />
+				 该位置已存在表计信息，请重新选择地理位置...
+				<br />
+				<br />
+				 存在相同的表号********，请修改后再重新添加...
+				<br />
+				<br />
+				 添加表计信息失败[关联集中器失败
+				<超时>
+				]
+				<br />
+				<br />
+				 该表计型号没有关联到集中器中，添加表计失败，请先在集中器中关联该表计型号!集中器编号：********
+				<br />
+				<br />
+				 该表计型号没有关联到集中器中，添加表计失败，请先在集中器中关联该表计型号!集中器编号：********
+				<br />
+				<br />
+				 终端热能表配置参数设置失败，添加表计失败!
+				<br />
+				<br />
+				 终端热能表配置参数设置超时，添加表计失败!
+				<br />
+				<br />
+				 添加表计信息失败，每个集中器最多只能关联1024个表计！
+				<br />
+				<br />
+				 添加表计信息失败[关联集中器失败
+				<集中器中不存在该表 ，请检查表计和集中器是否连接>
+				]
+				<br />
+				<br />
+				 添加表计信息成功!
+				<br />
+				<br />
+
+				<br />
+			</p>
+		</div>
+		<div id="div79" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;换表</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 换表
+				<br />
+			</p>
+
+			<p class="fontset">
+				通过单击表计管理页面中任意记录后的基本操作列的
+				<更换>
+				链接，可以进入换表操作页面（如下图）：
+				<br />
+				<br />
+				<img src="ghrlbxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				旧表号：要更换的旧表表号，不能修改。
+				<br />
+				<br />
+				新表号：要更换的新表表号，必填，8位字符。
+				<br />
+				<br />
+				表底数：表计在添加进系统时的累积热量，单位可选，Kwh（千瓦时）或MJ（兆焦）。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				更换的表计，必须已经连接到集中器中，点击
+				<提交>
+				按钮后，系统将会返回提示信息。
+				<br />
+				<br />
+				更换表计的返回信息包括如下几种：
+				<br />
+				<br />
+				 ********集中器不在线！
+				<br />
+				<br />
+				 表号没有进行修改...
+				<br />
+				<br />
+				 终端热能表配置参数设置失败，更换表计失败!
+				<br />
+				<br />
+				 终端热能表配置参数设置超时，更换表计失败!
+				<br />
+				<br />
+				 更换表计操作成功！
+				<br />
+				<br />
+
+
+			</p>
+		</div>
+		<div id="div80" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;阀门设置</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 阀门设置
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击表计管理页面中任意记录的阀门编号列的
+				<设置>
+				链接，可以进行阀门操作（如下图红框显示）：
+				<br />
+				<br />
+				<img src="famenshezhi.png" class="tupian1"/>
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				阀门编号：对该行所在的表计设置阀门，阀门编号是8位字符。
+				<br />
+				<br />
+				用户录入阀门编号后，点击
+				<确认>
+				按钮，即可完成阀门的设置。
+				<br />
+				<br />
+				点击
+				<清除>
+				按钮，清除阀门编号的内容，再点击
+				<确认>
+				按钮，可以取消表计关联的阀门或重新设置阀门。
+				<br />
+				<br />
+				点击
+				<关闭>
+				按钮，关闭阀门设置窗口。
+				<br />
+				<br />
+
+			</p>
+		</div>
+		<div id="div81" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;阀门控制</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 阀门控制
+				<br />
+			</p>
+			<p class="fontset">
+				通过表计管理页面中
+				<阀门控制>
+				可以控制表计的阀门的打开或关闭。如下图红框所示：
+				<br />
+				<br />
+
+				<img src="famenkongzhi.png" class="tupian"/>
+				<br />
+				<br />
+				用户在控制阀门前，先选择表计前的单选框，每次只能选择一个表计，否则会弹出提示框“请先选择表计！”
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				若是集中器不在线，将会弹出提示框“********集中器不在线！”。
+				<br />
+				<br />
+				若是集中器在线，返回在弹出提示框的内容有如下几种：
+				<br />
+				<br />
+				 该表计没有设置阀门编号，请先设置阀门编号!
+				<br />
+				<br />
+				 阀门操作成功!
+				<br />
+				<br />
+				 阀门操作失败!
+				<br />
+				<br />
+				 阀门控制请求超时!
+				<br />
+				<br />
+			</p>
+		</div>
+		<div id="div82" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;进入地图</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 进入地图
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击表计管理页面中的
+				<img src="jinruditu.png" />
+				按钮，可以进入表计管理的地图页面（如下图）：
+				<br />
+				<br />
+				<img src="biaojiditu.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				回到地图中心：地图返回到设置的地图中心。
+				<br />
+				<br />
+				返回：返回到地址信息列表中。
+				<br />
+				<br />
+				首页：返回到系统首页页面。
+				<br />
+				<br />
+				右键菜单
+				<br />
+				<br />
+				放大：放大地图的显示比例。
+				<br />
+				<br />
+				缩小：缩小地图的显示比例。
+				<br />
+				<br />
+				放置到最大级：放大地图到可视效果最大的显示比例。
+				<br />
+				<br />
+				放置到最小级：缩小地图到可视效果最小的显示比例。
+				<br />
+				<br />
+				地图上的图标右键
+				<br />
+				<br />
+				热量表信息：显示该集中器的所有表计信息，弹出来的表计信息包括：表号、表底数、地址、阀门状态、电池状态、在线状态（如下图）：
+				<br />
+				<br />
+				<img src="rlbxx.png" />
+				<br />
+				<br />
+
+				双击地图上的树状结构中的集中器，可直接定位到该集中器在地图上所处的位置。
+				<br />
+				<br />
+			</p>
+		</div>
+
+
+		<div id="div40" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;表计状态</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 表计状态
+				<br />
+			</p>
+			<p class="fontset">
+				“表计状态”是对系统的表计进行状态管理，可以查看表计的阀门状态、电池状态、在线状态。
+				<br />
+				<br />
+				单击首页中的【表计状态】，进入表计器状态管理页面 （如下图）：
+				<br />
+				<br />
+
+				<img src="biaojizhuangtai.png" class="tupian" />
+				<br />
+				<br />
+				<strong>☞ 查询表计状态</strong>
+				<br />
+				<br />
+				查询条件：用户可以根据表号、在线状态、阀门状态、电池状态等组合条件进行查询，支持模糊查询。
+				<br />
+				<br />
+				在表计状态页面的树形结构中双击，可以查询该区域下的表计状态情况。
+				<br />
+				<br />
+				表计状态页面的右下角的备注是对状态的基本描述（如下图）：
+				<br />
+				<br />
+
+				<img src="cxbjzt.jpg" />
+				<br />
+				<br />
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				表号：表计铭牌上的编号，若为空，查询全部的表计信息。
+				<br />
+				<br />
+				在线状态：根据表计在线或离线的状态查询表计状态信息。
+				<br />
+				<br />
+				阀门状态：根据阀门的状态查询表计状态信息。
+				<br />
+				<br />
+				电池状态：根据电池的状态查询表计状态信息。
+				<br />
+				<br />
+
+				<strong>☞ 打印表计状态</strong>
+				<br />
+				<br />
+				通过单击表计状态管理页面中的 按钮，跳转到打印预览页面，然后单击
+				<print>
+				链接，打印查询出来的表计状态信息（如下图）：
+				<br />
+				<br />
+
+				<img src="biaohaodayi.png" class="tupian"/>
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div83" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;查询集中器状态</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 集中器状态
+				<br />
+			</p>
+			<p class="fontset">
+			“集中器状态”是对系统的集中器进行状态管理，可以查看集中器的内存状态、通讯口1、通讯口2、通讯口3、在线状态。<br /><br />
+单击首页中的【集中器状态】，进入集中器状态管理页面 （如下图）：
+				<img src="jzqzt.png" class="tupian" />
+			</p>
+			<p class="fontset" style="font-weight: 600">
+				☞ 查询集中器状态
+				<br />
+			</p>
+			<p class="fontset">
+				查询条件：用户可以根据集中器编号、在线状态、内存状态等组合条件进行查询，支持模糊查询。
+				<br />
+				<br />
+				在集中器状态页面的树形结构中双击，可以查询该区域下的集中器状态情况。
+				<br />
+				<br />
+				集中器状态页面的右下角的备注是对状态的基本描述（如下图）：
+				<br />
+				<br />
+				<img src="jzqzt2.jpg" />
+				<br />
+				<br />
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				集中器编号：集中器铭牌上的编号，若为空，查询全部的集中器信息。
+				<br />
+				<br />
+				在线状态：根据集中器在线或离线的状态查询集中器状态信息。
+				<br />
+				<br />
+				内存状态：根据集中器的内存状态查询集中器状态信息。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div84" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;打印集中器状态</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 打印集中器状态
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击集中器状态管理页面中的<打印>按钮，跳转到打印预览页面，然后单击
+				<print>
+				链接，打印查询出来的集中器状态信息（如下图）：
+				<br />
+				<br />
+				<img src="jzqdyxx.png" class="tupian1" />
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div42" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;实时数据</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 实时数据
+				<br />
+			</p>
+
+			<p class="fontset">
+				“实时数据”是对系统的表计进行实时抄表，即时获取表计数据。
+				<br />
+				<br />
+				单击首页中的【实时数据】，进入实时抄表管理页面 （如下图）：
+				<br />
+				<br />
+
+				<img src="shishishuju.png" class="tupian"/>
+				<br />
+				<br />
+				“实时数据”页面的左边树状结构中包含了集中器与表计的信息。 <img src="jizhongqixiaotu.jpg"/>表示集中器，<img src="biaojixiaotu.jpg"/>表示表计。
+				<br />
+				<br />
+				“实时数据”页面的右边则是实时抄表后获得的数据。
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div85" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;自动抄读</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 自动抄读
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击【实时数据/自动抄读】按钮，可以对选择的表计进行实时抄读操作。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				若是没有选择任何表计，直接单击
+				<自动抄读>
+				按钮将会弹出提示框“请选择你要抄读的表…”。
+				<br />
+				<br />
+				选择表计后，表计所属的集中器会自动选择。
+				<br />
+				<br />
+				若选择集中器后，属于集中器的表计将自动选择。
+				<br />
+				<br />
+				若是集中器不在线，单击
+				<自动抄读>
+				后，弹出提示框“*******集中器不在线！”
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div86" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;进入地图</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 进入地图
+				<br />
+			</p>
+			<p class="fontset">
+				通过单击【实时数据】页面中的
+				<img src="jinruditu.png" />
+				按钮，可以进入实时数据的地图页面（如下图）：
+				<br />
+				<br />
+
+				<img src="mapinfo.png" class="tupian"/>
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				回到地图中心：地图返回到设置的地图中心。
+				<br />
+				<br />
+				返回：返回到地址信息列表中。
+				<br />
+				<br />
+				首页：返回到系统首页页面。
+				<br />
+				<br />
+				右键菜单
+				<br />
+				<br />
+				放大：放大地图的显示比例。
+				<br />
+				<br />
+				缩小：缩小地图的显示比例。
+				<br />
+				<br />
+				放置到最大级：放大地图到可视效果最大的显示比例。
+				<br />
+				<br />
+				放置到最小级：缩小地图到可视效果最小的显示比例。
+				<br />
+				<br />
+				地图上的图标 右键
+				<br />
+				<br />
+				实时抄表：实时抄读楼栋中所有表计的信息，弹出来的表计信息包括：表号、累计热量、累计流量、瞬时流量、累计时间、供水温度、回水温度（如下图）：
+				<br />
+				<br />
+
+				<img src="chaobiaoxinx.png" style="width:600px;height:450px;"/>
+				<br />
+				<br />
+			</p>
+		</div>
+
+		<div id="div87" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;历史数据</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 历史数据
+				<br />
+			</p>
+			<p class="fontset">
+				“历史数据”是指系统每隔一段时间，自动读取集中器中存储的表计数据。<br /><br />
+
+单击首页中的【历史数据】，进入历史数据管理页面 （如下图）：
+				<br />
+				<br />
+				选择【历史数据/历史数据】，如下图：
+				<br />
+				<br />
+
+				<img src="lishishuj.png" class="tupian1" />
+				<br />
+				<br />
+				<strong>☞ 查询历史数据</strong>
+				<br />
+				<br />
+				查询条件：用户可以根据表号或表计的地理位置查询表计的历史数据，支持模糊查询。
+				<br />
+				<br />
+				地理位置包括：省份、城市、区县、街道办/城镇、小区、楼栋、房间。每个下拉框选择之前，都要先选择前面的下拉框，如：选择城市，先选择省份。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				表号：若为空，则查询全部的数据。
+				<br />
+				<br />
+
+				<strong>☞ 打印历史数据</strong>
+				<br />
+				<br />
+				通过单击历史数据管理页面中的 按钮，跳转到打印预览页面，然后单击
+				<print>
+				链接，打印查询出来的历史数据信息（如下图）：
+				<br />
+				<br />
+
+				<img src="lishishuju2.png" class="tupian"/>
+				<br />
+				<br />
+				<strong>☞ 删除历史数据</strong>
+				<br />
+				<br />
+				通过单击历史数据信息列表中任意记录后
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除历史数据成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+				<strong>☞ 批量删除历史数据</strong>
+				<br />
+				<br />
+				在历史数据信息列表中批量勾选任意多条记录，然后单击 按钮，可以对这些记录进行删除操作。当单击 按钮时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除历史数据成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div88" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;月冻结数据</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 月冻结数据
+				<br />
+			</p>
+			<p class="fontset">
+				选择【历史数据/月冻结数据】，如下图：
+				<br />
+				<br />
+
+				<img src="ydjsj.png" class="tupian1" />
+				<br />
+				<br />
+				<strong>☞ 查询月冻结数据</strong>
+				<br />
+				<br />
+				查询条件：用户可以根据表号或表计的地理位置查询表计的月冻结数据，支持模糊查询。
+				<br />
+				<br />
+				地理位置包括：省份、城市、区县、街道办/城镇、小区、楼栋、房间。每个下拉框选择之前，都要先选择前面的下拉框，如：选择城市，先选择省份。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				： 
+				<br />
+				<br />
+				表号：若为空，则查询全部的数据。
+				<br />
+				<br />
+				<strong>☞ 打印月冻结数据</strong>
+				<br />
+				<br />
+				通过单击历史数据管理页面中的
+				<img src="dayi.png" />
+				按钮，跳转到打印预览页面，然后单击
+				<print>
+				链接，打印查询出来的月冻结数据信息（如下图）：
+				<br />
+				<br />
+
+				<img src="dayi3.png" class="tupian1" />
+				<br />
+				<br />
+				<strong>☞ 删除月冻结数据</strong>
+				<br />
+				<br />
+				通过单击月冻结数据信息列表中任意记录后
+				<删除>
+				链接，可以对该记录进行删除操作。当单击
+				<删除>
+				时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除月冻结数据成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+				<strong>☞ 批量删除月冻结数据</strong>
+				<br />
+				<br />
+				在月冻结数据信息列表中批量勾选任意多条记录，然后单击 按钮，可以对这些记录进行删除操作。当单击
+				按钮时，系统会提示是否确认删除（如下图）：
+				<br />
+				<br />
+
+				<img src="quedingshanchu.png" />
+				<br />
+				<br />
+				单击
+				<确定>
+				后，提示“删除月冻结数据成功”。
+				<br />
+				<br />
+				点击
+				<取消>
+				，放弃本次“删除”操作。
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div44" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;管网损耗</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 管网损耗
+				<br />
+			</p>
+			<p class="fontset">
+				管网损耗，单位时间内上级表计与下级表计之和的能量差值，单位：MJ。如：楼栋表与该楼栋下的户型表在单位时间内的能量差值。
+			<br /><br />
+			单击首页中的【管网损耗】，进入管网损耗页面 （如下图）：<br /><br />
+			 <img src="guanwangsunhao.jpg" />
+			<br /><br />
+			选择要分析的表计，然后选择X轴的单位，在开始时间与结束时间中选择要分析的时间段，再单击<查询>按钮，完成该表计的用量分析。
+			<br /><br /> <img src="shuoming.gif" />：<br /><br />
+			总表损耗能量累计：指的是选择的表消耗的能量。<br /><br />
+			分表损耗能量累计和：指的是总表下一级的表计消耗的能量累计和。<br /><br />
+			注意：<br /><br />
+			在管网损耗的树状结构中，户型表不能选择。<br /><br />
+			</p>
+		</div>
+
+		<div id="div45" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;集中器管理&nbsp;->&nbsp;初始化参数</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 初始化参数
+				<br />
+			</p>
+
+			<p class="fontset">
+				通过单击【集中器管理/初始化参数】按钮，可以进入集中器初始化参数页面（如下图）：
+				<br />
+				<br />
+
+				<img src="chushihua.png" class="tupian" />
+				<br />
+				<br />
+				初始化参数中设置的参数集中器进行配置的公共参数，在进行集中器维护前，需要在初始化参数中先设置。
+				<br />
+				<br />
+				服务器配置信息 ：
+				<br />
+				<br />
+				IP地址：必填，这里的IP地址指的是服务器所在的公网IP地址。
+				<br />
+				<br />
+				端 口：必填，范围在1~65535之间。
+				<br />
+				<br />
+				接入点名称：必填，集中器GPRS模块设置的接入点，1~16个字符之间。
+				<br />
+				<br />
+				注意：通常情况下，服务器的公网IP地址与端口要与服务器本机显示的地址，通过路由器设置映射关系。
+				<br />
+				<br />
+				集中器配置信息 ：
+				<br />
+				<br />
+				数传机延时时间(20ms)：
+				<br />
+				<br />
+				传输延时时间(min)：
+				<br />
+				<br />
+				响应超时时间(s)：集中器等待服务器的响应超时时间，单位：秒，范围是0~4095秒。
+				<br />
+				<br />
+				重发次数：集中器等待服务器响应超时后，重发的次数，单位：次，范围是0~3次。
+				<br />
+				<br />
+				是否需要服务器确认：是否需要服务器回复确认帧。
+				<br />
+				<br />
+				心跳周期(min)：集中器向服务器发起的心跳帧的周期，单位是：分，范围是1~255之间。
+				<br />
+				<br />
+
+			</p>
+		</div>
+
+		<div id="div46" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;软件使用说明&nbsp;->&nbsp;集中器管理&nbsp;->&nbsp;集中器维护</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 集中器维护
+				<br />
+			</p>
+
+			<p class="fontset">
+				“集中器维护”是对系统的所有集中器进行管理，可以进行查询、打印、新增、修改、进入地图、设备匹配、恢复出厂设置、读取版本信息、设置结算日的操作。
+				<br />
+				<br />
+				通过单击【集中器管理/集中器维护】按钮，可以进入集中器维护页面（如下图）：
+				<br />
+				<br />
+
+				<img src="jzqwh.png" class="tupian" />
+				<br />
+				<br />
+				<strong>☞ 查询集中器信息</strong>
+				<br />
+				<br />
+				集中器维护页面中的树状结构，用户点击相应的区域，将显示该区域中拥有哪些集中器。
+				<br />
+				<br />
+				用户可以根据集中器编号进行查询，支持模糊查询。
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				集中器编号：最长不超过8个字符，系统自动判断，用户无法输入超过8个字符的集中器编号。若集中器编号为空，将查询所有系统中的集中器信息；若输入的少于8个字符，将进行模糊查询。
+				<br />
+				<br />
+				<strong>☞ 打印集中器列表</strong>
+				<br />
+				<br />
+				通过单击集中器维护页面中的<打印>按钮，跳转到打印预览页面，然后单击
+				<print>
+				链接，打印查询出来的集中器信息（如下图）：
+				<br />
+				<br />
+
+				<img src="jzqdy.png" class="tupian1" />
+				<br />
+				<br />
+				<strong>☞ 新增集中器信息</strong>
+				<br />
+				<br />
+				通过单击集中器维护页面中的<新增>按钮，可以进入新增集中器信息页面（如下图）：
+				<br />
+				<br />
+
+				<img src="tjjzqxx.png" class="tupian" />
+				<br />
+				<br />
+
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				集中器编号：必填，8位字符，集中器编号不能重复。
+				<br />
+				<br />
+				冻结间隔：必选，集中器抄表间隔，根据选择的单位，再选择间隔值。
+				<br />
+				<br />
+				安装位置：必选，在弹出的树状结构中，选择集中器所处的位置，只能选择小区或楼栋的节点。
+				<br />
+				<br />
+				表计型号设置：至少要选择一个表计型号，最多20个。左边为待选项，右边是已选项。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				1、新增的集中器，必须已经登陆服务器，若是集中器在线，且添加成功，将会返回提示信息“添加集中器信息成功”；若是集中器不在线，单击
+				<保存>
+				，一分钟后超时，添加失败，将返回提示信息“终端上行通信口通信参数设置超时，添加集中器失败!”。
+				<br />
+				<br />
+				集中器设置失败的提示信息包括如下几种：
+				<br />
+				<br />
+				 终端上行通信口通信参数设置超时，添加集中器失败!
+				<br />
+				<br />
+				 终端上行通信口通信参数设置失败，添加集中器失败!
+				<br />
+				<br />
+				 冻结间隔设置失败，添加集中器失败!
+				<br />
+				<br />
+				 冻结间隔设置超时，添加集中器失败!
+				<br />
+				<br />
+				 主站IP地址与端口设置失败，添加集中器失败!
+				<br />
+				<br />
+				 主站IP地址与端口设置超时，添加集中器失败!
+				<br />
+				<br />
+				 地理位置设置失败，添加集中器失败!
+				<br />
+				<br />
+				 地理位置设置超时，添加集中器失败!
+				<br />
+				<br />
+				 表计型号关联失败，添加集中器失败!
+				<br />
+				<br />
+				 表计型号关联超时，添加集中器失败!
+				<br />
+				<br />
+				 请先设置集中器的初始化参数!
+				<br />
+				<br />
+
+				2、若是该集中器是从机，首先要新增的是该从机匹配的主机（拥有GPRS的集中器），添加成功后，再进行设备匹配，若是匹配成功后，从机会自动添加到系统中，此时，需要对从机修改即可。
+				单击
+				<重置>
+				，重置本次“新增”输入的内容。
+				<br />
+				<br />
+				<strong>☞ 修改集中器信息</strong>
+				<br />
+				<br />
+				通过单击集中器维护页面中任意记录后的
+				<编辑>
+				链接，可以进入该记录的修改页面（如下图）：
+				<br />
+				<br />
+				<img src="xgjzqxx.png" class="tupian" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				集中器编号：不能修改。
+				<br />
+				<br />
+				冻结间隔：必选，集中器抄表间隔，根据选择的单位，再选择间隔值。
+				<br />
+				<br />
+				安装位置：必选，在弹出的树状结构中，选择集中器所处的位置，只能选择小区或楼栋的节点。
+				<br />
+				<br />
+				表计型号设置：至少要选择一个表计型号，最多20个。左边为待选项，右边是已选项。表计型号只能添
+				<br />
+				<br />
+				加，不能修改。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				1、集中器是主机或不是第一次修改的从机，若是集中器在线，且修改成功，将会返回提示信息“修改集中器信息成功”；若是集中器不在线，单击
+				<保存>
+				，将返回提示信息“*********集中器不在线!”。
+				<br />
+				<br />
+				集中器是主机设置失败的提示信息包括如下几种：
+				<br />
+				<br />
+				 冻结间隔设置失败，添加集中器失败!
+				<br />
+				<br />
+				 冻结间隔设置超时，添加集中器失败!
+				<br />
+				<br />
+				 地理位置设置失败，添加集中器失败!
+				<br />
+				<br />
+				 地理位置设置超时，添加集中器失败!
+				<br />
+				<br />
+				 表计型号关联失败，添加集中器失败!
+				<br />
+				<br />
+				 表计型号关联超时，添加集中器失败!
+				<br />
+				<br />
+
+				2、若是该集中器是从机并且是第一次修改，若是集中器在线，且修改成功，将会返回提示信息“修改集中器信息成功”；若是集中器不在线，单击
+				<保存>
+				，将返回提示信息“*********集中器不在线!”。
+				<br />
+				<br />
+				集中器是从机设置失败的提示信息包括如下几种：
+				<br />
+				<br />
+				 终端上行通信口通信参数设置超时，添加集中器失败!
+				<br />
+				<br />
+				 终端上行通信口通信参数设置失败，添加集中器失败!
+				<br />
+				<br />
+				 冻结间隔设置失败，添加集中器失败!
+				<br />
+				<br />
+				 冻结间隔设置超时，添加集中器失败!
+				<br />
+				<br />
+				 主站IP地址与端口设置失败，添加集中器失败!
+				<br />
+				<br />
+				 主站IP地址与端口设置超时，添加集中器失败!
+				<br />
+				<br />
+				 地理位置设置失败，添加集中器失败!
+				<br />
+				<br />
+				 地理位置设置超时，添加集中器失败!
+				<br />
+				<br />
+				 表计型号关联失败，添加集中器失败!
+				<br />
+				<br />
+				 表计型号关联超时，添加集中器失败!
+				<br />
+				<br />
+
+				单击
+				<重置>
+				，重置本次“修改”输入的内容。
+				<br />
+				<br />
+
+				<strong>☞ 设备匹配</strong>
+				<br />
+				<br />
+				通过单击集中器维护页面中任意记录后的
+				<设备匹配>
+				链接，可以进入该记录的设备匹配页面（如下图）：
+				<br />
+				<br />
+				<img src="jzqsbpp.png" class="tupian1" />
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				主机集中器编号：不能修改。
+				<br />
+				<br />
+				RF信道设置：必填，范围1~16，RF信道指的是主机与从机通讯的RF信道。
+				<br />
+				<br />
+				集中器从机：匹配在该主机下的从机，从机数量0~128。如果要在原来的集中器下再添加从机，必须要
+				<br />
+				<br />
+				在原来从机的基础上添加，不能删除原来的；如果要清除从机，将所有的从机删除即可。
+				<br />
+				<br />
+				添加从机：添加一个集中器（从机）。
+				<br />
+				<br />
+				删除从机：删除所在行的集中器（从机）。
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				若是集中器（主机）不在线，单击
+				<保存>
+				按钮，将会返回提示信息“********集中器不在线！”。
+				<br />
+				<br />
+				设备匹配失败返回的提示信息有如下几种：
+				<br />
+				<br />
+				 集中器设备匹配失败！
+				<br />
+				<br />
+				 集中器设备匹配超时！
+				<br />
+				<br />
+				 RF信道设置失败！
+				<br />
+				<br />
+				 RF信道设置超时！
+				<br />
+				<br />
+
+				<strong>☞ 恢复出厂设置</strong>
+				<br />
+				<br />
+				通过单击集中器维护页面中任意记录后的
+				<恢复出厂设置>
+				链接，将会弹出提示框，避免用户误操作。
+				<br />
+				<br />
+				注意：
+				<br />
+				<br />
+				若是集中器不在线，将会弹出提示框“********集中器不在线！”。
+				<br />
+				<br />
+				若是集中器在线，返回在弹出提示框的内容有如下几种：
+				<br />
+				<br />
+				 恢复出厂设置成功！
+				<br />
+				<br />
+				 恢复出厂设置失败！
+				<br />
+				<br />
+				 请求超时…
+				<br />
+				<br />
+
+				<strong>☞ 读取版本信息</strong>
+				<br />
+				<br />
+				通过单击集中器维护页面中任意记录后的
+				<读取版本信息>
+				链接，将会实时查询集中器的信息。
+				<br />
+				<br />
+
+				版本信息内容如下：
+				<br />
+				<br />
+				1、 厂商代号
+				<br />
+				<br />
+				2、 设备编号
+				<br />
+				<br />
+				3、 终端软件版本号
+				<br />
+				<br />
+				4、 终端软件发布日期(年月日)
+				<br />
+				<br />
+				5、 终端配置容量信息码
+				<br />
+				<br />
+				6、 终端通信协议.版本号
+				<br />
+				<br />
+				7、 终端硬件版本号
+				<br />
+				<br />
+				8、 终端硬件发布日期(年月日)
+				<br />
+				<br />
+
+
+				注意：
+				<br />
+				<br />
+				若是集中器不在线，将会返回提示信息“集中器不在线！”。
+				<br />
+				<br />
+				若是集中器在线，返回的提示信息有如下几种：
+				<br />
+				<br />
+				 读取集中器版本信息成功！
+				<br />
+				<br />
+				 读取集中器版本信息失败！
+				<br />
+				<br />
+				 请求超时…
+				<br />
+				<br />
+
+				<strong>☞ 设置结算日</strong>
+				<br />
+				<br />
+				通过集中器维护页面中
+				<写结算日>
+				可以设置集中器的结算日，系统支持批量设置集中器的结算日。如下图红框所示：
+				<br />
+				<br />
+				<img src="jzqwhyxjsr.png" class="tupian" />
+				<br />
+				<br />
+				用户在设置结算日前，先选择集中器，否则会弹出提示框“请选择要设置结算日的集中器！”
+				<br />
+				<br />
+				用户选择集中器后，必须输入结算日，范围在1~28
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				： 结算日：必填，结算日范围1~28。
+				<br />
+				<br />
+
+				注意：
+				<br />
+				<br />
+				若是集中器不在线，将会弹出提示框“********集中器不在线！”。
+				<br />
+				<br />
+				若是集中器在线，返回在弹出提示框的内容有如下几种：
+				<br />
+				<br />
+				 设置结算日成功！
+				<br />
+				<br />
+				 设置结算日失败！
+				<br />
+				<br />
+				 请求超时…
+				<br />
+				<br />
+
+				<strong>☞ 进入地图</strong>
+				<br />
+				<br />
+				通过单击集中器维护页面
+				中的<img src="jinruditu.png"/>按钮，可以进入集中器维护的地图页面（如下图）：
+				<br />
+				<br />
+				<img src="mapinfo.png" class="tupian"/>
+				<br />
+				<br />
+				<img src="shuoming.gif" />
+				：
+				<br />
+				<br />
+				回到地图中心：地图返回到设置的地图中心。
+				<br />
+				<br />
+				返回：返回到地址信息列表中。
+				<br />
+				<br />
+				首页：返回到系统首页页面。
+				<br />
+				<br />
+				右键菜单
+				<br />
+				<br />
+				放大：放大地图的显示比例。
+				<br />
+				<br />
+				缩小：缩小地图的显示比例。
+				<br />
+				<br />
+				放置到最大级：放大地图到可视效果最大的显示比例。
+				<br />
+				<br />
+				放置到最小级：缩小地图到可视效果最小的显示比例。
+				<br />
+				<br />
+				地图上的图标右键
+				<br />
+				<br />
+				集中器信息：显示该位置（楼栋）的所有集中器。
+				<br />
+				<br />
+				双击地图上的树状结构中的集中器，可直接定位到该集中器在地图上所处的位置。
+				<br />
+				<br />
+
+			</p>
+		</div>
+		<!-- 
+		<div id="div47" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;附录&nbsp;->&nbsp;常用操作</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 常用操作
+				<br />
+			</p>
+		</div> -->
+
+		<div id="div48" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;附录&nbsp;->&nbsp;用户许可协议</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 用户许可协议
+				<br />
+			</p>
+			<p class="fontset" >
+				<strong>许可：</strong>   <br />
+				<br />
+本公司将本软件程序的使用权授予您，但您必须向本公司作以下保证：不在本协议规定的条款之外，使用、拷贝、修改、租赁或转让本系统或其中的任一部份。 
+<br />
+				<br />
+<strong>您保证：</strong> <br /><br />
+1. 只在一台机器上使用本系统； <br /><br />
+2. 为在这一台机器上使用，出于备份或档案管理的目的，以机器可读格式制作本系统的拷贝； <br /><br />
+3. 在他方接受本协议的条款和条件的前提下，将本系统及许可协议转手给另一方使用。 <br /><br />
+如若发生转手，原文档及其伴随文档的所有拷贝必须一并转交对方，或将未转交的拷贝全部销毁； <br /><br />
+4. 只在以下之一前提下，将本系统用于多用户环境或网络系统上： <br /><br />
+⊙本系统明文许可用于多用户环境或网络系统上；或者， <br /><br />
+⊙使用本系统的每一节点及终端都已购买使用许可。 <br /><br />
+
+<strong>您保证不：</strong> <br /><br />
+
+1. 对本系统再次转让许可； <br /><br />
+2. 对本系统进行逆向工程、反汇编或解体拆卸； <br /><br />
+3. 拷贝或转交本系统的全部或部分，但本协议中明文规定的除外。 <br /><br />
+&nbsp;您将本系统或拷贝的全部或局部转手给另一使用方之时，您的许可权即自行终止。 <br /><br />
+本系统的版权和所有权： <br /><br />
+  　&nbsp;本系统及其所有拷贝的名称，与光盘上或本系统中注明的公司同在。本系统及文档享有版权，并受国家版权法及国际协约条款的保护。<br /><br />
+   &nbsp; 您不能从本软件中去掉其版权声明；并保证为本系统的拷贝(全部或部分)复制版权声明。您同意制止以任何形式非法拷贝本系统及文档。 
+<br />
+				<br />
+
+<strong>许可终止：</strong> <br />
+				<br />
+  　您若违返本协议的任一条款与条件，本公司可能随时会终止许可。终止许可之时，您必须立即销毁本系统及文档的所有拷贝，或归还给本公司。 
+<br />
+				<br />
+<strong>适用法律： </strong>
+  　《知识产权保护条例》、《版权、著作权法》、《专利法》等等。 <br />
+				<br />
+
+				
+			</p>
+		</div>
+
+		<div id="div49" class="d2" style="display: none">
+			<div class="body_1">
+				<span>系统帮助&nbsp;->&nbsp;附录&nbsp;->&nbsp;用户使用FAQ</span>
+			</div>
+			<p class="fontset" style="font-weight: 600">
+				☞ 用户使用FAQ
+				<br />
+			</p>
+			<p class="fontset">
+			Q：为什么登陆系统后不能操作其功能，点击会弹出用户未注册，怎么注册？ <br /><br />
+			<span class="spanfaq">A：此问题表示用户未注册或注册已过期，请点击注册按钮进行注册，注册完刷新即可。</span><br /><br /><br />
+			
+			Q：集中器设置为何老是失败？ <br /><br />
+			<span class="spanfaq">A：一般情况下此类问题皆由集中器不在线导致，只需將集中器配置在线即可。</span><br /><br /><br />
+			
+			Q：集中器设置为何老是失败？ <br /><br />
+			<span class="spanfaq">A：一般情况下此类问题皆由集中器不在线导致，只需將集中器配置在线即可。</span><br /><br /><br />
+			</p>
+		
+
+
+			
+		</div>
+	</body>
+</html>
+

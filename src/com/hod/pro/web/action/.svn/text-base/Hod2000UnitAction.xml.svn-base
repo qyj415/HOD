@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Unit" extends="defaults" namespace="/">
+		<action name="hod2000Unit" class="springHod2000UnitAction">
+			<result name="success">/iframes/unitIframe.jsp</result>
+			<result name="toUpdate">/update/unitedit.jsp</result>
+		</action>
+	</package>
+</struts>

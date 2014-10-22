@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hodOperateLog" extends="json-default" namespace="/">
+		<action name="hodOperateLog" class="springHod2000OperateLogAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+		<action name="hodOperateLog" class="springHod2000OperateLogAction" method="doDelete">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

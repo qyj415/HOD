@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Concentrator" extends="defaults" namespace="/">
+		<action name="hod2000Concentrator" class="springHod2000ConcentratorAction">
+			<result name="toUpdate">/update/concentratoredit.jsp</result>
+			<result name="toChange">/update/concentratorchange.jsp</result>
+			<result name="add">/form/concentratoradd.jsp</result>
+			<result name="show">/share/showConcentrator.jsp</result>
+			<result name="print">/print/concentratorPrint.jsp</result>
+			<result name="params">/form/initialize.jsp</result>
+			<result name="statePrint">/print/concentratorStatePrint.jsp</result>
+			<result name="concentratorWarmPrint">/print/concentratorWarmPrint.jsp</result>
+			<result name="toMapping">/show/concentratorMapping.jsp</result>
+		</action>
+	</package>
+	<package name="hodConcentrator" extends="json-default" namespace="/">
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="doTree">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="setClearDate">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="getTerminalInfo">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="factoryReset">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="doState">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="concentratorWarm">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="readVersion">
+			<result type="json"></result>
+		</action>
+		<action name="hodConcentrator" class="springHod2000ConcentratorAction" method="getEventList">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

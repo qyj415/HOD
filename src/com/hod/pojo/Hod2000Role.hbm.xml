@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Role" 
+    table="hod2000_role"
+>
+
+    <id
+        name="rid"
+        type="java.lang.Integer"
+        column="r_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="rname"
+        type="java.lang.String"
+        column="r_name"
+        length="50"
+    />
+    <property
+        name="rpurview"
+        type="java.lang.String"
+        column="r_purview"
+        length="2000"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000Operator -->
+    <set
+        name="hod2000Operators"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+        <key>
+            <column name="r_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Operator"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

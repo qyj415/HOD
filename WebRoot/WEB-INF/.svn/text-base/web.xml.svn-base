@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<welcome-file-list>
+		<welcome-file>/login.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 中文过滤器，user为空时调转到登陆页面 -->
+	<filter>
+		<filter-name>ChineseFilter</filter-name>
+		<filter-class>com.hod.util.ChineseFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ChineseFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- struts2过滤器 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.FilterDispatcher
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter> 
+ 
+	<filter-name>hibernateFilter</filter-name>
+		<filter-class>
+			org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+		</filter-class>
+		<!-- singleSession默认为true,若设为false则等于没用OpenSessionInView -->
+		<init-param>
+			<param-name>singleSession</param-name>
+			<param-value>true</param-value> 
+		</init-param> 
+	</filter>
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name> 
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	 
+	<servlet>
+	<servlet-name>DisplayChart</servlet-name>
+	<servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisplayChart</servlet-name>
+		<url-pattern>/servlet/DisplayChart</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+  		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<!-- 初始化参数,log4j的注册 -->
+	<servlet>
+		<description>log</description>
+		<display-name>log</display-name>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.hod.util.InitServlet</servlet-class>
+		<init-param>
+			<param-name>log4j-init-file</param-name>
+			<param-value>WEB-INF/classes/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- session监听器 -->
+	<listener>
+	<listener-class>
+		com.hod.sessionCount.UserCounter
+		</listener-class>
+	</listener>
+	
+	<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateSession</servlet-name>
+    <servlet-class>com.hod.servlet.UpdateSession</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>UpdateSession</servlet-name>
+    <url-pattern>/servlet/UpdateSession</url-pattern>
+  </servlet-mapping>
+</web-app>

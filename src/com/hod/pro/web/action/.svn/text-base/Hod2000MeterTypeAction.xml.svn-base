@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000MeterType" extends="defaults" namespace="/">
+		<action name="hod2000MeterType" class="springHod2000MeterTypeAction">
+			<result name="success">/show/metertypelist.jsp</result>
+			<result name="toUpdate">/update/metertypeedit.jsp</result>
+			<result name="add">/form/metertypeadd.jsp</result>
+		</action>
+	</package>
+	<package name="hodMeterType" extends="json-default" namespace="/">
+		<action name="hodMeterType" class="springHod2000MeterTypeAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

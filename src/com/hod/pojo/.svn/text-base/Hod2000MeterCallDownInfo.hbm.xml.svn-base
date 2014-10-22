@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000MeterCallDownInfo" 
+    table="hod2000_meterCallDownInfo"
+>
+
+    <id
+        name="callId"
+        type="java.lang.Integer"
+        column="call_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="meterName"
+        type="java.lang.String"
+        column="meter_name"
+        length="50"
+    />
+    <property
+        name="conNum"
+        type="java.lang.String"
+        column="con_number"
+    />
+    <property
+        name="sendContent"
+        type="java.lang.String"
+        column="sendContent"
+        length="150"
+    />
+    <property
+        name="protocolType"
+        type="java.lang.String"
+        column="protocolType"
+        length="150"
+    />
+    <property
+        name="submitTime"
+        type="java.lang.String"
+        column="submitTime"
+    />
+    <property
+        name="sendFlag"
+        type="java.lang.Integer"
+        column="sendFlag"
+    />
+	 <property
+        name="state"
+        type="java.lang.Integer"
+        column="state"
+    />
+    <property
+        name="remark"
+        type="java.lang.String"
+        column="remark"
+        length="150"
+    />
+    <property
+        name="resultContent"
+        type="java.lang.String"
+        column="result_meterInit"
+        length="20"
+    />
+    <property
+        name="resultAccuFlow"
+        type="java.lang.String"
+        column="result_accuFlow"
+        length="20"
+    />
+    <!-- Associations -->
+  
+</class>
+</hibernate-mapping>

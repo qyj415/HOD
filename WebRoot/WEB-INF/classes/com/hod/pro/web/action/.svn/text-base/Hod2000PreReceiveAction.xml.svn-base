@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000PreReceive" extends="defaults" namespace="/">
+		<action name="hod2000PreReceive" class="springHod2000PreReceiveAction">
+			<result name="params">/form/prechargeSet.jsp</result>
+			<result name="success">/show/prereceivelist.jsp</result>
+			<result name="print1">/print/preReceivePrint.jsp</result>
+			<result name="print2">/print/unPreReceivePrint.jsp</result>
+			
+		</action>
+		
+	<action name="hod2000PreReceive2" class="springHod2000PreReceiveAction" method="exportToExcel">  
+        <result name="success" type="stream">  
+            <param name="contentType">application/vnd.ms-excel;charset=utf-8</param>  
+            <!-- filename的属性值,表示的是下载的时候,显示在下载工具中的文件名,而不一定是保存的文件的文件名 -->  
+       		<param name="contentDisposition">attachment;filename="${fileName}.xls"</param>  
+        	<!-- 下载的文件流的方法名, 也就是说, 在Java代码里面必须有InputStream getDownloadFile()这个方法 -->  
+        	<!-- 在这里定义成文件名xxx,那么对应在Java文件中就必须要有InputStream getXxx()方法 -->  
+        	<param name="inputName">excelStream</param>  
+        	<!-- 缓存大小 -->  
+        	<param name="bufferSize">4096</param>  
+    	</result>  
+		</action>
+		
+		<action name="hod2000PreReceive3" class="springHod2000PreReceiveAction" method="exportToExce2">  
+	        <result name="success" type="stream">  
+	            <param name="contentType">application/vnd.ms-excel;charset=utf-8</param>  
+	            <!-- filename的属性值,表示的是下载的时候,显示在下载工具中的文件名,而不一定是保存的文件的文件名 -->  
+	       		<param name="contentDisposition">attachment;filename="${fileName}.xls"</param>  
+	        	<!-- 下载的文件流的方法名, 也就是说, 在Java代码里面必须有InputStream getDownloadFile()这个方法 -->  
+	        	<!-- 在这里定义成文件名xxx,那么对应在Java文件中就必须要有InputStream getXxx()方法 -->  
+	        	<param name="inputName">excelStream</param>  
+	        	<!-- 缓存大小 -->  
+	        	<param name="bufferSize">4096</param>  
+	    	</result>  
+		</action>
+	</package>
+	
+	<package name="hodPreReceive" extends="json-default" namespace="/">
+		<action name="hodPreReceive" class="springHod2000PreReceiveAction" method="getPreCharge">
+			<result type="json"></result>
+		</action>
+		<action name="hodPreReceive" class="springHod2000PreReceiveAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+		<action name="hodPreReceive" class="springHod2000PreReceiveAction" method="doSelect2">
+			<result type="json"></result>
+		</action>
+		<action name="hodPreReceive" class="springHod2000PreReceiveAction" method="doSelect3">
+			<result type="json"></result>
+		</action>
+		
+	</package>
+</struts>

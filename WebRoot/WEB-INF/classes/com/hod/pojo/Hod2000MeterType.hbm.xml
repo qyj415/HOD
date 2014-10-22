@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000MeterType" 
+    table="hod2000_meterType"
+>
+
+
+    <id
+        name="typeIndex"
+        type="java.lang.Integer"
+        column="type_index"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="typeName"
+        type="java.lang.String"
+        column="type_name"
+        length="50"
+    />
+    <property
+        name="typeCode"
+        type="java.lang.String"
+        column="type_code"
+        length="50"
+    />
+	 <property
+        name="companyNum"
+        type="java.lang.String"
+        column="company_num"
+        not-null="false"
+        length="10"
+    />
+    <property
+        name="companyName"
+        type="java.lang.String"
+        column="company_name"
+        not-null="false"
+        length="50"
+    />
+     <property
+        name="communicationProtocol"
+        type="java.lang.Integer"
+        column="communication_protocol"
+        not-null="false"
+        length="10"
+    />
+    <!-- Associations -->
+  	    <set
+        name="hod2000Meters"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+        <key>
+            <column name="type_index" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Meter"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

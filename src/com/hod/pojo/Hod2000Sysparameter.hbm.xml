@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Sysparameter" 
+    table="hod2000_sysparameter"
+>
+
+<cache usage="read-write"/>
+
+    <id
+        name="pid"
+        type="java.lang.Integer"
+        column="p_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="pname"
+        type="java.lang.String"
+        column="p_name"
+        length="150"
+    />
+    <property
+        name="pvalue"
+        type="java.lang.String"
+        column="p_value"
+        length="150"
+    />
+    <property
+        name="ptype"
+        type="java.lang.Integer"
+        column="p_type"
+    />
+    <property
+        name="pdesc"
+        type="java.lang.String"
+        column="p_desc"
+        length="250"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

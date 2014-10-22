@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Price" 
+    table="hod2000_price"
+>
+
+    <id
+        name="pid"
+        type="java.lang.Integer"
+        column="p_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="pname"
+        type="java.lang.String"
+        column="p_name"
+        length="50"
+    />
+    <property
+        name="ptype"
+        type="java.lang.Integer"
+        column="p_type"
+        length="10"
+    />
+    <property
+        name="pstatus"
+        type="java.lang.Integer"
+        column="p_status"
+        length="10"
+    />
+	  <property
+        name="pstartTime"
+        type="java.util.Date"
+        column="p_startDate"
+        length="23"
+      />
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000PriceDetail -->
+    <set
+        name="hod2000PriceDetails"
+        lazy="false"
+        inverse="true"
+		cascade="all"
+    >
+        <key>
+            <column name="p_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000PriceDetail"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

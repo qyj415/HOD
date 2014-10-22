@@ -1,0 +1,638 @@
+package  com.hod.pro.web.action;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+// import java.util.Properties;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+
+import javax.servlet.http.HttpServletRequest;
+import net.sf.json.JSONObject;
+import org.apache.log4j.Logger;
+import org.apache.struts2.ServletActionContext;
+import org.hibernate.criterion.DetachedCriteria;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.servlet.ServletUtilities;
+import org.jfree.data.general.DefaultPieDataset;
+import com.hod.javabean.GetReceive;
+import com.hod.javabean.ReceiveSummary;
+import com.hod.javabean.UnCollectReceive;
+import com.hod.pojo.Hod2000Heatingparameter;
+import com.hod.pojo.Hod2000PreReceive;
+import com.hod.pojo.Hod2000Price;
+import com.hod.pojo.Hod2000Receive;
+import com.hod.pojo.Hod2000Room;
+import com.hod.pro.model.service.IHod2000ClientService;
+import com.hod.pro.model.service.IHod2000HeatingparameterService;
+import com.hod.pro.model.service.IHod2000PreReceiveService;
+import com.hod.pro.model.service.IHod2000PriceService;
+import com.hod.pro.model.service.IHod2000ReceiveService;
+import com.hod.pro.model.service.IHod2000RoomService;
+import com.hod.util.Arith;
+import com.hod.util.Message;
+import com.hod.util.OperatorLog;
+import com.hod.util.Utils;
+import com.opensymphony.xwork2.ActionSupport;
+import com.hod.util.GraphicReportHelp;
+
+/**
+ * Hod2000ReceiveAction 收费明细表
+ * @author yixiang
+ */
+public class Hod2000ReceiveAction extends ActionSupport {
+
+	private HttpServletRequest request;
+	private IHod2000ReceiveService hod2000ReceiveService;
+	private Hod2000Receive hod2000Receive;
+	private Hod2000Heatingparameter heatingparameter;
+	private IHod2000HeatingparameterService heatingparameterService;
+	private IHod2000PreReceiveService hod2000PreReceiveService;
+	private IHod2000ClientService clientService;
+	private IHod2000RoomService hod2000RoomService;
+	private IHod2000PriceService hod2000PriceService;
+	private List dataList;
+	private PrintWriter out;
+	private Message msg=Message.getInstance();
+	private static Logger log = Logger.getLogger(Hod2000ReceiveAction.class.getName());
+	private MyJsonOut myjsonOut = new MyJsonOut();
+	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
+	private String fileName;
+	private InputStream excelStream ;
+	
+	public String doSave() {
+		try {
+			request = ServletActionContext.getRequest();
+			//设置该用的收费为已收费
+			Hod2000Room room=(Hod2000Room) hod2000RoomService.findById(hod2000Receive.getRoomId());
+			room.setRoomReceiveFlag(1);
+			hod2000RoomService.update(room);
+			hod2000ReceiveService.save(hod2000Receive);
+			msg.setMsg1("收款成功!");
+			OperatorLog.addOperatorLog("收费");
+		} catch (Exception e) {
+			msg.setError1("错误信息："+e.toString());
+			log.error("Hod2000ReceiveAction-->doSave:",e);
+		}
+		msg.setLink(0, "<a href=\"" + request.getContextPath()
+				+ "/form/charge.jsp\">返回列表</a>");
+		request.setAttribute("message", msg);
+		return "message";
+	}
+    
+	public void doSelect() {
+		try {
+			OperatorLog.addOperatorLog("收费统计查询");
+			request = ServletActionContext.getRequest();
+			out=ServletActionContext.getResponse().getWriter();
+			int page=Integer.parseInt(request.getParameter("page"));//获得请求的页码
+			int pageSize=Integer.parseInt(request.getParameter("rows"));//获得请求的每页记录数
+			String startTime=request.getParameter("startTime");
+			String endTime=request.getParameter("endTime");
+			String clientName=request.getParameter("clientName");
+			String roperator=request.getParameter("roperator");
+			//已收款信息
+			String sql="select r_id,address,a.client_name,pr_money,r_money,return_money,fill_money,r_type,r_date,room_size,r_operator from receive_room_meter a inner join hod2000_receive p on a.room_id=p.room_id where client_enable=1 and meter_able=1";
+			//String sql="select r_id,community_name+'-'+building_name+'-'+room_name address,a.client_name,pr_money,r_money,return_money,fill_money,r_type,r_date,room_size,r_operator from receive_room_meter a inner join hod2000_receive p on a.room_id=p.room_id where client_enable=1 and meter_able=1";
+			String countSql="select count(*) from receive_room_meter a inner join hod2000_receive p on a.room_id=p.room_id where client_enable=1 and meter_able=1";
+			Object[] objects;
+			Map map;
+			dataList=new ArrayList();
+			if(startTime!=null&&!startTime.equals(""))
+			{
+				sql+=" and r_date>='"+startTime+"'";
+				countSql+=" and r_date>='"+startTime+"'";
+			}
+			if(endTime!=null&&!endTime.equals(""))
+			{
+				sql+=" and r_date<='"+endTime+"'";
+				countSql+=" and r_date<='"+endTime+"'";
+			}
+			if(clientName!=null&&!"".equals(clientName))
+			{
+				sql+=" and a.client_name ='"+clientName+"'";
+				countSql+=" and a.client_name ='"+clientName+"'";
+			}
+			if(roperator!=null&&!"".equals(roperator))
+			{
+				sql+=" and r_operator ='"+roperator+"'";
+				countSql+=" and r_operator ='"+roperator+"'";
+			}
+			sql+=" order by r_date desc";
+			List list=hod2000ReceiveService.findByNHQL(page, pageSize, sql);
+			for (int i = 0; i < list.size(); i++) {
+				map = new HashMap();   
+			    objects=(Object[])list.get(i);
+			    map.put("rid", objects[0]);
+			    map.put("address", objects[1]);
+			    map.put("clientName", objects[2]);
+			    map.put("prMoney", objects[3]);
+			    map.put("rmoney", objects[4]);
+			    map.put("returnMoney", objects[5]);
+			    map.put("fillMoney", objects[6]);
+			    map.put("rtype", objects[7]);
+			    map.put("rdate", Utils.dateToStrLong(Utils.strToDateLong(objects[8].toString())));
+			    map.put("roomSize", objects[9]);
+			    map.put("roperator", objects[10]);
+			    dataList.add(map);
+			}
+			int totalRecord =Integer.parseInt(hod2000ReceiveService.findByNHQL(countSql).get(0).toString());
+			myjsonOut.OutByObject("Hod2000ReceiveAction-->doSelect:",dataList,totalRecord,page,pageSize,out);
+		} catch (Exception e) {
+			log.error("Hod2000ReceiveAction-->doSelect:",e);
+		}
+	}
+	
+	//未收款统计
+	public void doSelect2()
+	{
+		try {
+			request = ServletActionContext.getRequest();
+			out=ServletActionContext.getResponse().getWriter();
+			String page=request.getParameter("page");//获得请求的页码
+			String pageSize=request.getParameter("rows");//获得请求的每页记录数
+			String countSql="select count(*) from receive_room_meter where room_receive_flag=0 and client_enable=1 and meter_able=1";
+			//未收款信息查询
+			List<UnCollectReceive> unCollect=hod2000ReceiveService.findUnCollected(page,pageSize);
+			int totalRecord =Integer.parseInt(hod2000ReceiveService.findByNHQL(countSql).get(0).toString());
+			myjsonOut.OutByObject("Hod2000ReceiveAction-->doSelect2:",unCollect,totalRecord,Integer.parseInt(page),Integer.parseInt(pageSize),out);
+		} catch (Exception e) {
+			log.error("Hod2000ReceiveAction-->doSelect2:",e);
+		}
+	}
+	
+	//统计汇总
+	public void doSelect3()
+	{
+		try {
+			request = ServletActionContext.getRequest();
+			out=ServletActionContext.getResponse().getWriter();
+			//收费统计汇总
+			ReceiveSummary summary=hod2000ReceiveService.getSummary();
+			DefaultPieDataset dataset=new DefaultPieDataset();
+			dataset.setValue("已收费户数", summary.getUserNum());
+			dataset.setValue("未收费户数", summary.getUnCollectUserNum());
+			JFreeChart chart=ChartFactory.createPieChart3D("已收费与未收费户数统计汇总", dataset, true, true, false);//绘制3D饼图
+			GraphicReportHelp.getPieFont(chart);
+			String fileName = ServletUtilities.saveChartAsPNG(chart, 400, 300, null,request.getSession());
+			out.write("{success:true,fileName:'"+fileName+"',preMoney:"+summary.getPreMoney()+",totalMoney:"+summary.getTotalMoney()+",returnMoney:"+summary.getReturnMoney()+",fillMoney:"+summary.getFillMoney()+"}");
+		} catch (Exception e) {
+			log.error("Hod2000ReceiveAction-->doSelect3:",e);
+			out.write("{success:false}");
+		}
+	}
+	
+	//已收款明细打印
+	public String getReceivePrint()
+	{
+		try {
+			OperatorLog.addOperatorLog("已收款明细打印");
+			request = ServletActionContext.getRequest();
+			String startTime=request.getParameter("startTime");
+			String endTime=request.getParameter("endTime");
+			String clientName=request.getParameter("clientName");
+			String roperator=request.getParameter("roperator");
+			if(startTime!=null||endTime!=null)
+			{
+				//已收款信息
+				String sql="select r_id,address,a.client_name,pr_money,r_money,return_money,fill_money,r_type,r_date,room_size,r_operator from receive_room_meter a inner join hod2000_receive p on a.room_id=p.room_id where client_enable=1 and meter_able=1";
+				//String sql="select r_id,community_name+'-'+building_name+'-'+room_name address,a.client_name,pr_money,r_money,return_money,fill_money,r_type,r_date,room_size,r_operator from receive_room_meter a inner join hod2000_receive p on a.room_id=p.room_id where client_enable=1 and meter_able=1";
+				String countSql="select count(*) from receive_room_meter a inner join hod2000_receive p on a.room_id=p.room_id where client_enable=1 and meter_able=1";
+				Object[] objects;
+				Map map;
+				dataList=new ArrayList();
+				if(startTime!=null&&!startTime.equals(""))
+				{
+					sql+=" and r_date>='"+startTime+"'";
+					countSql+=" and r_date>='"+startTime+"'";
+				}
+				if(endTime!=null&&!endTime.equals(""))
+				{
+					sql+=" and r_date<='"+endTime+"'";
+					countSql+=" and r_date<='"+endTime+"'";
+				}
+				if(clientName!=null&&!"".equals(clientName))
+				{
+					sql+=" and a.client_name ='"+clientName+"'";
+					countSql+=" and a.client_name ='"+clientName+"'";
+				}
+				if(roperator!=null&&!"".equals(roperator))
+				{
+					sql+=" and r_operator ='"+roperator+"'";
+					countSql+=" and r_operator ='"+roperator+"'";
+				}
+				sql+=" order by r_date desc";
+				List list=Page.findBySql(request, hod2000ReceiveService, sql, countSql);
+				for (int i = 0; i < list.size(); i++) {
+					map = new HashMap();   
+				    objects=(Object[])list.get(i);
+				    map.put("rid", objects[0]);
+				    map.put("address", objects[1]);
+				    map.put("clientName", objects[2]);
+				    map.put("prMoney", objects[3]);
+				    map.put("rmoney", objects[4]);
+				    map.put("returnMoney", objects[5]);
+				    map.put("fillMoney", objects[6]);
+				    map.put("rtype", objects[7]);
+				    map.put("rdate", objects[8]);
+				    map.put("roomSize", objects[9]);
+				    map.put("roperator", objects[10]);
+				    dataList.add(map);
+				}
+			}
+			return "print1";
+		}catch (Exception e) {
+			msg.setError1("错误信息："+e.toString());
+			log.error("Hod2000ReceiveAction-->getReceivePrint:",e);
+			request.setAttribute("message", msg);
+			return "message";
+		}
+	}
+	
+	/**
+	 * 未收款明细统计导出为excel
+	 */
+	public String exportToExcel(){
+		try {
+			request = ServletActionContext.getRequest();
+			//未收款信息查询
+			List<UnCollectReceive> unCollect=hod2000ReceiveService.findUnCollected("","");
+			//System.out.println(unCollect+"----------------------------------");
+			String date = sdf.format(new Date());
+			fileName = date;
+			
+			//标题行
+	        String title[]={"地理位置","用户姓名","联系电话","表号","预付款金额（元）","应交金额(元)"};
+	        List<String[]> t_list = new ArrayList<String[]>();
+	        t_list.add(title);
+	        
+	        for(UnCollectReceive u : unCollect){
+	        	String[] rowData = new String[6];
+	        	rowData[0] = u.getAddress();
+	        	rowData[1] = u.getClientName();
+				rowData[2] = u.getClientTel();
+				rowData[3] = u.getMeterName();
+				rowData[4] = Double.valueOf(u.getPreMoney()).toString();
+				rowData[5] = Double.valueOf(u.getReceiveMoney()).toString();
+	        	t_list.add(rowData);
+	        }
+	        
+	        //创建Excel工作簿方法2.2
+			HSSFWorkbook workbook = getWorkbook(t_list,"未收款明细统计");
+
+			if (null != workbook) {
+				this.workbook2InputStream(workbook,fileName); 
+				return "success";
+			}
+
+		} catch (Exception e) {
+			log.error("Hod2000PreReceiveAction-->doSelect:",e);
+			return "message";
+		}
+		return "message";
+	}
+	
+	/**
+	 * 已收款明细统计导出为excel
+	 */
+	public String exportToExcel2(){
+		try {
+			
+			String sql="select r_id,address,a.client_name,pr_money,r_money,return_money,fill_money,r_type,r_date,room_size,r_operator from receive_room_meter a inner join hod2000_receive p on a.room_id=p.room_id where client_enable=1 and meter_able=1";
+			List list = hod2000PreReceiveService.findByNHQL(sql);
+			
+			String date = sdf.format(new Date());
+			fileName = date;
+			
+			//标题行
+	        String title[]={"地址位置","用户姓名","预付款金额（元）","退款金额（元）","补交金额（元）","应交金额(元)","收费方案","收费时间","操作员"};
+	        List<String[]> t_list = new ArrayList<String[]>();
+	        t_list.add(title);
+			
+			if(heatingparameterService.findPreReceiveParams()>0)
+			{
+				
+				for (int i = 0; i < list.size(); i++) {
+					String[] rowData = new String[9];
+					Object[] objects = (Object[])list.get(i);
+					rowData[0] = (String)objects[1];
+					rowData[1] = (String)objects[2];
+					rowData[2] = ((Double)objects[3]).toString();
+					rowData[3] = ((Double)objects[5]).toString();
+					rowData[4] = ((Double)objects[6]).toString();
+					rowData[5] = ((Double)objects[4]).toString();
+					rowData[6] = (String)objects[7].toString();
+					if(rowData[6].equals("1"))
+					{
+						rowData[6]="多退少不补";
+					}else{
+						rowData[6]="多退少补";
+					}
+					rowData[7] = (String)objects[8].toString();
+					rowData[8] = (String)objects[10].toString();
+					
+					t_list.add(rowData);
+					
+				}
+			}
+
+	        //创建Excel工作簿方法2.2
+			HSSFWorkbook workbook = getWorkbook(t_list,"已收款明细统计");
+
+			if (null != workbook) {
+				this.workbook2InputStream(workbook,fileName); 
+				return "success";
+			}
+
+		} catch (Exception e) {
+			log.error("Hod2000PreReceiveAction-->doSelect:",e);
+			return "message";
+		}
+		return "message";
+	}
+	
+	/**
+	   * 将Workbook写入到InputStream
+	   * 
+	   * @param workbook    HSSFWorkbook
+	   * @param fileName  String 文件名
+	   * 
+	   * */
+	 private void workbook2InputStream(HSSFWorkbook workbook, String fileName) throws Exception {
+		 this.setFileName(URLEncoder.encode(fileName,"UTF-8"));
+		 ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		 workbook.write(baos);
+		 baos.flush();
+		 byte[] aa = baos.toByteArray();
+		 excelStream = new ByteArrayInputStream(aa, 0, aa.length);
+		 baos.close();
+	 }
+	 
+	 public void setFileName(String fileName)
+			throws UnsupportedEncodingException {
+		request = ServletActionContext.getRequest();
+		String agent = request.getHeader("User-Agent");
+		if (null != agent) {
+			agent = agent.toLowerCase();
+			if (agent.indexOf("firefox") != -1) {
+				this.fileName = new String(URLDecoder.decode(fileName, "UTF-8")
+						.getBytes(), "iso-8859-1");
+			} else {
+				this.fileName = fileName;
+			}
+		}
+	}
+	
+	private HSSFWorkbook getWorkbook(List<String[]> listM, String sheetNames)
+			throws Exception {
+
+		HSSFWorkbook workbook = new HSSFWorkbook();// 创建Excel文件
+
+		HSSFCellStyle style = workbook.createCellStyle(); // 样式对象
+		style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
+		style.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);// 指定单元格垂直居中对齐
+		
+		HSSFSheet sheet = workbook.createSheet();// 创建sheet
+		workbook.setSheetName(0,sheetNames);
+		
+		for (int k = 0; k < listM.size(); k++) {
+			String[] columnNames = listM.get(k);
+			HSSFRow row = sheet.createRow(k); // 创建第1行，也就是输出表头
+			HSSFCell cell = row.createCell((short) 0);
+			cell.setCellType(HSSFCell.CELL_TYPE_STRING);
+			
+			for (short i = 0; i < columnNames.length; i++) {
+				cell = row.createCell(i); // 创建第i列
+				cell.setCellType(HSSFCell.CELL_TYPE_STRING);
+				cell.setCellValue(columnNames[i]);
+			}
+		}
+		return workbook;
+	}
+	
+	public String getUnReceivePrint()
+	{
+		try {
+			OperatorLog.addOperatorLog("未收款明细打印");
+			request = ServletActionContext.getRequest();
+			//未收款信息查询
+			List<UnCollectReceive> unCollect=hod2000ReceiveService.findUnCollected("","");
+			request.setAttribute("unCollect", unCollect);
+			return "print2";
+		}catch (Exception e) {
+			msg.setError1("错误信息："+e.toString()); 
+			log.error("Hod2000ReceiveAction-->getUnReceivePrint:",e);
+			request.setAttribute("message", msg);
+			return "message";
+		}
+	}
+	
+	//根据用户id得到收费信息
+	public void getCharge()
+	{
+		try {
+			double preMoney=0;//预付款金额
+			double rMoney=0;//应收金额
+			double returnMoney=0;//退款金额
+			double fillMoney=0;//补交金额
+			request = ServletActionContext.getRequest();
+			out=ServletActionContext.getResponse().getWriter();
+			String roomId=request.getParameter("roomId");
+			//判断收费参数是否已经设置
+			int receiveParams=heatingparameterService.findReceiveParams();
+			if(0==receiveParams)
+			{
+				out.write("{success:false,msg:'请先设置收费参数!'}");
+				return;
+			}
+			//查询房间的价格方案，判断该方案是否已经存在当前方案
+			Hod2000Room room=(Hod2000Room) hod2000RoomService.findById(Integer.parseInt(roomId));
+			Hod2000Price price=null;
+			price=hod2000PriceService.findByParams(room.getPriceType(),1);
+			if(price==null)
+			{
+				out.write("{success:false,msg:'程序中未启用该房间价格方案的当前方案!'}");
+				return;
+			}
+			GetReceive re=hod2000ReceiveService.getCharge(Integer.parseInt(roomId));
+			re.setTypes(0);
+			//查询该房间的预付款金额，一定是当前季度的，即房间中的预收款状态为1
+			List preList=hod2000PreReceiveService.findByRoomId(Integer.parseInt(roomId));
+			if(preList.size()>0)
+			{
+				Hod2000PreReceive pre=(Hod2000PreReceive) preList.get(0);
+				//如果该用户的预收款为置零时，其收费方案只能为"多退少补"
+				if(1==pre.getPrAfter())
+				{
+					re.setReType(2);
+					re.setTypes(1);
+				}
+				preMoney=pre.getPrMoney();
+			}
+			re.setPreMoney(preMoney);
+			rMoney=re.getMonetyToPay();
+			if(rMoney>preMoney)
+			{
+				//fillMoney=rMoney-preMoney;
+				fillMoney=Arith.subtract(rMoney, preMoney, 2);
+			}
+			else if(rMoney<preMoney)
+			{
+				//returnMoney=preMoney-rMoney;
+				returnMoney=Arith.subtract(preMoney, rMoney, 2);
+			}
+			if(re.getReType()==1)
+				re.setFillMoney(0);
+			else
+				re.setFillMoney(fillMoney);
+			re.setReturnMoney(returnMoney);
+			out.write("{success:true,data:"+JSONObject.fromObject(re)+"}");
+		} catch (Exception e) {
+			msg.setError1("错误信息："+e.toString());
+			log.error("Hod2000ReceiveAction-->getCharge:",e);
+			out.write("{success:false}");
+		}
+	}
+	
+	public String showParam()
+	{
+		try {
+			DetachedCriteria dc=DetachedCriteria.forClass(Hod2000Heatingparameter.class);
+			List list=heatingparameterService.findByCriteria(dc);
+			if(list.size()>0)
+			{
+				heatingparameter=(Hod2000Heatingparameter) list.get(0);
+			}
+			return "params";
+		} catch (Exception e) {
+			msg.setError1("错误信息："+e.toString());
+			log.error("Hod2000ReceiveAction-->showParam:",e);
+			request.setAttribute("message", msg);
+			return "message";
+		}
+	}
+	
+	/**
+	 * 预收款参数设置
+	 * @return
+	 */
+	public String setParam()
+	{
+		try {
+			request = ServletActionContext.getRequest();
+			String id=request.getParameter("id");
+			String startMonth=request.getParameter("startMonth");
+			String endMonth=request.getParameter("endMonth");
+			String hpType=request.getParameter("hpType");
+			if(id!=null&&!id.equals(""))
+			{
+				heatingparameter=(Hod2000Heatingparameter) heatingparameterService.findById(Integer.parseInt(id));
+			}
+			else
+			{
+				heatingparameter=new Hod2000Heatingparameter();
+			}
+			if(startMonth!=null&&!startMonth.equals(""))
+			{
+				heatingparameter.setHpStart(Utils.strToDate(startMonth));
+			}
+			if(endMonth!=null&&!endMonth.equals(""))
+			{
+				heatingparameter.setHpEnd(Utils.strToDate(endMonth));
+			}
+			heatingparameter.setHpType(Integer.parseInt(hpType));
+			//将房间的所有是否预收款设为0 未预收款
+			hod2000RoomService.executeUpdate("update Hod2000Room set roomReceiveFlag=0");
+			heatingparameterService.saveOrUpdate(heatingparameter);
+			msg.setMsg1("设置收费参数成功");
+			OperatorLog.addOperatorLog("收费参数设置");
+		} catch (Exception e) {
+			msg.setError1("错误信息："+e.toString());
+			log.error("Hod2000ReceiveAction-->setParam:",e);
+		}
+		msg.setLink(0, "<a href=\"" + request.getContextPath()
+				+ "/hod2000Receive!showParam.do\">返回</a>");
+		request.setAttribute("message", msg);
+		return "message";
+	}
+    
+    	
+	public List getDataList() {
+		return dataList;
+	}
+
+	public void setDataList(List dataList) {
+		this.dataList = dataList;
+	}
+	
+    
+	public void setHod2000ReceiveService(IHod2000ReceiveService hod2000ReceiveService) {
+		this.hod2000ReceiveService = hod2000ReceiveService;
+	}
+ 
+	public Hod2000Receive getHod2000Receive() {
+		return hod2000Receive;
+	}
+
+	public void setHod2000Receive(Hod2000Receive hod2000Receive) {
+		this.hod2000Receive = hod2000Receive;
+	}
+    
+	public Hod2000Heatingparameter getHeatingparameter() {
+		return heatingparameter;
+	}
+
+	public void setHeatingparameter(Hod2000Heatingparameter heatingparameter) {
+		this.heatingparameter = heatingparameter;
+	}
+
+	public void setHeatingparameterService(
+			IHod2000HeatingparameterService heatingparameterService) {
+		this.heatingparameterService = heatingparameterService;
+	}
+
+	public void setHod2000PreReceiveService(
+			IHod2000PreReceiveService hod2000PreReceiveService) {
+		this.hod2000PreReceiveService = hod2000PreReceiveService;
+	}
+
+	public void setClientService(IHod2000ClientService clientService) {
+		this.clientService = clientService;
+	}
+
+	public void setHod2000RoomService(IHod2000RoomService hod2000RoomService) {
+		this.hod2000RoomService = hod2000RoomService;
+	}
+
+	public void setHod2000PriceService(IHod2000PriceService hod2000PriceService) {
+		this.hod2000PriceService = hod2000PriceService;
+	}
+	
+	public InputStream getExcelStream() {
+		return excelStream;
+	}
+
+	public void setExcelStream(InputStream excelStream) {
+		this.excelStream = excelStream;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+}

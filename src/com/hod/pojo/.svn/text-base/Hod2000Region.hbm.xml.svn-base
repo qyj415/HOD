@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Region" 
+    table="hod2000_region"
+>
+
+<cache usage="read-write"/>
+
+    <id
+        name="regionId"
+        type="java.lang.Integer"
+        column="region_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="regionName"
+        type="java.lang.String"
+        column="region_name"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="regionCode"
+        type="java.lang.String"
+        column="region_code"
+        not-null="true"
+        length="50"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000City -->
+    <set
+        name="hod2000Cities"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+        <key>
+            <column name="region_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000City"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

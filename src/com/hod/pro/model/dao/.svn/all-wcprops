@@ -1,0 +1,413 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Prj1202/!svn/ver/2085/sys_src/source/HOD-2000/src/com/hod/pro/model/dao
+END
+Hod2000MeterTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/252/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000MeterTypeDAO.java
+END
+Hod2000CountyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Prj1202/!svn/ver/158/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000CountyDAO.java
+END
+IHod2000MeterInfoTempDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Prj1202/!svn/ver/166/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000MeterInfoTempDAO.java
+END
+Hod2000DbBackupScheduleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/1005/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000DbBackupScheduleDAO.java
+END
+Hod2000PreReceiveDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Prj1202/!svn/ver/2062/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000PreReceiveDAO.java
+END
+Hod2000BatchClientErrorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/1876/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000BatchClientErrorDAO.java
+END
+IHod2000DownInfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000DownInfoDAO.java
+END
+IHod2000RegionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000RegionDAO.java
+END
+Hod2000RoleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000RoleDAO.java
+END
+Hod2000MeterInfoHistoryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/1936/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000MeterInfoHistoryDAO.java
+END
+Hod2000MeterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Prj1202/!svn/ver/2055/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000MeterDAO.java
+END
+Hod2000MeterCallDownInfoDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/444/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000MeterCallDownInfoDao.java
+END
+Hod2000UnitDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/1849/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000UnitDAO.java
+END
+GenericDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Prj1202/!svn/ver/2149/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/GenericDAO.java
+END
+Hod2000HeatingparameterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/1771/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000HeatingparameterDAO.java
+END
+IHod2000CityDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000CityDAO.java
+END
+Hod2000ReceiveDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/2062/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000ReceiveDAO.java
+END
+Hod2000RegionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Prj1202/!svn/ver/840/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000RegionDAO.java
+END
+IHod2000RoomDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/677/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000RoomDAO.java
+END
+Hod2000PriceDetailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000PriceDetailDAO.java
+END
+IHod2000ReceiveDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/1759/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000ReceiveDAO.java
+END
+IHod2000CommunityDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000CommunityDAO.java
+END
+IHod2000PriceDetailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000PriceDetailDAO.java
+END
+IHod2000DbBackupScheduleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Prj1202/!svn/ver/1005/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000DbBackupScheduleDAO.java
+END
+IHod2000PermissionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000PermissionDAO.java
+END
+Hod2000ConcentratorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Prj1202/!svn/ver/1945/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000ConcentratorDAO.java
+END
+IHod2000BatchClientErrorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Prj1202/!svn/ver/1876/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000BatchClientErrorDAO.java
+END
+IHod2000OperateLogDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000OperateLogDAO.java
+END
+IHod2000RoleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000RoleDAO.java
+END
+IHod2000PriceDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/1133/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000PriceDAO.java
+END
+Hod2000MeterInfoTempDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Prj1202/!svn/ver/166/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000MeterInfoTempDAO.java
+END
+Hod2000SysparameterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Prj1202/!svn/ver/228/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000SysparameterDAO.java
+END
+IHod2000DownInfoCacheDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000DownInfoCacheDAO.java
+END
+IHod2000MeterInfoHistoryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Prj1202/!svn/ver/1786/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000MeterInfoHistoryDAO.java
+END
+Hod2000DeviceInitParameterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Prj1202/!svn/ver/765/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000DeviceInitParameterDAO.java
+END
+IHod2000ParaDownInfoCacheDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Prj1202/!svn/ver/765/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000ParaDownInfoCacheDAO.java
+END
+IHod2000MeterTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Prj1202/!svn/ver/252/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000MeterTypeDAO.java
+END
+IHod2000ClientDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/1762/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000ClientDAO.java
+END
+Hod2000PermissionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000PermissionDAO.java
+END
+Hod2000BatchMeterErrorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Prj1202/!svn/ver/1879/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000BatchMeterErrorDAO.java
+END
+IHod2000UnitDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Prj1202/!svn/ver/1849/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000UnitDAO.java
+END
+IHod2000HeatingparameterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Prj1202/!svn/ver/1132/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000HeatingparameterDAO.java
+END
+Hod2000MeterInfoFreezeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Prj1202/!svn/ver/2164/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000MeterInfoFreezeDAO.java
+END
+Hod2000OperatorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/1780/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000OperatorDAO.java
+END
+Hod2000BuildingDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/252/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000BuildingDAO.java
+END
+IHod2000DeviceInitParameterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/Prj1202/!svn/ver/765/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000DeviceInitParameterDAO.java
+END
+GenericHibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Prj1202/!svn/ver/2149/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/GenericHibernateDAO.java
+END
+IHod2000BatchMeterErrorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/1879/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000BatchMeterErrorDAO.java
+END
+Hod2000OperateLogDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000OperateLogDAO.java
+END
+IHod2000MeterInfoFreezeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/1961/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000MeterInfoFreezeDAO.java
+END
+IHod2000ConcentratorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/Prj1202/!svn/ver/1089/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000ConcentratorDAO.java
+END
+Hod2000ClientDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/1762/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000ClientDAO.java
+END
+Hod2000DownInfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000DownInfoDAO.java
+END
+Hod2000VillageDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/158/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000VillageDAO.java
+END
+Hod2000CommunityDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/158/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000CommunityDAO.java
+END
+IHod2000MeterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/1786/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000MeterDAO.java
+END
+IHod2000MeterCallDownInfoDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Prj1202/!svn/ver/444/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000MeterCallDownInfoDao.java
+END
+IHod2000SysparameterDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Prj1202/!svn/ver/229/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000SysparameterDAO.java
+END
+IHod2000CountyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000CountyDAO.java
+END
+IHod2000VillageDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000VillageDAO.java
+END
+Hod2000PriceDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/490/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000PriceDAO.java
+END
+IHod2000PreReceiveDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Prj1202/!svn/ver/1207/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000PreReceiveDAO.java
+END
+IHod2000OperatorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/969/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000OperatorDAO.java
+END
+IHod2000BuildingDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/152/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/IHod2000BuildingDAO.java
+END
+Hod2000DownInfoCacheDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Prj1202/!svn/ver/121/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000DownInfoCacheDAO.java
+END
+Hod2000CityDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Prj1202/!svn/ver/158/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000CityDAO.java
+END
+Hod2000ParaDownInfoCacheDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Prj1202/!svn/ver/765/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000ParaDownInfoCacheDAO.java
+END
+Hod2000RoomDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/1849/sys_src/source/HOD-2000/src/com/hod/pro/model/dao/Hod2000RoomDAO.java
+END

@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-2.0.xsd" default-lazy-init="true">
+ 
+	<!-- <bean id="conn" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+		<property name="url" value="jdbc:sqlserver://127.0.0.1:1433;databasename=HOD-2000"></property>
+		<property name="username" value="sa"></property>
+		<property name="password" value="brt123@brt"></property>
+		<property name="initialSize" value="5" />
+		<property name="maxActive" value="100" />
+		<property name="maxIdle" value="30" />
+		<property name="maxWait" value="1000" />
+		<property name="poolPreparedStatements" value="true" />
+		<property name="defaultAutoCommit" value="false" />
+	</bean>
+ 	-->
+ 	<bean id="conn"
+		class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/HOD-2000" />
+		<property name="resourceRef" value="false" />
+	</bean>
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="conn" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.jdbc.fetch_size">20</prop>
+				<prop key="hibernate.jdbc.batch_size">30</prop>
+				<prop key="hibernate.max_fetch_depth">0</prop>
+				 <!--代表使用Hibernate的二级缓存--> 
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/hod/pojo/Hod2000Building.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000City.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Client.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Community.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Concentrator.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000County.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000DownInfo.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000DownInfoCache.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Meter.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000MeterInfoFreeze.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000MeterInfoHistory.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000MeterInfoTemp.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000MeterType.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000OperateLog.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Operator.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Permission.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Region.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Role.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Room.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Village.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Price.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000PriceDetail.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Heatingparameter.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000PreReceive.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Receive.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Sysparameter.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000MeterCallDownInfo.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000ParaDownInfoCache.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000DeviceInitParameter.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000DbBackupSchedule.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000Unit.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000BatchMeterError.hbm.xml</value>
+				<value>com/hod/pojo/Hod2000BatchClientError.hbm.xml</value>
+				<value>com/hod/pojo/ConEventMap.hbm.xml</value>
+				<!-- hbm -->
+			</list>
+		</property>
+	</bean>
+ 
+	<bean id="hibernateTransactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<tx:advice transaction-manager="hibernateTransactionManager" id="txAdvice">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED"></tx:method>
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut id="myPoint" expression="execution(* com.hod.pro.model.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="myPoint" />
+	</aop:config>
+ 
+	<bean id="springHod2000BuildingDAO" class="com.hod.pro.model.dao.Hod2000BuildingDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000CityDAO" class="com.hod.pro.model.dao.Hod2000CityDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000ClientDAO" class="com.hod.pro.model.dao.Hod2000ClientDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000CommunityDAO" class="com.hod.pro.model.dao.Hod2000CommunityDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000ConcentratorDAO" class="com.hod.pro.model.dao.Hod2000ConcentratorDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000CountyDAO" class="com.hod.pro.model.dao.Hod2000CountyDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000DownInfoDAO" class="com.hod.pro.model.dao.Hod2000DownInfoDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000DownInfoCacheDAO" class="com.hod.pro.model.dao.Hod2000DownInfoCacheDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000MeterDAO" class="com.hod.pro.model.dao.Hod2000MeterDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000MeterInfoFreezeDAO" class="com.hod.pro.model.dao.Hod2000MeterInfoFreezeDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000MeterInfoHistoryDAO" class="com.hod.pro.model.dao.Hod2000MeterInfoHistoryDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000MeterInfoTempDAO" class="com.hod.pro.model.dao.Hod2000MeterInfoTempDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000MeterTypeDAO" class="com.hod.pro.model.dao.Hod2000MeterTypeDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000OperateLogDAO" class="com.hod.pro.model.dao.Hod2000OperateLogDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000OperatorDAO" class="com.hod.pro.model.dao.Hod2000OperatorDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000PermissionDAO" class="com.hod.pro.model.dao.Hod2000PermissionDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000RegionDAO" class="com.hod.pro.model.dao.Hod2000RegionDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000RoleDAO" class="com.hod.pro.model.dao.Hod2000RoleDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000RoomDAO" class="com.hod.pro.model.dao.Hod2000RoomDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000VillageDAO" class="com.hod.pro.model.dao.Hod2000VillageDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+	
+	<bean id="springHod2000PriceDAO" class="com.hod.pro.model.dao.Hod2000PriceDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000PriceDetailDAO" class="com.hod.pro.model.dao.Hod2000PriceDetailDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+	
+	<bean id="springHod2000HeatingparameterDAO" class="com.hod.pro.model.dao.Hod2000HeatingparameterDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000PreReceiveDAO" class="com.hod.pro.model.dao.Hod2000PreReceiveDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000ReceiveDAO" class="com.hod.pro.model.dao.Hod2000ReceiveDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000SysparameterDAO" class="com.hod.pro.model.dao.Hod2000SysparameterDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+	
+	<bean id="springHod2000MeterCallDownInfoDao" class="com.hod.pro.model.dao.Hod2000MeterCallDownInfoDao"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+	
+	<bean id="springHod2000ParaDownInfoCacheDAO" class="com.hod.pro.model.dao.Hod2000ParaDownInfoCacheDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000DeviceInitParameterDAO" class="com.hod.pro.model.dao.Hod2000DeviceInitParameterDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000DbBackupScheduleDAO" class="com.hod.pro.model.dao.Hod2000DbBackupScheduleDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000UnitDAO" class="com.hod.pro.model.dao.Hod2000UnitDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+	
+	<bean id="springHod2000BatchMeterErrorDAO" class="com.hod.pro.model.dao.Hod2000BatchMeterErrorDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+
+	<bean id="springHod2000BatchClientErrorDAO" class="com.hod.pro.model.dao.Hod2000BatchClientErrorDAO"><property name="sessionFactory" ref="sessionFactory"></property></bean>
+<!-- dao -->
+
+	<bean id="springHod2000BuildingService" class="com.hod.pro.model.service.Hod2000BuildingService">
+		<property name="genericDAO" ref="springHod2000BuildingDAO"></property>
+		<property name="buildingDAO" ref="springHod2000BuildingDAO"></property>
+		<property name="communityDAO" ref="springHod2000CommunityDAO"></property>
+	</bean>
+
+	<bean id="springHod2000CityService" class="com.hod.pro.model.service.Hod2000CityService">
+		<property name="genericDAO" ref="springHod2000CityDAO"></property>
+		<property name="cityDAO" ref="springHod2000CityDAO"></property>
+	</bean>
+
+	<bean id="springHod2000ClientService" class="com.hod.pro.model.service.Hod2000ClientService">
+		<property name="genericDAO" ref="springHod2000ClientDAO"></property>
+		<property name="hod2000ClientDAO" ref="springHod2000ClientDAO"></property>
+	</bean>
+
+	<bean id="springHod2000CommunityService" class="com.hod.pro.model.service.Hod2000CommunityService">
+		<property name="genericDAO" ref="springHod2000CommunityDAO"></property>
+		<property name="hod2000CommunityDAO" ref="springHod2000CommunityDAO"></property>
+		<property name="hod2000VillageDAO" ref="springHod2000VillageDAO"></property>
+	</bean>
+
+	<bean id="springHod2000ConcentratorService" class="com.hod.pro.model.service.Hod2000ConcentratorService">
+		<property name="genericDAO" ref="springHod2000ConcentratorDAO"></property>
+		<property name="concentratorDAO" ref="springHod2000ConcentratorDAO"></property>
+		<property name="cacheDAO" ref="springHod2000ParaDownInfoCacheDAO"></property>
+	</bean>
+
+	<bean id="springHod2000CountyService" class="com.hod.pro.model.service.Hod2000CountyService">
+		<property name="genericDAO" ref="springHod2000CountyDAO"></property>
+		<property name="countyDAO" ref="springHod2000CountyDAO"></property>
+	</bean>
+
+	<bean id="springHod2000DownInfoService" class="com.hod.pro.model.service.Hod2000DownInfoService"><property name="genericDAO" ref="springHod2000DownInfoDAO"></property></bean>
+
+	<bean id="springHod2000DownInfoCacheService" class="com.hod.pro.model.service.Hod2000DownInfoCacheService"><property name="genericDAO" ref="springHod2000DownInfoCacheDAO"></property></bean>
+
+	<bean id="springHod2000MeterService" class="com.hod.pro.model.service.Hod2000MeterService">
+		<property name="genericDAO" ref="springHod2000MeterDAO"></property>
+		<property name="hod2000MeterDAO" ref="springHod2000MeterDAO"></property>
+	</bean>
+
+	<bean id="springHod2000MeterInfoFreezeService" class="com.hod.pro.model.service.Hod2000MeterInfoFreezeService">
+		<property name="genericDAO" ref="springHod2000MeterInfoFreezeDAO"></property>
+		<property name="hod2000MeterInfoFreezeDAO" ref="springHod2000MeterInfoFreezeDAO"></property>
+	</bean>
+
+	<bean id="springHod2000MeterInfoHistoryService" class="com.hod.pro.model.service.Hod2000MeterInfoHistoryService">
+		<property name="genericDAO" ref="springHod2000MeterInfoHistoryDAO"></property>
+		<property name="hod2000MeterInfoHistoryDAO" ref="springHod2000MeterInfoHistoryDAO"></property>
+	</bean>
+
+	<bean id="springHod2000MeterInfoTempService" class="com.hod.pro.model.service.Hod2000MeterInfoTempService">
+		<property name="genericDAO" ref="springHod2000MeterInfoTempDAO"></property>
+		<property name="hod2000MeterInfoTempDAO" ref="springHod2000MeterInfoTempDAO"></property>
+	</bean>
+
+	<bean id="springHod2000MeterTypeService" class="com.hod.pro.model.service.Hod2000MeterTypeService">
+		<property name="genericDAO" ref="springHod2000MeterTypeDAO"></property>
+		<property name="hod2000MeterTypeDAO" ref="springHod2000MeterTypeDAO"></property>
+	</bean>
+
+	<bean id="springHod2000OperateLogService" class="com.hod.pro.model.service.Hod2000OperateLogService">
+	<property name="genericDAO" ref="springHod2000OperateLogDAO"></property>
+	</bean>
+
+	<bean id="springHod2000OperatorService" class="com.hod.pro.model.service.Hod2000OperatorService">
+		<property name="genericDAO" ref="springHod2000OperatorDAO"></property>
+		<property name="hod2000OperatorDAO" ref="springHod2000OperatorDAO"></property>
+	</bean>
+
+	<bean id="springHod2000PermissionService" class="com.hod.pro.model.service.Hod2000PermissionService">
+		<property name="genericDAO" ref="springHod2000PermissionDAO"></property>
+		<property name="hod2000PermissionDAO" ref="springHod2000PermissionDAO"></property>
+	</bean>
+
+	<bean id="springHod2000RegionService" class="com.hod.pro.model.service.Hod2000RegionService">
+		<property name="genericDAO" ref="springHod2000RegionDAO"></property>
+		<property name="hod2000RegionDAO" ref="springHod2000RegionDAO"></property>
+	</bean>
+
+	<bean id="springHod2000RoleService" class="com.hod.pro.model.service.Hod2000RoleService">
+	<property name="genericDAO" ref="springHod2000RoleDAO"></property>
+	</bean>
+
+	<bean id="springHod2000RoomService" class="com.hod.pro.model.service.Hod2000RoomService">
+		<property name="genericDAO" ref="springHod2000RoomDAO"></property>
+		<property name="hod2000RoomDAO" ref="springHod2000RoomDAO"></property>
+		<property name="hod2000UnitDAO" ref="springHod2000UnitDAO"></property>
+	</bean>
+
+	<bean id="springHod2000VillageService" class="com.hod.pro.model.service.Hod2000VillageService">
+		<property name="genericDAO" ref="springHod2000VillageDAO"></property>
+		<property name="hod2000VillageDAO" ref="springHod2000VillageDAO"></property>
+	</bean>
+	
+	<bean id="springHod2000PriceService" class="com.hod.pro.model.service.Hod2000PriceService">
+		<property name="genericDAO" ref="springHod2000PriceDAO"></property>
+		<property name="hod2000PriceDAO" ref="springHod2000PriceDAO"></property>
+	</bean>
+
+	<bean id="springHod2000PriceDetailService" class="com.hod.pro.model.service.Hod2000PriceDetailService">
+	<property name="genericDAO" ref="springHod2000PriceDetailDAO"></property>
+	</bean>
+	
+	<bean id="springHod2000HeatingparameterService" class="com.hod.pro.model.service.Hod2000HeatingparameterService">
+	<property name="genericDAO" ref="springHod2000HeatingparameterDAO"></property>
+	</bean>
+
+	<bean id="springHod2000PreReceiveService" class="com.hod.pro.model.service.Hod2000PreReceiveService">
+		<property name="genericDAO" ref="springHod2000PreReceiveDAO"></property>
+		<property name="hod2000PreReceiveDAO" ref="springHod2000PreReceiveDAO"></property>
+	</bean>
+
+	<bean id="springHod2000ReceiveService" class="com.hod.pro.model.service.Hod2000ReceiveService">
+		<property name="genericDAO" ref="springHod2000ReceiveDAO"></property>
+		<property name="hod2000ReceiveDAO" ref="springHod2000ReceiveDAO"></property>
+		<property name="freezeDAO" ref="springHod2000MeterInfoFreezeDAO"></property>
+		<property name="heatingparameterDAO" ref="springHod2000HeatingparameterDAO"></property>
+		<property name="hod2000PriceDAO" ref="springHod2000PriceDAO"></property>
+		<property name="hod2000RoomDAO" ref="springHod2000RoomDAO"></property>
+		<property name="hod2000PreReceiveDAO" ref="springHod2000PreReceiveDAO"></property>
+		<property name="clientDAO" ref="springHod2000ClientDAO"></property>
+		<property name="hod2000MeterDAO" ref="springHod2000MeterDAO"></property>
+		<property name="historyDAO" ref="springHod2000MeterInfoHistoryDAO"></property>
+	</bean>
+
+	<bean id="springHod2000SysparameterService" class="com.hod.pro.model.service.Hod2000SysparameterService">
+		<property name="genericDAO" ref="springHod2000SysparameterDAO"></property>
+		<property name="hod2000SysparameterDAO" ref="springHod2000SysparameterDAO"></property>
+	</bean>
+	
+	<bean id="springHod2000MeterCallDownInfoService" class="com.hod.pro.model.service.Hod2000MeterCallDownInfoService">
+		<property name="genericDAO" ref="springHod2000MeterCallDownInfoDao"></property>
+		<property name="hod2000MeterCallDownInfoDao" ref="springHod2000MeterCallDownInfoDao"></property>
+	</bean>
+	
+	<bean id="springHod2000ParaDownInfoCacheService" class="com.hod.pro.model.service.Hod2000ParaDownInfoCacheService">
+		<property name="genericDAO" ref="springHod2000ParaDownInfoCacheDAO"></property>
+		<property name="cacheDAO" ref="springHod2000ParaDownInfoCacheDAO"></property>
+	</bean>
+
+	<bean id="springHod2000DeviceInitParameterService" class="com.hod.pro.model.service.Hod2000DeviceInitParameterService">
+	<property name="genericDAO" ref="springHod2000DeviceInitParameterDAO"></property>
+	</bean>
+
+	<bean id="springHod2000DbBackupScheduleService" class="com.hod.pro.model.service.Hod2000DbBackupScheduleService">
+	<property name="genericDAO" ref="springHod2000DbBackupScheduleDAO"></property>
+	</bean>
+
+	<bean id="springHod2000UnitService" class="com.hod.pro.model.service.Hod2000UnitService">
+		<property name="genericDAO" ref="springHod2000UnitDAO"></property>
+		<property name="buildingDAO" ref="springHod2000BuildingDAO"></property>
+	</bean>
+	
+	<bean id="springHod2000BatchMeterErrorService" class="com.hod.pro.model.service.Hod2000BatchMeterErrorService">
+	<property name="hod2000BatchMeterErrorDAO" ref="springHod2000BatchMeterErrorDAO"></property>
+	<property name="genericDAO" ref="springHod2000BatchMeterErrorDAO"></property>
+	</bean>
+
+	<bean id="springHod2000BatchClientErrorService" class="com.hod.pro.model.service.Hod2000BatchClientErrorService">
+	<property name="genericDAO" ref="springHod2000BatchClientErrorDAO"></property>
+	<property name="hod2000BatchClientErrorDAO" ref="springHod2000BatchClientErrorDAO"></property>
+	</bean>
+<!-- service -->
+
+	<bean id="springHod2000BuildingAction" class="com.hod.pro.web.action.Hod2000BuildingAction" scope="prototype">
+		<property name="hod2000BuildingService" ref="springHod2000BuildingService"></property>
+		<property name="hod2000CommunityService" ref="springHod2000CommunityService"></property>
+		<property name="hod2000SysparameterService" ref="springHod2000SysparameterService"></property>
+	</bean>
+
+	<bean id="springHod2000CityAction" class="com.hod.pro.web.action.Hod2000CityAction" scope="prototype">
+		<property name="hod2000CityService" ref="springHod2000CityService"></property>
+		<property name="hod2000CountyService" ref="springHod2000CountyService"></property>
+		<property name="hod2000CommunityService" ref="springHod2000CommunityService"></property>
+		<property name="hod2000BuildingService" ref="springHod2000BuildingService"></property>
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+		<property name="hod2000VillageService" ref="springHod2000VillageService"></property>
+		<property name="hod2000RegionService" ref="springHod2000RegionService"></property>
+		<property name="hod2000UnitService" ref="springHod2000UnitService"></property>
+		<property name="hod2000SysparameterService" ref="springHod2000SysparameterService"></property>
+	</bean>
+
+	<bean id="springHod2000ClientAction" class="com.hod.pro.web.action.Hod2000ClientAction" scope="prototype">
+		<property name="hod2000ClientService" ref="springHod2000ClientService"></property>
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+		<property name="hod2000BatchClientErrorService" ref="springHod2000BatchClientErrorService"></property>
+	</bean>				
+
+	<bean id="springHod2000CommunityAction" class="com.hod.pro.web.action.Hod2000CommunityAction" scope="prototype">
+		<property name="hod2000CommunityService" ref="springHod2000CommunityService"></property>
+		<property name="hod2000VillageService" ref="springHod2000VillageService"></property>
+	</bean>
+
+	<bean id="springHod2000ConcentratorAction" class="com.hod.pro.web.action.Hod2000ConcentratorAction" scope="prototype">
+		<property name="hod2000ConcentratorService" ref="springHod2000ConcentratorService"></property>
+		<property name="hod2000RegionService" ref="springHod2000RegionService"></property>
+		<property name="hod2000CityService" ref="springHod2000CityService"></property>
+		<property name="hod2000CountyService" ref="springHod2000CountyService"></property>
+		<property name="hod2000BuildingService" ref="springHod2000BuildingService"></property>
+		<property name="hod2000VillageService" ref="springHod2000VillageService"></property>
+		<property name="hod2000CommunityService" ref="springHod2000CommunityService"></property>
+		<property name="hod2000MeterService" ref="springHod2000MeterService"></property>
+		<property name="hod2000SysparameterService" ref="springHod2000SysparameterService"></property>
+		<property name="cacheService" ref="springHod2000ParaDownInfoCacheService"></property>
+		<property name="deviceInitParameterService" ref="springHod2000DeviceInitParameterService"></property>
+		<property name="hod2000MeterTypeService" ref="springHod2000MeterTypeService"></property>
+	</bean>
+
+	<bean id="springHod2000CountyAction" class="com.hod.pro.web.action.Hod2000CountyAction" scope="prototype">
+		<property name="hod2000CountyService" ref="springHod2000CountyService"></property>
+		<property name="hod2000CityService" ref="springHod2000CityService"></property>
+	</bean>
+
+	<bean id="springHod2000MeterAction" class="com.hod.pro.web.action.Hod2000MeterAction" scope="prototype">
+		<property name="hod2000MeterService" ref="springHod2000MeterService"></property>
+		<property name="concentratorService" ref="springHod2000ConcentratorService"></property>
+		<property name="hod2000DownInfoCacheService" ref="springHod2000DownInfoCacheService"></property>
+		<property name="hod2000MeterTypeService" ref="springHod2000MeterTypeService"></property>
+		<property name="hod2000SysparameterService" ref="springHod2000SysparameterService"></property>
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+		<property name="hod2000MeterCallDownInfoService" ref="springHod2000MeterCallDownInfoService"></property>
+		<property name="hod2000BatchMeterErrorService" ref="springHod2000BatchMeterErrorService"></property>
+		<property name="cacheService" ref="springHod2000ParaDownInfoCacheService"></property>
+	</bean>
+
+	<bean id="springHod2000MeterInfoHistoryAction" class="com.hod.pro.web.action.Hod2000MeterInfoHistoryAction" scope="prototype">
+		<property name="hod2000MeterInfoHistoryService" ref="springHod2000MeterInfoHistoryService"></property>
+		<property name="hod2000RegionService" ref="springHod2000RegionService"></property>
+		<property name="cityService" ref="springHod2000CityService"></property>
+		<property name="countyService" ref="springHod2000CountyService"></property>
+		<property name="hod2000VillageService" ref="springHod2000VillageService"></property>
+		<property name="communityService" ref="springHod2000CommunityService"></property>
+		<property name="buildingService" ref="springHod2000BuildingService"></property>
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+		<property name="hod2000MeterInfoFreezeService" ref="springHod2000MeterInfoFreezeService"></property>
+		<property name="hod2000MeterService" ref="springHod2000MeterService"></property>
+		<property name="hod2000SysparameterService" ref="springHod2000SysparameterService"></property>
+		<property name="hod2000UnitService" ref="springHod2000UnitService"></property>
+	</bean>
+
+	<bean id="springHod2000MeterInfoTempAction" class="com.hod.pro.web.action.Hod2000MeterInfoTempAction" scope="prototype">
+		<property name="hod2000MeterInfoTempService" ref="springHod2000MeterInfoTempService"></property>
+		<property name="hod2000MeterService" ref="springHod2000MeterService"></property>
+		<property name="hod2000DownInfoCacheService" ref="springHod2000DownInfoCacheService"></property>
+	</bean>
+
+	<bean id="springHod2000MeterTypeAction" class="com.hod.pro.web.action.Hod2000MeterTypeAction" scope="prototype">
+		<property name="hod2000MeterTypeService" ref="springHod2000MeterTypeService"></property>
+		<property name="hod2000SysparameterService" ref="springHod2000SysparameterService"></property>
+	</bean>
+
+	<bean id="springHod2000OperateLogAction" class="com.hod.pro.web.action.Hod2000OperateLogAction" scope="prototype"><property name="hod2000OperateLogService" ref="springHod2000OperateLogService"></property></bean>
+
+	<bean id="springHod2000OperatorAction" class="com.hod.pro.web.action.Hod2000OperatorAction" scope="prototype">
+		<property name="hod2000OperatorService" ref="springHod2000OperatorService"></property>
+		<property name="hod2000RoleService" ref="springHod2000RoleService"></property>
+	</bean>
+
+	<bean id="springHod2000RegionAction" class="com.hod.pro.web.action.Hod2000RegionAction" scope="prototype"><property name="hod2000RegionService" ref="springHod2000RegionService"></property></bean>
+
+	<bean id="springHod2000RoleAction" class="com.hod.pro.web.action.Hod2000RoleAction" scope="prototype">
+		<property name="hod2000RoleService" ref="springHod2000RoleService"></property>
+		<property name="hod2000PermissionService" ref="springHod2000PermissionService"></property>
+		<property name="hod2000OperatorService" ref="springHod2000OperatorService"></property>
+	</bean>
+
+	<bean id="springHod2000RoomAction" class="com.hod.pro.web.action.Hod2000RoomAction" scope="prototype">
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+		<property name="hod2000UnitService" ref="springHod2000UnitService"></property>
+	</bean>
+
+	<bean id="springHod2000VillageAction" class="com.hod.pro.web.action.Hod2000VillageAction" scope="prototype">
+		<property name="hod2000VillageService" ref="springHod2000VillageService"></property>
+		<property name="hod2000CountyService" ref="springHod2000CountyService"></property>
+	</bean>
+	
+	<bean id="springLoginAction" class="com.hod.pro.web.action.LoginAction" scope="prototype">
+		<property name="hod2000OperatorService" ref="springHod2000OperatorService"></property>
+		<property name="hod2000RoleService" ref="springHod2000RoleService"></property>
+		<property name="hod2000PermissionService" ref="springHod2000PermissionService"></property>
+	</bean>
+	
+	<bean id="springDatabaseAction" class="com.hod.pro.web.action.DatabaseAction" scope="prototype">
+		<property name="backupScheduleService" ref="springHod2000DbBackupScheduleService"></property>
+	</bean>
+	
+	<bean id="springHod2000PriceAction" class="com.hod.pro.web.action.Hod2000PriceAction" scope="prototype">
+		<property name="hod2000PriceService" ref="springHod2000PriceService"></property>
+		<property name="detailService" ref="springHod2000PriceDetailService"></property>
+	</bean>
+
+	<bean id="springHod2000PreReceiveAction" class="com.hod.pro.web.action.Hod2000PreReceiveAction" scope="prototype">
+		<property name="hod2000PreReceiveService" ref="springHod2000PreReceiveService"></property>
+		<property name="heatingparameterService" ref="springHod2000HeatingparameterService"></property>
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+		<property name="clientService" ref="springHod2000ClientService"></property>
+	</bean>
+
+	<bean id="springHod2000ReceiveAction" class="com.hod.pro.web.action.Hod2000ReceiveAction" scope="prototype">
+		<property name="hod2000ReceiveService" ref="springHod2000ReceiveService"></property>
+		<property name="heatingparameterService" ref="springHod2000HeatingparameterService"></property>
+		<property name="hod2000PreReceiveService" ref="springHod2000PreReceiveService"></property>
+		<property name="clientService" ref="springHod2000ClientService"></property>
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+		<property name="hod2000PriceService" ref="springHod2000PriceService"></property>
+	</bean>
+
+	<bean id="springJfreeChartAction" class="com.hod.pro.web.action.JfreeChartAction" scope="prototype">
+		<property name="hod2000MeterService" ref="springHod2000MeterService"></property>
+		<property name="hod2000MeterInfoHistoryService" ref="springHod2000MeterInfoHistoryService"></property>
+		<property name="hod2000MeterInfoFreezeService" ref="springHod2000MeterInfoFreezeService"></property>
+	</bean>
+	
+	<bean id="springHod2000UnitAction" class="com.hod.pro.web.action.Hod2000UnitAction" scope="prototype">
+		<property name="hod2000UnitService" ref="springHod2000UnitService"></property>
+		<property name="hod2000BuildingService" ref="springHod2000BuildingService"></property>
+	</bean>
+	
+	<bean id="springHod2000BatchMeterAction" class="com.hod.pro.web.action.Hod2000BatchMeterAction" scope="prototype">
+		<property name="hod2000BatchMeterErrorService" ref="springHod2000BatchMeterErrorService"></property>
+	</bean>
+	
+	<bean id="springHod2000BatchClientErrorAction" class="com.hod.pro.web.action.Hod2000BatchClientErrorAction" scope="prototype">
+		<property name="hod2000BatchClientErrorService" ref="springHod2000BatchClientErrorService"></property>
+		<property name="hod2000ClientService" ref="springHod2000ClientService"></property>
+		<property name="hod2000RoomService" ref="springHod2000RoomService"></property>
+	</bean>
+	
+<!-- action -->
+ 
+</beans>

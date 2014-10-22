@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="defaults" extends="struts-default">
+		<!-- 定义拦截器栈包含Permission拦截器 -->
+		<!-- 
+		<interceptors>
+			<interceptor name="Permission"
+				class="com.hod.util.PermissionInterceptor" />
+			<interceptor-stack name="myDefaultStack">
+				<interceptor-ref name="Permission"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+		 -->
+		<global-results>
+			<result name="error">/inc/exception.jsp</result>
+			<result name="message">/inc/message.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.NullPointerException" result="error" />
+			<exception-mapping exception="java.lang.Exception" result="error" />
+		</global-exception-mappings>
+	</package>
+	
+		<include file="com/hod/pro/web/action/Hod2000BuildingAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000CityAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000ClientAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000CommunityAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000ConcentratorAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000CountyAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000MeterAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000MeterInfoHistoryAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000MeterInfoTempAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000MeterTypeAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000OperateLogAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000OperatorAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000RegionAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000RoleAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000RoomAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000VillageAction.xml"></include>
+		<include file="com/hod/pro/web/action/struts-jfreechart.xml"></include>
+		<include file="com/hod/pro/web/action/LoginAction.xml"></include>
+		<include file="com/hod/pro/web/action/DatabaseAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000PriceAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000PreReceiveAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000ReceiveAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000UnitAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000BatchMeterErrorAction.xml"></include>
+		<include file="com/hod/pro/web/action/Hod2000BatchClientErrorAction.xml"></include>
+</struts>

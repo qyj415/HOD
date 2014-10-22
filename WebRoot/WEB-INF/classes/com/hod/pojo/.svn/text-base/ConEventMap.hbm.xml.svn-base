@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.ConEventMap" 
+    table="address_con"
+>
+
+    <id
+        name="conId"
+        type="java.lang.Integer"
+        column="con_id"
+    >
+    </id>
+
+    <property
+        name="conNumber"
+        type="java.lang.String"
+        column="con_number"
+        length="50"
+    />
+    <property
+        name="conPositionName"
+        type="java.lang.String"
+        column="con_position_name"
+        length="200"
+    />
+    <property
+        name="conAddress"
+        type="java.lang.String"
+        column="con_address"
+        length="200"
+    />
+    <property
+        name="regionCode"
+        type="java.lang.String"
+        column="region_code"
+        length="20"
+    />
+    <property
+        name="cityCode"
+        type="java.lang.String"
+        column="city_code"
+        length="20"
+    />
+    <property
+        name="countyCode"
+        type="java.lang.String"
+        column="county_code"
+        length="20"
+    />
+    <property
+        name="villageCode"
+        type="java.lang.String"
+        column="village_code"
+        length="20"
+    />
+    <property
+        name="communityCode"
+        type="java.lang.String"
+        column="community_code"
+        length="20"
+    />
+    <property
+        name="conFlashStatus"
+        type="java.lang.Integer"
+        column="con_flash_status"
+        length="50"
+    />
+	<property
+        name="conIsonline"
+        type="java.lang.Integer"
+        column="con_isonline"
+        length="50"
+    />
+    <property
+        name="conCom1Status"
+        type="java.lang.Integer"
+        column="con_com1_status"
+        length="50"
+    />
+    <property
+        name="conCom2Status"
+        type="java.lang.Integer"
+        column="con_com2_status"
+        length="50"
+    />
+    <property
+        name="conCom3Status"
+        type="java.lang.Integer"
+        column="con_com3_status"
+        length="50"
+    />
+    <property
+        name="conStrong"
+        type="java.lang.Integer"
+        column="con_strong"
+        length="50"
+    />
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

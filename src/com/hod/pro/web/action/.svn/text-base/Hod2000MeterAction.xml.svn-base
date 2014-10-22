@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Meter" extends="defaults" namespace="/">
+		<action name="hod2000Meter" class="springHod2000MeterAction">
+			<result name="success">/show/meterlist.jsp</result>
+			<result name="toUpdate">/update/meteredit.jsp</result>
+			<result name="add">/form/meteradd.jsp</result>
+			<result name="meterPrint">/print/meterPrint.jsp</result>
+			<result name="monitorPrint">/print/monitorPrint.jsp</result>
+		</action>
+	</package>
+	<package name="hodMeter" extends="json-default" namespace="/">
+		<action name="hodMeter" class="springHod2000MeterAction" method="doTree">
+			<result type="json"></result>
+		</action>
+		<action name="hodMeter" class="springHod2000MeterAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+		<action name="hodMeter" class="springHod2000MeterAction" method="doMonitor">
+			<result type="json"></result>
+		</action>
+		<action name="hodMeter" class="springHod2000MeterAction" method="getMeter">
+			<result type="json"></result>
+		</action>
+		<action name="hodMeter" class="springHod2000MeterAction" method="setValveId">
+			<result type="json"></result>
+		</action>
+		<action name="hodMeter" class="springHod2000MeterAction" method="valveControl">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,606 @@
+body{
+	background-color: #211919;
+	overflow: hidden;
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	color: #0094DE;
+}
+.deskDiv{
+	position: absolute;
+	width:100%;
+	height:100%;
+	margin:0px;
+}
+.titleDiv{
+	font-size:25px;
+	font-weight:bold;
+	color:white;
+	vertical-align:middle;
+	height: 48px;
+	line-height: 48px;
+}
+.userName{
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	padding-top:15px;
+	padding-left: 40px;
+}
+#wrapper1{
+	width:868px;
+	height:340px;
+	top:50%;
+	left:50%;
+	margin-top:-170px;
+	margin-left:-434px;
+	position: absolute;
+}
+#wrapper2{
+	width:213px;
+	float:left;
+	height:292px;
+	bottom:0%;
+	background:url('../backgroud-left.gif')/*#409da5*/;
+	position: absolute;
+}
+#wrapper3{
+	width:147px;
+	height:243px;
+	float:right;
+	top:10%;
+	right:0%;
+	background:url('../backgroud-right.gif')/*#409da5*/;
+	background-repeat:no-repeat;
+	position: absolute;
+}
+#wrapper4{
+	width:200px;
+	height:37px;
+	float:right;
+	right:0%;
+	bottom:5%;
+	position: absolute;
+}
+#text1{
+	float:right;
+	text-align:center;
+	height:37px;
+	padding-top:10px;
+	right:20%;
+	bottom:5%;
+	position: absolute;
+}
+#wrapper5{
+	width:600px;
+	height:48px;
+	float:left;
+	left:15%;
+	top:8%;
+	position: absolute;
+}
+#tit{
+	color: white;
+	font-weight: bold;
+	height:48px;
+	line-height:48px;
+	vertical-align:middle;
+	font-size: 20px;
+}
+#wrapper6{
+	width:59px;
+	height:324px;
+	background-image:url("../main.gif");
+	float:right;
+	right:0%;
+	top:50%;
+	margin-top:-162px;
+	position: absolute;
+	
+}
+#wrapper7{
+	width:100px;
+	height:36px;
+	background-image:url("../admins.png");
+	background-repeat:no-repeat;
+	right:18%;
+	top:10%;
+	position: absolute;
+}
+#wrapper1 div{
+	margin: 5px;
+	text-align: center;
+}
+#thumb1-1{
+	width:125px;
+	height:121px;
+	cursor:pointer;
+	position: absolute;
+	left:0px;
+	top:0px;
+	background:url('clientinfo.gif')/*#409da5*/;
+	line-height: 121px;
+}
+#thumb1-2{
+	width:256px;
+	height:86px;
+	cursor:pointer;
+	position: absolute;
+	left:0px;
+	top:126px;
+	background:url('alarm.gif')/*#409da5*/;
+	line-height:86px;
+}
+#thumb1-3{
+	width:126px;
+	height:113px;
+	cursor:pointer;
+	position: absolute;
+	left:0px;
+	top:217px;
+	background:url('meters.gif')/*#409da5*/;
+	line-height:113px;
+}
+#thumb1-4{
+	width:125px;
+	cursor:pointer;
+	height:121px;
+	position: absolute;
+	left:130px;
+	top:0px;
+	background:url('address.gif')/*#409da5*/;
+	line-height:121px;
+}
+#thumb1-5{
+	width:126px;
+	height:113px;
+	cursor:pointer;
+	position: absolute;
+	left:130px;
+	top:217px;
+	background:url('terminals.gif')/*#409da5*/;
+	line-height:113px;
+}
+#thumb1-6{
+	width:217px;
+	height:105px;
+	position: absolute;
+	left:260px;
+	cursor:pointer;
+	top:0px;
+	background:url('price1.gif')/*#409da5*/;
+	line-height:212px;
+}
+#thumb1-19{
+	width:107px;
+	height:103px;
+	left:260px;
+	top:109px;
+	cursor:pointer;
+	position: absolute;
+	background:url('yu.gif')/*#409da5*/;
+}
+#thumb1-20{
+	width:106px;
+	height:103px;
+	left:371px;
+	top:109px;
+	cursor:pointer;
+	position: absolute;
+	background:url('shou.gif')/*#409da5*/;
+}
+#thumb1-7{
+	width:121px;
+	height:113px;
+	cursor:pointer;
+	position: absolute;
+	left:260px;
+	top:217px;
+	background:url('data.gif')/*#409da5*/;
+	line-height:113px;
+}
+#thumb1-18{
+	width:124px;
+	height:113px;
+	cursor:pointer;
+	position: absolute;
+	left:386px;
+	top:217px;
+	background:url('history.gif')/*#409da5*/;
+	line-height:113px;
+}
+#thumb1-8{
+	width:157px;
+	height:105px;
+	cursor:pointer;
+	position: absolute;
+	left:481px;
+	top:0px;
+	background:url('fuhe.gif')/*#409da5*/;
+	line-height:107px;
+}
+#thumb1-9{
+	width:157px;
+	height:103px;
+	position: absolute;
+	left:481px;
+	cursor:pointer;
+	top:109px;
+	background:url('nenghao.gif')/*#409da5*/;
+	line-height:100px;
+}
+#thumb1-10{
+	width:123px;
+	height:113px;
+	position: absolute;
+	left:515px;
+	cursor:pointer;
+	top:217px;
+	background:url('wang.gif')/*#409da5*/;
+	line-height:113px;
+}
+#thumb1-11{
+	width:104px;
+	height:149px;
+	position: absolute;
+	left:643px;
+	cursor:pointer;
+	top:0px;
+	background:url('system.gif')/*#409da5*/;
+	line-height:149px;
+}
+#thumb1-12{
+	width:214px;
+	height:85px;
+	position: absolute;
+	left:643px;
+	cursor:pointer;
+	top:154px;
+	background:url('meter.gif')/*#409da5*/;
+	line-height:85px;
+}
+#thumb1-13{
+	width:214px;
+	height:85px;
+	cursor:pointer;
+	position: absolute;
+	left:643px;
+	top:244px;
+	background:url('terminal.gif')/*#409da5*/;
+	line-height:85px;
+}
+#thumb1-14{
+	width:104px;
+	height:149px;
+	cursor:pointer;
+	position: absolute;
+	left:752px;
+	top:0px;
+	background:url('metertype.gif')/*#409da5*/;
+	line-height:149px;
+}
+#thumb1-15{
+	width:37px;
+	height:37px;
+	overflow:hidden;
+	cursor:pointer;
+	position: absolute;
+	background:url('registers.gif')/*#409da5*/;
+}
+#thumb1-16{
+	width:37px;
+	height:37px;
+	left:134px;
+	cursor:pointer;
+	position: absolute;
+	background:url('exit.gif')/*#409da5*/;
+}
+#thumb1-17{
+	width:37px;
+	height:37px;
+	left:67px;
+	cursor:pointer;
+	position: absolute;
+	background:url('help.gif')/*#409da5*/;
+}
+#div0{
+	width:810px;
+	height:130px;
+	top:50%;
+	left:50%;
+	margin-left:-405px;
+	margin-top:-65px;
+	position: absolute;
+}
+#thumb2-1{
+	width:127px;
+	height:127px;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('addClientinfo.gif')/*#409da5*/;
+}
+#thumb2-2{
+	width:127px;
+	height:127px;
+	left:227px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('update.gif')/*#409da5*/;
+}
+#thumb2-3{
+	width:127px;
+	height:127px;
+	left:454px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('clientinfos.gif')/*#409da5*/;
+}
+#thumb2-4{
+	width:127px;
+	height:127px;
+	left:681px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('delete.gif')/*#409da5*/;
+}
+#thumb2-5{
+	width:37px;
+	height:37px;
+	left:12px;
+	top:40px;
+	cursor:pointer;
+	position: absolute;
+	background:url('home.gif')/*#409da5*/;
+}
+#thumb2-7{
+	width:37px;
+	height:37px;
+	left:12px;
+	top:107px;
+	cursor:pointer;
+	position: absolute;
+	background:url('back.gif')/*#409da5*/;
+}
+#thumb2-8{
+	width:37px;
+	height:37px;
+	left:12px;
+	top:174px;
+	cursor:pointer;
+	position: absolute;
+	background:url('help.gif')/*#409da5*/;
+}
+#thumb2-9{
+	width:37px;
+	height:37px;
+	left:12px;
+	top:241px;
+	cursor:pointer;
+	position: absolute;
+	background:url('exit.gif')/*#409da5*/;
+}
+#div1{
+	width:800px;
+	height:130px;
+	top:50%;
+	left:50%;
+	margin-left:-400px;
+	margin-top:-65px;
+	position: absolute;
+}
+#thumb2-10{
+	width:127px;
+	height:127px;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('role.gif')/*#409da5*/;
+}
+#thumb2-11{
+	width:127px;
+	height:127px;
+	left:167px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('opreator.gif')/*#409da5*/;
+}
+#thumb2-12{
+	width:127px;
+	height:127px;
+	left:334px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('log.gif')/*#409da5*/;
+}
+#thumb2-15{
+	width:127px;
+	height:127px;
+	left:501px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('datas.gif')/*#409da5*/;
+}
+#thumb2-16{
+	width:127px;
+	height:127px;
+	left:668px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('updatepass.gif')/*#409da5*/;
+}
+#div2{
+	width:404px;
+	height:130px;
+	top:50%;
+	left:50%;
+	margin-left:-202px;
+	margin-top:-65px;
+	position: absolute;
+}
+#thumb2-17{
+	width:127px;
+	height:127px;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('normal.gif')/*#409da5*/;
+}
+#thumb2-18{
+	width:127px;
+	height:127px;
+	left:274px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('exception.gif')/*#409da5*/;
+}
+#div3{
+	width:584px;
+	height:130px;
+	top:50%;
+	left:50%;
+	margin-left:-292px;
+	margin-top:-65px;
+	position: absolute;
+}
+#thumb2-19{
+	width:127px;
+	height:127px;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('charge.gif')/*#409da5*/;
+}
+#thumb2-20{
+	width:127px;
+	height:127px;
+	left:227px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('price.gif')/*#409da5*/;
+}
+#thumb2-21{
+	width:127px;
+	height:127px;
+	left:454px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('charge2.gif')/*#409da5*/;
+}
+#div4{
+	width:584px;
+	height:130px;
+	top:50%;
+	left:50%;
+	margin-left:-292px;
+	margin-top:-65px;
+	position: absolute;
+}
+#thumb2-22{
+	width:127px;
+	height:127px;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('tocharge.gif')/*#409da5*/;
+}
+#thumb2-23{
+	width:127px;
+	height:127px;
+	left:227px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('tong.gif')/*#409da5*/;
+}
+#thumb2-24{
+	width:127px;
+	height:127px;
+	left:454px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('set.gif')/*#409da5*/;
+}
+#div5{
+	width:584px;
+	height:130px;
+	top:50%;
+	left:50%;
+	margin-left:-292px;
+	margin-top:-65px;
+	position: absolute;
+}
+#thumb2-25{
+	width:127px;
+	height:127px;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('forcharge.gif')/*#409da5*/;
+}
+#thumb2-26{
+	width:127px;
+	height:127px;
+	left:227px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('tong.gif')/*#409da5*/;
+}
+#thumb2-27{
+	width:127px;
+	height:127px;
+	left:454px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('set.gif')/*#409da5*/;
+}
+#div6{
+	width:404px;
+	height:130px;
+	top:50%;
+	left:50%;
+	margin-left:-202px;
+	margin-top:-65px;
+	position: absolute;
+}
+#thumb2-28{
+	width:127px;
+	height:127px;
+	left:0px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('initialize.gif')/*#409da5*/;
+}
+#thumb2-29{
+	width:127px;
+	height:127px;
+	left:274px;
+	top:0px;
+	cursor:pointer;
+	position: absolute;
+	background:url('coninfo.gif')/*#409da5*/;
+}

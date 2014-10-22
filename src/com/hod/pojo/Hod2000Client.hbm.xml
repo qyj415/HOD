@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Client" 
+    table="hod2000_client"
+>
+
+    <id
+        name="clientId"
+        type="java.lang.Integer"
+        column="client_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="clientName"
+        type="java.lang.String"
+        column="client_name"
+        length="50"
+    />
+    <property
+        name="clientSex"
+        type="java.lang.String"
+        column="client_sex"
+        length="1"
+    />
+    <property
+        name="clientCardType"
+        type="java.lang.Integer"
+        column="client_card_type"
+        length="18"
+    />
+    <property
+        name="clientIdentity"
+        type="java.lang.String"
+        column="client_card_number"
+        length="25"
+    />
+    <property
+        name="clientAddress"
+        type="java.lang.String"
+        column="client_address"
+        length="100"
+    />
+    <property
+        name="clientTel"
+        type="java.lang.String"
+        column="client_tel"
+        length="20"
+    />
+    <property
+        name="clientRemark"
+        type="java.lang.String"
+        column="client_remark"
+        length="100"
+    />
+    <property
+        name="clientEnable"
+        type="java.lang.Integer"
+        column="client_enable"
+        length="10"
+    />
+    <property
+        name="clientOpenTime"
+        type="java.util.Date"
+        column="client_open_time"
+        length="23"
+    />
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000Room -->
+    <set
+        name="hod2000Rooms"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+        <key>
+            <column name="client_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Room"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

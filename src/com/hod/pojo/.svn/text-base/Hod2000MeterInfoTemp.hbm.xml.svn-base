@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000MeterInfoTemp" 
+    table="hod2000_meterInfoTemp"
+>
+
+    <id
+        name="tid"
+        type="java.lang.Integer"
+        column="t_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="meterName"
+        type="java.lang.String"
+        column="meter_name"
+        length="50"
+    />
+    <property
+        name="currentEnergy"
+        type="java.lang.String"
+        column="current_energy"
+        length="20"
+    />
+    <property
+        name="accumulateFlow"
+        type="java.lang.String"
+        column="accumulate_flow"
+        length="20"
+    />
+    <property
+        name="meterFlow"
+        type="java.lang.String"
+        column="meter_flow"
+        length="20"
+    />
+    <property
+        name="accumulateTime"
+        type="java.lang.Integer"
+        column="accumulate_time"
+        length="10"
+    />
+    <property
+        name="supplyTemper"
+        type="java.lang.String"
+        column="supply_temper"
+        length="20"
+    />
+    <property
+        name="backTemper"
+        type="java.lang.String"
+        column="back_temper"
+        length="20"
+    />
+    <property
+        name="readTime"
+        type="java.util.Date"
+        column="read_time"
+        length="23"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

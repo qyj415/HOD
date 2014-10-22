@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Roles" extends="defaults" namespace="/">
+		<action name="hod2000Roles" class="springHod2000RoleAction">
+			<result name="success">/show/rolelist.jsp</result>
+			<result name="toUpdate">/update/roleedit.jsp</result>
+			<result name="toAdd">/form/roleadd.jsp</result>
+		</action>
+	</package>
+	<package name="hodRole" extends="json-default" namespace="/">
+		<action name="hodRole" class="springHod2000RoleAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+		<action name="hodRole" class="springHod2000RoleAction" method="doDelete">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,413 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Prj1202/!svn/ver/2091/sys_src/source/HOD-2000/src/com/hod/pojo
+END
+Hod2000MeterInfoTemp.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Prj1202/!svn/ver/252/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterInfoTemp.hbm.xml
+END
+Hod2000Price.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Prj1202/!svn/ver/489/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Price.java
+END
+Hod2000Sysparameter.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Prj1202/!svn/ver/2116/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Sysparameter.hbm.xml
+END
+ConEventMap.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Prj1202/!svn/ver/2013/sys_src/source/HOD-2000/src/com/hod/pojo/ConEventMap.hbm.xml
+END
+Hod2000DeviceInitParameter.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Prj1202/!svn/ver/763/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DeviceInitParameter.hbm.xml
+END
+Hod2000Permission.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Prj1202/!svn/ver/1243/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Permission.hbm.xml
+END
+Hod2000BatchMeterError.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/2008/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000BatchMeterError.hbm.xml
+END
+Hod2000MeterInfoFreeze.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/1626/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterInfoFreeze.hbm.xml
+END
+Hod2000MeterType.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Prj1202/!svn/ver/1663/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterType.java
+END
+Hod2000Operator.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Prj1202/!svn/ver/105/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Operator.hbm.xml
+END
+Hod2000Building.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Prj1202/!svn/ver/2084/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Building.hbm.xml
+END
+Hod2000DownInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Prj1202/!svn/ver/1484/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DownInfo.java
+END
+Hod2000Village.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Prj1202/!svn/ver/23/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Village.java
+END
+Hod2000DeviceInitParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/763/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DeviceInitParameter.java
+END
+Hod2000PriceDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Prj1202/!svn/ver/51/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000PriceDetail.java
+END
+Hod2000OperateLog.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Prj1202/!svn/ver/27/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000OperateLog.hbm.xml
+END
+Hod2000Permission.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Prj1202/!svn/ver/1243/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Permission.java
+END
+Hod2000BatchMeterError.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Prj1202/!svn/ver/2008/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000BatchMeterError.java
+END
+Hod2000BatchClientError.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/1904/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000BatchClientError.java
+END
+Hod2000MeterCallDownInfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Prj1202/!svn/ver/1957/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterCallDownInfo.hbm.xml
+END
+Hod2000Concentrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Prj1202/!svn/ver/1941/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Concentrator.java
+END
+Hod2000Client.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Prj1202/!svn/ver/2091/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Client.hbm.xml
+END
+Hod2000Village.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Prj1202/!svn/ver/2084/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Village.hbm.xml
+END
+Hod2000DownInfoCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Prj1202/!svn/ver/763/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DownInfoCache.java
+END
+Hod2000DownInfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Prj1202/!svn/ver/1483/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DownInfo.hbm.xml
+END
+Hod2000Community.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Prj1202/!svn/ver/2084/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Community.hbm.xml
+END
+Hod2000MeterInfoHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/1454/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterInfoHistory.java
+END
+Hod2000ParaDownInfoCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/763/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000ParaDownInfoCache.java
+END
+Hod2000MeterCallDownInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/Prj1202/!svn/ver/1954/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterCallDownInfo.java
+END
+Hod2000Receive.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Prj1202/!svn/ver/1677/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Receive.java
+END
+Hod2000Community.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Prj1202/!svn/ver/403/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Community.java
+END
+Hod2000Price.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Prj1202/!svn/ver/2168/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Price.hbm.xml
+END
+Hod2000MeterInfoFreeze.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Prj1202/!svn/ver/290/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterInfoFreeze.java
+END
+Hod2000DownInfoCache.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/1485/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DownInfoCache.hbm.xml
+END
+Hod2000City.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Prj1202/!svn/ver/2084/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000City.hbm.xml
+END
+Hod2000Building.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Prj1202/!svn/ver/1848/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Building.java
+END
+Hod2000ParaDownInfoCache.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/763/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000ParaDownInfoCache.hbm.xml
+END
+Hod2000Room.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Prj1202/!svn/ver/2143/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Room.hbm.xml
+END
+Hod2000OperateLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Prj1202/!svn/ver/23/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000OperateLog.java
+END
+Hod2000MeterType.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Prj1202/!svn/ver/2129/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterType.hbm.xml
+END
+Hod2000County.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Prj1202/!svn/ver/2084/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000County.hbm.xml
+END
+Hod2000City.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Prj1202/!svn/ver/23/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000City.java
+END
+Hod2000Room.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Prj1202/!svn/ver/1848/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Room.java
+END
+Hod2000DbBackupSchedule.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/1004/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DbBackupSchedule.hbm.xml
+END
+Hod2000PreReceive.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Prj1202/!svn/ver/1677/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000PreReceive.hbm.xml
+END
+Hod2000MeterInfoTemp.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Prj1202/!svn/ver/252/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterInfoTemp.java
+END
+Hod2000BatchClientError.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/1877/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000BatchClientError.hbm.xml
+END
+Hod2000Unit.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Prj1202/!svn/ver/1848/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Unit.java
+END
+ConEventMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Prj1202/!svn/ver/2013/sys_src/source/HOD-2000/src/com/hod/pojo/ConEventMap.java
+END
+Hod2000Region.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Prj1202/!svn/ver/23/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Region.java
+END
+Hod2000Role.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Prj1202/!svn/ver/27/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Role.hbm.xml
+END
+Hod2000DbBackupSchedule.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Prj1202/!svn/ver/1004/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000DbBackupSchedule.java
+END
+Hod2000MeterInfoHistory.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Prj1202/!svn/ver/1454/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000MeterInfoHistory.hbm.xml
+END
+Hod2000Meter.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Prj1202/!svn/ver/2129/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Meter.hbm.xml
+END
+Hod2000Unit.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Prj1202/!svn/ver/2084/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Unit.hbm.xml
+END
+Hod2000Heatingparameter.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/Prj1202/!svn/ver/462/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Heatingparameter.hbm.xml
+END
+Hod2000Receive.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Prj1202/!svn/ver/1677/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Receive.hbm.xml
+END
+Hod2000Region.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Prj1202/!svn/ver/2116/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Region.hbm.xml
+END
+Hod2000PriceDetail.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Prj1202/!svn/ver/66/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000PriceDetail.hbm.xml
+END
+Hod2000Meter.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Prj1202/!svn/ver/1952/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Meter.java
+END
+Hod2000Client.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Prj1202/!svn/ver/676/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Client.java
+END
+Hod2000Sysparameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Prj1202/!svn/ver/205/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Sysparameter.java
+END
+Hod2000Heatingparameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Prj1202/!svn/ver/462/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Heatingparameter.java
+END
+Hod2000County.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/Prj1202/!svn/ver/23/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000County.java
+END
+Hod2000Concentrator.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Prj1202/!svn/ver/2129/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Concentrator.hbm.xml
+END
+Hod2000PreReceive.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Prj1202/!svn/ver/1677/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000PreReceive.java
+END
+Hod2000Operator.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Prj1202/!svn/ver/105/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Operator.java
+END
+Hod2000Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Prj1202/!svn/ver/23/sys_src/source/HOD-2000/src/com/hod/pojo/Hod2000Role.java
+END

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Operator" 
+    table="hod2000_operator"
+>
+
+    <id
+        name="operId"
+        type="java.lang.Integer"
+        column="oper_id"
+    >
+        <generator class="identity" />
+    </id>
+    <property
+        name="loginName"
+        type="java.lang.String"
+        column="login_name"
+        length="50"
+    />
+    <property
+        name="operPassword"
+        type="java.lang.String"
+        column="oper_password"
+        length="128"
+    />
+    <property
+        name="operEnable"
+        type="java.lang.Integer"
+        column="oper_enable"
+        length="10"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to Hod2000Role -->
+    <many-to-one
+        name="hod2000Role"
+        class="com.hod.pojo.Hod2000Role"
+        not-null="true"
+        lazy="false"
+    >
+        <column name="r_id" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

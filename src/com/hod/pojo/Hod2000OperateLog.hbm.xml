@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000OperateLog" 
+    table="hod2000_operateLog"
+>
+
+    <id
+        name="logId"
+        type="java.lang.Integer"
+        column="log_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="operName"
+        type="java.lang.String"
+        column="oper_name"
+        length="50"
+    />
+    <property
+        name="logDate"
+        type="java.util.Date"
+        column="log_date"
+        length="23"
+    />
+    <property
+        name="logContent"
+        type="java.lang.String"
+        column="log_content"
+        length="150"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

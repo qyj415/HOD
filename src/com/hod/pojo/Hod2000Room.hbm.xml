@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Room" 
+    table="hod2000_room"
+>
+
+<cache usage="read-write"/>
+
+    <id
+        name="roomId"
+        type="java.lang.Integer"
+        column="room_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="roomName"
+        type="java.lang.String"
+        column="room_name"
+        length="100"
+    />
+    <property
+        name="roomCode"
+        type="java.lang.String"
+        column="room_code"
+        length="50"
+    />
+     <property
+        name="roomRemark"
+        type="java.lang.String"
+        column="room_remark"
+        length="128"
+    />
+     <property
+        name="roomHouseType"
+        type="java.lang.String"
+        column="room_house_type"
+        length="50"
+    />
+     <property
+        name="roomSize"
+        type="java.lang.Double"
+        column="room_size"
+        length="50"
+    />
+	<property
+        name="priceType"
+        type="java.lang.Integer"
+        not-null="false"
+        column="p_type"
+    />
+    <property
+        name="roomPreFlag"
+        type="java.lang.Integer"
+        not-null="false"
+        column="room_pre_flag"
+    />
+    <property
+        name="roomReceiveFlag"
+        type="java.lang.Integer"
+        not-null="false"
+        column="room_receive_flag"
+    />
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to Hod2000Client -->
+    <many-to-one
+        name="hod2000Client"
+        class="com.hod.pojo.Hod2000Client"
+        not-null="true"
+    >
+        <column name="client_id" />
+    </many-to-one>
+    <!-- bi-directional one-to-many association to Hod2000Meter -->
+    <set
+        name="hod2000Meters"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+    <cache usage="read-write"/>
+        <key>
+            <column name="room_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Meter"
+        />
+    </set>
+    <!-- bi-directional many-to-one association to Hod2000Building -->
+     <many-to-one
+        name="hod2000Unit"
+        class="com.hod.pojo.Hod2000Unit"
+        not-null="true"
+    >
+        <column name="unit_id" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="login" extends="defaults" namespace="/">
+		<action name="login" class="springLoginAction">
+			<result name="login">/main.jsp</result>
+			<result name="unlogin">/login.jsp</result>
+			<result name="help">/show/checkCodelist.jsp</result>
+		</action>
+	</package>
+</struts>

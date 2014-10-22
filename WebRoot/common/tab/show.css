@@ -1,0 +1,274 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.uploadbtn{
+	background-image: url(upload.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.clearbtn{
+	background-image: url(clear.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.printBillBtn{
+	background-image: url(printBill.gif);
+	width: 55px;
+	height: 22px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.addbtn{
+	background-image: url(add1.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.returnbtn{
+	background-image: url(return.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.homebtn{
+	background-image: url(home.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.delbtn{
+	background-image: url(del.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.mapbtn{
+	background-image: url(map.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.setbtn{
+	background-image: url(set.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.delrowbtn{
+	background-image: url(delrow.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.addrowbtn{
+	background-image: url(addrow.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.savebtn{
+	background-image: url(save.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.exportbtn{
+	background-image: url(export.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.printbtn{
+	background-image: url(print.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.confirmbtn{
+	background-image: url(confirm.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.closebtn{
+	background-image: url(close.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.resetbtn{
+	background-image: url(reset.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.searchbtn{
+	background-image: url(searchbtn.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.readbtn{
+	background-image: url(read.gif);
+	width: 85px;
+	height: 25px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+
+/* ---------列表样式-------- */
+td{font-size:12px;}
+.STYLE1 {font-size: 12px;text-align:center;BACKGROUND-COLOR: #ffffff;height:25px}
+.STYLE6 {font-size: 12px;text-align:center;BACKGROUND-COLOR: #ffffff;}
+.STYLE7 {font-size: 12px;text-align:left;BACKGROUND-COLOR: #ffffff;}
+.STYLE2 {font-size: 12px;}
+.STYLE3 {font-size: 12px; font-weight: bold;text-align:center;background-image:url('bg.gif'); height:22px }
+.STYLE5 {font-size: 12px; font-weight: bold;text-align:center;background-image:url('bg.gif'); height:22px;width: 30px; }
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+.tab_05{background: url(tab_05.gif)}
+.tab_12{background: url(tab_12.gif)}
+.tab_15{background: url(tab_15.gif)}
+.tab_19{background: url(tab_19.gif)}
+.tab_03{background: url(tab_03.gif)}
+.tab_07{background: url(tab_07.gif)}
+.tab_18{background: url(tab_18.gif)}
+
+.tab_20{background: url(tab_20.gif)}
+
+.tb{background: url(tb.gif) no-repeat}
+.add{background: url(add.gif) no-repeat}
+.edit{width:16px;height:16px;background: url(edit.gif) no-repeat}
+.delete{width:16px;height:16px;background: url(delete.gif) no-repeat}
+.showModel{width:16px;height:16px;background: url(zoom_in.gif) no-repeat}
+.showModel2{width:16px;height:16px;background: url(zoom_out.gif) no-repeat}
+
+/* ---------搜索样式-------- */
+.Search_tr{FONT-SIZE: 12px; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #ffffff}
+.Search_gif{width:63px;height:63px;background: url(Search.gif) no-repeat;BACKGROUND-COLOR: #ffffff}
+
+/* ---------链接样式-------- */
+a:link {
+	color: #003399;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #003399;
+}
+a:hover {
+	text-decoration: none;
+	color: #996600;
+}
+a:active {
+	text-decoration: none;
+}
+
+#tab span
+{
+	color: gray;
+}
+#tab select
+{
+	width: 155px;
+}
+
+/* ---------防止表格溢出-------- */
+#datatable{table-layout:fixed;}
+#datatable td,#datatable td div,#datatable td a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+#datatable2{table-layout:fixed;}
+#datatable2 td,#datatable2 td div,#datatable2 td a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+
+.menubackg {
+	BORDER-RIGHT: #98b1c0 1px solid; BORDER-TOP: #98b1c0 1px solid; FONT-SIZE: 12px; MARGIN-BOTTOM:0px; PADDING-BOTTOM: 1px; BORDER-LEFT: #98b1c0 1px solid; BORDER-BOTTOM: #98b1c0 1px solid; HEIGHT: 20px; TEXT-ALIGN: center
+}
+
+/**button*/
+.buttonSave{width:60px; height:20px; background:url(../save.gif) no-repeat; BORDER: #98b1c0 1px solid;MARGIN-TOP:2px;}
+.sps{margin-left: 5px;margin-right: 10px;}
+.btn{
+	background-image: url(search/query.gif);
+	width: 85px;
+	height: 22px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+.del-btn{
+	background-image: url(search/del.png);
+	width: 95px;
+	height: 22px;
+	border: none;
+	cursor: hand;
+	overflow: hidden;
+}
+/* 树菜单-刷新按钮 */
+.x-tool-westtools-terminal
+{
+	background-image:url(refresh.gif ) ! important;
+    background-position: left top;
+    float : right;
+	margin-right : 3px;
+	margin-left : 3px;
+}
+/* 树菜单-全部闭合按钮 */
+.x-tool-westtools-collapseAll
+{
+	background-image:url(collapse-all.gif ) ! important;
+    background-position: left top;
+    float : right;
+	margin-right : 3px;
+	margin-left : 3px;
+}
+/* 树菜单-全部展开按钮 */
+.x-tool-westtools-expandAll
+{
+	background-image:url(expand-all.gif ) ! important;
+    background-position: left top;
+    float : right;
+	margin-right : 3px;
+	margin-left : 3px;
+}  

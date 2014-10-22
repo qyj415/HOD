@@ -1,0 +1,34 @@
+9
+
+dir
+2109
+http://dsvr/svn/Prj1202/sys_src/source/HOD-2000/src/com/hod/pro/model
+http://dsvr/svn/Prj1202
+
+
+
+2014-01-14T00:39:31.355295Z
+2100
+quyongjin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4134e87-7215-43a7-a50b-40293ec7293c
+
+service
+dir
+
+dao
+dir
+

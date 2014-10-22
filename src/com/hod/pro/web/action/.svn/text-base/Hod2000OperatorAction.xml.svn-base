@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Operator" extends="defaults" namespace="/">
+		<action name="hod2000Operator" class="springHod2000OperatorAction">
+			<result name="success">/show/operatorlist.jsp</result>
+			<result name="toUpdate">/update/operatoredit.jsp</result>
+			<result name="toAdd">/form/operatoradd.jsp</result>
+		</action>
+	</package>
+	<package name="hodOperator" extends="json-default" namespace="/">
+		<action name="hodOperator" class="springHod2000OperatorAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+		<action name="hodOperator" class="springHod2000OperatorAction" method="doDelete">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Prj1202/!svn/ver/2109/sys_src/source/HOD-2000/src
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Prj1202/!svn/ver/2100/sys_src/source/HOD-2000/src/ehcache.xml
+END
+struts.properties
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Prj1202/!svn/ver/1882/sys_src/source/HOD-2000/src/struts.properties
+END
+sysconfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Prj1202/!svn/ver/2179/sys_src/source/HOD-2000/src/sysconfig.properties
+END
+struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Prj1202/!svn/ver/1892/sys_src/source/HOD-2000/src/struts.xml
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Prj1202/!svn/ver/63/sys_src/source/HOD-2000/src/log4j.properties
+END

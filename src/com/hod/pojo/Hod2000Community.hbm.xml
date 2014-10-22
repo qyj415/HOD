@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Community" 
+    table="hod2000_community"
+>
+
+<cache usage="read-write"/>
+
+    <id
+        name="communityId"
+        type="java.lang.Integer"
+        column="community_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="communityName"
+        type="java.lang.String"
+        column="community_name"
+        not-null="true"
+        length="100"
+    />
+    
+    <property
+        name="communityCode"
+        type="java.lang.String"
+        column="community_code"
+        not-null="true"
+        length="50"
+    />
+    
+     <property
+        name="communityRemark"
+        type="java.lang.String"
+        column="community_remark"
+        not-null="false"
+        length="128"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000Building -->
+    <set
+        name="hod2000Buildings"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+    <cache usage="read-write"/>
+        <key>
+            <column name="community_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Building"
+        />
+    </set>
+    <!-- bi-directional many-to-one association to Hod2000Village -->
+    <many-to-one
+        name="hod2000Village"
+        class="com.hod.pojo.Hod2000Village"
+        not-null="true"
+    >
+        <column name="village_id" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

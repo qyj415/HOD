@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000DeviceInitParameter" 
+    table="hod2000_device_init_parameter"
+>
+
+    <id
+        name="pid"
+        type="java.lang.Integer"
+        column="p_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="pcol1"
+        type="java.lang.Integer"
+        column="p_col1"
+        length="10"
+    />
+    <property
+        name="pcol2"
+        type="java.lang.Integer"
+        column="p_col2"
+        length="10"
+    />
+    <property
+        name="pcol3"
+        type="java.lang.Integer"
+        column="p_col3"
+        length="10"
+    />
+    <property
+        name="pcol4"
+        type="java.lang.Integer"
+        column="p_col4"
+        length="10"
+    />
+    <property
+        name="pcol5"
+        type="java.lang.Integer"
+        column="p_col5"
+        length="10"
+    />
+    <property
+        name="pcol6"
+        type="java.lang.Integer"
+        column="p_col6"
+        length="10"
+    />
+    <property
+        name="pcol7"
+        type="java.lang.String"
+        column="p_col7"
+        length="21"
+    />
+    <property
+        name="pcol8"
+        type="java.lang.String"
+        column="p_col8"
+        length="21"
+    />
+    <property
+        name="pcol9"
+        type="java.lang.String"
+        column="p_col9"
+        length="16"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

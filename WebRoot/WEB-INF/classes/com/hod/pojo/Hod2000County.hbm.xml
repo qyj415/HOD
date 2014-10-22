@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000County" 
+    table="hod2000_county"
+>
+
+<cache usage="read-write"/>
+
+    <id
+        name="countyId"
+        type="java.lang.Integer"
+        column="county_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="countyName"
+        type="java.lang.String"
+        column="county_name"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="countyCode"
+        type="java.lang.String"
+        column="county_code"
+        not-null="true"
+        length="50"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000Village -->
+    <set
+        name="hod2000Villages"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+        <key>
+            <column name="county_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Village"
+        />
+    </set>
+    <!-- bi-directional many-to-one association to Hod2000City -->
+    <many-to-one
+        name="hod2000City"
+        class="com.hod.pojo.Hod2000City"
+        not-null="true"
+    >
+        <column name="city_id" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

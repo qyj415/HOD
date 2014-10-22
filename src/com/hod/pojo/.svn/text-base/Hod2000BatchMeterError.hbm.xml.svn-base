@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000BatchMeterError" 
+    table="hod2000_batchMeterError"
+>
+
+    <id
+        name="batchMeterId"
+        type="java.lang.Integer"
+        column="id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="errorMsg"
+        type="java.lang.String"
+        column="error_msg"
+        length="200"
+    />
+    <property
+        name="meterName"
+        type="java.lang.String"
+        column="meter_name"
+        length="50"
+    />
+    <property
+        name="meterCaliber"
+        type="java.lang.String"
+        column="meter_caliber"
+        length="20"
+    />
+    <property
+        name="meterBaudrate"
+        type="java.lang.String"
+        column="meter_baudrate"
+        length="50"
+    />
+    <property
+        name="typeName"
+        type="java.lang.String"
+        column="type_name"
+        length="50"
+    />
+    <property
+        name="meterPosition"
+        type="java.lang.String"
+        column="meter_position_name"
+        length="100"
+    />
+	<property
+		name="meterParent"
+		type="java.lang.String"
+		column="meter_parent_name"
+		length="100"
+	/>
+    <!-- Associations -->
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Concentrator" 
+    table="hod2000_concentrator"
+>
+
+    <id
+        name="conId"
+        type="java.lang.Integer"
+        column="con_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="conNumber"
+        type="java.lang.String"
+        column="con_number"
+        length="20"
+    />
+    <property
+        name="freezeInterval"
+        type="java.lang.Integer"
+        column="freezeInterval"
+        length="10"
+    />
+     <property
+        name="freezeIntervalValue"
+        type="java.lang.Integer"
+        column="freezeIntervalValue"
+        length="10"
+    />
+      <property
+        name="clearDate"
+        type="java.lang.Integer"
+        column="clear_date"
+        length="10"
+    />
+    <property
+        name="conAddress"
+        type="java.lang.String"
+        column="con_address"
+        length="100"
+    />
+    <property
+        name="conPositionName"
+        type="java.lang.String"
+        column="con_position_name"
+        length="100"
+    />
+	 <property
+        name="conCompanyNum"
+        type="java.lang.String"
+        column="con_company_num"
+        length="4"
+    />
+    <property
+        name="conDeviceNum"
+        type="java.lang.String"
+        column="con_device_num"
+        length="8"
+    />
+    <property
+        name="conSoftVersion"
+        type="java.lang.String"
+        column="con_soft_version"
+        length="4"
+    />
+    <property
+        name="conSoftDate"
+        type="java.lang.String"
+        column="con_soft_date"
+        length="12"
+    />
+    <property
+        name="conCapacityInfoCode"
+        type="java.lang.String"
+        column="con_capacity_info_code"
+        length="11"
+    />
+    <property
+        name="conProtocolVersion"
+        type="java.lang.String"
+        column="con_protocol_version"
+        length="4"
+    />
+    <property
+        name="conHardVersion"
+        type="java.lang.String"
+        column="con_hard_version"
+        length="4"
+    />
+    <property
+        name="conHardDate"
+        type="java.lang.String"
+        column="con_hard_date"
+        length="12"
+    />
+    <property
+        name="conIsonline"
+        type="java.lang.Integer"
+        column="con_isonline"
+    />
+    <property
+        name="conFlashStatus"
+        type="java.lang.Integer"
+        column="con_flash_status"
+    />
+    <property
+        name="conLastPosition"
+        type="java.lang.Integer"
+        column="con_last_position"
+    />
+     <property
+        name="masterConId"
+        type="java.lang.Integer"
+        column="master_con_id"
+    />
+    <property
+        name="typeIndexs"
+        type="java.lang.String"
+        column="type_indexs"
+    />
+    <property
+        name="conRfValue"
+        type="java.lang.Integer"
+        column="con_rf_value"
+    />
+    <property
+        name="conCom1Status"
+        type="java.lang.Integer"
+        column="con_com1_status"
+    />
+    <property
+        name="conCom2Status"
+        type="java.lang.Integer"
+        column="con_com2_status"
+    />
+    <property
+        name="conCom3Status"
+        type="java.lang.Integer"
+        column="con_com3_status"
+    />
+    <property
+        name="conAble"
+        type="java.lang.Integer"
+        column="con_able"
+    />
+    <property
+        name="conStrong"
+        type="java.lang.Integer"
+        column="con_strong"
+    />
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to Hod2000Meter -->
+    <set
+        name="hod2000Meters"
+        lazy="true"
+        inverse="true"
+		cascade="none"
+    >
+        <key>
+            <column name="con_id" />
+        </key>
+        <one-to-many 
+            class="com.hod.pojo.Hod2000Meter"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

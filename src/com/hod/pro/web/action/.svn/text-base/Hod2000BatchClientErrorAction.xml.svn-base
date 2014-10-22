@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000BatchClientError" extends="defaults" namespace="/">
+		<action name="hod2000BatchClientError" class="springHod2000BatchClientErrorAction">
+			<result name="success">/show/Hod2000BatchClientError_List.jsp</result>
+		</action>
+	</package>
+	<package name="hodBatchClientError" extends="json-default" namespace="/">
+		<action name="hodBatchClientError" class="springHod2000BatchClientErrorAction" method="doSelect">
+			<result type="json"></result>
+		</action>
+		<action name="hodBatchClientError" class="springHod2000BatchClientErrorAction" method="doUpdate">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

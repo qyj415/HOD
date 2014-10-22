@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Meter" 
+    table="hod2000_meter"
+>
+
+
+    <id
+        name="meterId"
+        type="java.lang.Integer"
+        column="meter_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="meterName"
+        type="java.lang.String"
+        column="meter_name"
+        length="50"
+    />
+    <property
+        name="meterIndex"
+        type="java.lang.Integer"
+        column="meter_index"
+    />
+    <property
+        name="valveStatus"
+        type="java.lang.Integer"
+        column="valve_status"
+    />
+    <property
+        name="batteryStatus"
+        type="java.lang.Integer"
+        column="battery_status"
+    />
+    <property
+        name="isOnline"
+        type="java.lang.Integer"
+        column="isonline"
+    />
+    <property
+        name="meterCaliber"
+        type="java.lang.String"
+        column="meter_caliber"
+        length="20"
+    />
+    <property
+        name="meterInit"
+        type="java.lang.Double"
+        column="meter_init"
+        length="20"
+    />
+    <property
+        name="meterPort"
+        type="java.lang.String"
+        column="meter_port"
+        length="50"
+    />
+    <property
+        name="meterBaudrate"
+        type="java.lang.String"
+        column="meter_baudrate"
+        length="50"
+    />
+    <property
+        name="meterParent"
+        type="java.lang.String"
+        column="meter_parent"
+        length="100"
+    />
+    <property
+        name="meterPosition"
+        type="java.lang.String"
+        column="meter_position"
+        length="100"
+    />
+    <property
+        name="meterPositionName"
+        type="java.lang.String"
+        column="meter_position_name"
+        length="100"
+    />
+     <property
+        name="meterAble"
+        type="java.lang.Integer"
+        column="meter_able"
+    />
+	<property
+        name="changeMeterTime"
+        type="java.util.Date"
+        column="changemeter_time"
+    />
+	<property
+        name="valveId"
+        type="java.lang.String"
+        column="valve_id"
+        length="8"
+    />
+    <property
+        name="meterStyle"
+        type="java.lang.Integer"
+        column="meter_style"
+    />
+    <property
+        name="eepromStatus"
+        type="java.lang.Integer"
+        column="eeprom_status"
+    />
+    <property
+        name="flowsensorStatus"
+        type="java.lang.Integer"
+        column="flowsensor_status"
+    />
+    <property
+        name="tepdownStatus"
+        type="java.lang.Integer"
+        column="tepdown_status"
+    />
+    <property
+        name="tepupStatus"
+        type="java.lang.Integer"
+        column="tepup_status"
+    />
+     <property
+        name="changeValue"
+        type="java.lang.String"
+        column="change_value"
+        length="20"
+    />
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to Hod2000Room -->
+    <many-to-one
+        name="hod2000Room"
+        class="com.hod.pojo.Hod2000Room"
+        not-null="false"
+        lazy="false"
+    >
+        <column name="room_id" />
+    </many-to-one>
+    <!-- bi-directional many-to-one association to Hod2000Concentrator -->
+    <many-to-one
+        name="hod2000Concentrator"
+        class="com.hod.pojo.Hod2000Concentrator"
+        not-null="true"
+        lazy="false"
+    >
+        <column name="con_id" />
+    </many-to-one>
+	
+	<many-to-one name="hod2000MeterType"
+	class="com.hod.pojo.Hod2000MeterType"
+	not-null="true"
+	lazy="false">
+		<column name="type_index"></column>
+	</many-to-one>
+
+</class>
+</hibernate-mapping>

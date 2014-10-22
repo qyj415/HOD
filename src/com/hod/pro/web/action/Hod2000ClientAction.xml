@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Client" extends="defaults" namespace="/">
+		<action name="hod2000Client" class="springHod2000ClientAction">
+			<result name="success">/show/clientlist.jsp</result>
+			<result name="toUpdate">/show/clientedit.jsp</result>
+			<result name="add">/show/clientadd.jsp</result>
+			<result name="delete">/show/clientdel.jsp</result>
+			<result name="show">/share/showClient.jsp</result>
+			<result name="print">/print/clientPrint.jsp</result>
+		</action>
+	</package>
+	<package name="hodClient" extends="json-default" namespace="/">
+		<action name="hodClient" class="springHod2000ClientAction" method="showRoom()">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

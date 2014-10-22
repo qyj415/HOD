@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    <!--  Created by the JSmart -->
+<hibernate-mapping>
+<class 
+    name="com.hod.pojo.Hod2000Receive" 
+    table="hod2000_receive"
+>
+
+    <id
+        name="rid"
+        type="java.lang.Integer"
+        column="r_id"
+    >
+        <generator class="identity" />
+    </id>
+
+    <property
+        name="roomId"
+        type="int"
+        column="room_id"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="prMoney"
+        type="java.lang.Double"
+        column="pr_money"
+        length="15"
+    />
+    <property
+        name="rmoney"
+        type="java.lang.Double"
+        column="r_money"
+        length="15"
+    />
+    <property
+        name="returnMoney"
+        type="java.lang.Double"
+        column="return_money"
+        length="15"
+    />
+    <property
+        name="fillMoney"
+        type="java.lang.Double"
+        column="fill_money"
+        length="15"
+    />
+    <property
+        name="rtype"
+        type="java.lang.Integer"
+        column="r_type"
+        length="10"
+    />
+    <property
+        name="rdate"
+        type="java.util.Date"
+        column="r_date"
+        length="23"
+    />
+	<property
+        name="roperator"
+        type="java.lang.String"
+        column="r_operator"
+        length="50"
+    />
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

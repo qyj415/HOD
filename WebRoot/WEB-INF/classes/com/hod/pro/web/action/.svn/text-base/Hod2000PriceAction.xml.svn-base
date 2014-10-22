@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="hod2000Price" extends="defaults" namespace="/">
+		<action name="hod2000Price" class="springHod2000PriceAction">
+			<result name="sp1">/show/pricelist.jsp?method=1</result>
+			<result name="sp2">/show/pricelist.jsp?method=2</result>
+			<result name="sp3">/show/pricelist.jsp?method=3</result>
+			<result name="toUpdate">/update/priceedit.jsp</result>
+			<result name="toUpdate1">/update/priceedit1.jsp</result>
+		</action>
+	</package>
+	<package name="hodPrice" extends="json-default" namespace="/">
+		<action name="hodPrice" class="springHod2000PriceAction" method="showDetail">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>
